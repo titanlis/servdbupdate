@@ -1,9 +1,11 @@
-package ru.itm.servdbupdate.entity.tables.act;
+/**
+ * @file act.java
+ * Entity для operator.acts - обновление реализовано
+ */
+package ru.itm.servdbupdate.entity.tables.operator;
 
 import ru.itm.servdbupdate.entity.AbstractEntity;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity

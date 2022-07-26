@@ -1,4 +1,4 @@
-package ru.itm.servdbupdate.entity.tables.act;
+package ru.itm.servdbupdate.entity.tables.operator;
 
 import ru.itm.servdbupdate.entity.AbstractEntity;
 import javax.persistence.Entity;
@@ -35,5 +35,9 @@ public final class Role extends AbstractEntity {
 
 	public void setActive(boolean active) {
 		this.active = active;
+	}
+
+	public String toStringShow(){
+		return "[id=" + id + ", name =\'" + name + "\', descr=\'" + descr +", active=\'"+ active +"\']";
 	}
 }

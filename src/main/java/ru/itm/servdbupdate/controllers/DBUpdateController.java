@@ -1,6 +1,5 @@
 package ru.itm.servdbupdate.controllers;
 
-import com.esotericsoftware.kryo.kryo5.Kryo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,11 +7,11 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 import ru.itm.servdbupdate.entity.TableVersion;
-import ru.itm.servdbupdate.entity.tables.act.Act;
-import ru.itm.servdbupdate.entity.tables.equipment.Equipment;
 import ru.itm.servdbupdate.kryo.KryoSerializer;
-import ru.itm.servdbupdate.repository.CommonRepository;
-import ru.itm.servdbupdate.repository.act.ActRepository;
+import ru.itm.servdbupdate.repository.config.ValuesDataRepository;
+import ru.itm.servdbupdate.repository.operator.ActRepository;
+import ru.itm.servdbupdate.repository.operator.ActToRoleRepository;
+import ru.itm.servdbupdate.repository.operator.RoleRepository;
 import ru.itm.servdbupdate.repository.equipment.EquipmentRepository;
 import ru.itm.servdbupdate.serivce.TablesService;
 import ru.itm.servdbupdate.udp.DBModelContainer;
@@ -25,11 +24,27 @@ import java.util.*;
 @RestController
 @RequestMapping("/api/v1/{ip}")
 public class DBUpdateController {
+    private List<DBModelContainer> dbModelContainerList = new ArrayList<>();
     private TablesService tablesService;    //контакты с бд postgresql
     private ActRepository actRepository;
+    private ActToRoleRepository actToRoleRepository;
+    private RoleRepository roleRepository;
     private EquipmentRepository equipmentRepository;
+    private ValuesDataRepository valuesDataRepository;
+    @Autowired
+    public void setValuesDataRepository(ValuesDataRepository valuesDataRepository) {
+        this.valuesDataRepository = valuesDataRepository;
+    }
 
-    private List<DBModelContainer> dbModelContainerList = new ArrayList<>();
+    @Autowired
+    public void setRoleRepository(RoleRepository roleRepository) {
+        this.roleRepository = roleRepository;
+    }
+
+    @Autowired
+    public void setActRepository(ActToRoleRepository actToRoleRepository) {
+        this.actToRoleRepository = actToRoleRepository;
+    }
 
     @Autowired
     public void setTablesService(TablesService tablesService) {
@@ -157,20 +172,40 @@ public class DBUpdateController {
         table = table.toLowerCase();
         switch (table) {
             case "acts" -> {
-                actRepository.findAll().forEach(act ->{
+                actRepository.findAll().forEach(act -> {
                     System.out.println(act.toStringShow());
                     listByteArray.add(KryoSerializer.serialize(act));
                 });
-
-
+                logger.info("act серилизован и отправлен на бк");
             }
+            case "acts_to_roles" -> {
+                actToRoleRepository.findAll().forEach(a ->{
+                    System.out.println(a.toStringShow());
+                    listByteArray.add(KryoSerializer.serialize(a));
+                });
+                logger.info("acts_to_roles серилизован и отправлен на бк");
+            }
+            case "roles" -> {
+                roleRepository.findAll().forEach(a ->{
+                    System.out.println(a.toStringShow());
+                    listByteArray.add(KryoSerializer.serialize(a));
+                });
+                logger.info("roles серилизован и отправлен на бк");
+            }
+            case "values_data" -> {
+                valuesDataRepository.findAll().forEach(a ->{
+                    System.out.println(a.toStringShow());
+                    listByteArray.add(KryoSerializer.serialize(a));
+                });
+                logger.info("values_data серилизован и отправлен на бк");
+            }
+
             default -> {
                 return null;
             }
 
         }
 
-        logger.info("act серилизован и отправлен на бк");
         return new DBModelContainer(listByteArray, table);
     }
 

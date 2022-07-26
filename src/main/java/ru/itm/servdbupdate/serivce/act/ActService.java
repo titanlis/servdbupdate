@@ -1,8 +1,8 @@
 package ru.itm.servdbupdate.serivce.act;
 
 import org.springframework.stereotype.Service;
-import ru.itm.servdbupdate.entity.tables.act.Act;
-import ru.itm.servdbupdate.repository.act.ActRepository;
+import ru.itm.servdbupdate.entity.tables.operator.Act;
+import ru.itm.servdbupdate.repository.operator.ActRepository;
 import ru.itm.servdbupdate.serivce.AbstractService;
 
 @Service

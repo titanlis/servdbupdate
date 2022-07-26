@@ -1,7 +1,7 @@
-package ru.itm.servdbupdate.repository.act;
+package ru.itm.servdbupdate.repository.operator;
 
 import org.springframework.stereotype.Repository;
-import ru.itm.servdbupdate.entity.tables.act.Role;
+import ru.itm.servdbupdate.entity.tables.operator.Role;
 import ru.itm.servdbupdate.repository.CommonRepository;
 
 @Repository
