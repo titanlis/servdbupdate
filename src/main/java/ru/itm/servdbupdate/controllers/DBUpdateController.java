@@ -8,11 +8,7 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 import ru.itm.servdbupdate.entity.TableVersion;
 import ru.itm.servdbupdate.kryo.KryoSerializer;
-import ru.itm.servdbupdate.repository.config.ValuesDataRepository;
-import ru.itm.servdbupdate.repository.operator.ActRepository;
-import ru.itm.servdbupdate.repository.operator.ActToRoleRepository;
-import ru.itm.servdbupdate.repository.operator.RoleRepository;
-import ru.itm.servdbupdate.repository.equipment.EquipmentRepository;
+import ru.itm.servdbupdate.repository.RepositoryFactory;
 import ru.itm.servdbupdate.serivce.TablesService;
 import ru.itm.servdbupdate.udp.DBModelContainer;
 
@@ -24,42 +20,14 @@ import java.util.*;
 @RestController
 @RequestMapping("/api/v1/{ip}")
 public class DBUpdateController {
-    private List<DBModelContainer> dbModelContainerList = new ArrayList<>();
+
     private TablesService tablesService;    //контакты с бд postgresql
-    private ActRepository actRepository;
-    private ActToRoleRepository actToRoleRepository;
-    private RoleRepository roleRepository;
-    private EquipmentRepository equipmentRepository;
-    private ValuesDataRepository valuesDataRepository;
-    @Autowired
-    public void setValuesDataRepository(ValuesDataRepository valuesDataRepository) {
-        this.valuesDataRepository = valuesDataRepository;
-    }
-
-    @Autowired
-    public void setRoleRepository(RoleRepository roleRepository) {
-        this.roleRepository = roleRepository;
-    }
-
-    @Autowired
-    public void setActRepository(ActToRoleRepository actToRoleRepository) {
-        this.actToRoleRepository = actToRoleRepository;
-    }
 
     @Autowired
     public void setTablesService(TablesService tablesService) {
         this.tablesService = tablesService;
     }
 
-    @Autowired
-    public void setActRepository(ActRepository actRepository) {
-        this.actRepository = actRepository;
-    }
-
-    @Autowired
-    public void setEquipmentRepository(EquipmentRepository equipmentRepository) {
-        this.equipmentRepository = equipmentRepository;
-    }
 
     private static Logger logger = LoggerFactory.getLogger(DBUpdateController.class);
 
@@ -95,62 +63,8 @@ public class DBUpdateController {
             map.add(tab.getTableName(), tab.getTableVersion());     //создаем пары для отправки на bk
         });
 
-        /**Если есть что обновлять, обновляем*/
-//        if(!map.isEmpty()){
-//            sendUpdatedTablesToBK(ip, newTablesList);
-//        }
-
         return map;
     }
-
-    /**
-     * Отправка обновлений на bk
-     * @param ip    куда отправляем
-     * @param newTablesList список таблиц для обновления
-     */
-//    private void sendUpdatedTablesToBK(String ip, List<TableVersion> newTablesList) {
-//        System.out.println("Отправка " + newTablesList.size() + " таблиц на бk " + ip + " для обновления");
-//        newTablesList.stream().forEach(t -> {
-//            //находим таблицу по имени
-//            String s = t.getTableName().toLowerCase();
-//            switch (s){
-//                case "acts" ->  {
-//                    List<byte[]> listByteArray = new ArrayList<>();
-//                    Iterable<Act> actList= actRepository.findAll();
-//                    for (Act a:actList){
-//                        System.out.println(a.toStringShow());
-//                        listByteArray.add(KryoSerializer.serialize(a));
-//                    }
-//
-//                    dbModelContainerList.add(new DBModelContainer(listByteArray, "acts"));
-//
-//                    if(actList.spliterator().estimateSize()<=0){
-//                        logger.info("Act не найдена");
-//                    }
-//
-//                    System.out.println("-----------------------------------------------------");
-//
-//                    listByteArray.stream().forEach(a->{
-//                        Act deserialize = (Act) KryoSerializer.deserialize(a);
-//                        System.out.println(deserialize.toStringShow());
-//                    });
-//
-//                }
-//                case "equipment" ->  {
-//                    Optional<Equipment> optionalEquipment = equipmentRepository.findById(t.getId());
-//                    if(optionalEquipment.isEmpty()){
-//                        logger.info("Equipment не найдена");
-//                    }
-//                    else {
-//                        logger.info("Equipment присутствует");
-//                    }
-//                }
-//            }
-//            //обновляем
-//            //серрилизуем
-//            //в table_version записываем актуальный номер версии
-//        });
-//    }
 
     /**
      * Получить список с версиями таблиц
@@ -160,55 +74,30 @@ public class DBUpdateController {
         return tablesService.findAll();
     }
 
-    @GetMapping("/update/{table}")
+    /**
+     * Поиск таблицы в базе по имени.
+     * @param ip входящий ip
+     * @param tableName имя таблицы
+     * @return DBModelContainer Сообщение {список данных из таблицы в kryo (байты), имя таблицы}
+     */
+    @GetMapping("/update/{tableName}")
     public DBModelContainer findTablesYoungerThanThis(
-            //@RequestBody DBModelContainer dbModelContainer,
             @PathVariable String ip,
-            @PathVariable String table) {
-        logger.info("findTablesYoungerThanThis starts -> " + table);
+            @PathVariable String tableName) {
 
         List<byte[]> listByteArray = new ArrayList<>();
+        tableName = tableName.toLowerCase();
 
-        table = table.toLowerCase();
-        switch (table) {
-            case "acts" -> {
-                actRepository.findAll().forEach(act -> {
-                    System.out.println(act.toStringShow());
-                    listByteArray.add(KryoSerializer.serialize(act));
-                });
-                logger.info("act серилизован и отправлен на бк");
-            }
-            case "acts_to_roles" -> {
-                actToRoleRepository.findAll().forEach(a ->{
-                    System.out.println(a.toStringShow());
-                    listByteArray.add(KryoSerializer.serialize(a));
-                });
-                logger.info("acts_to_roles серилизован и отправлен на бк");
-            }
-            case "roles" -> {
-                roleRepository.findAll().forEach(a ->{
-                    System.out.println(a.toStringShow());
-                    listByteArray.add(KryoSerializer.serialize(a));
-                });
-                logger.info("roles серилизован и отправлен на бк");
-            }
-            case "values_data" -> {
-                valuesDataRepository.findAll().forEach(a ->{
-                    System.out.println(a.toStringShow());
-                    listByteArray.add(KryoSerializer.serialize(a));
-                });
-                logger.info("values_data серилизован и отправлен на бк");
-            }
-
-            default -> {
-                return null;
-            }
-
+        try{
+            RepositoryFactory.getRepo(tableName)
+                    .findAll()
+                    .forEach(entityObject -> listByteArray.add(KryoSerializer.serialize(entityObject)));
+            logger.info(tableName + " серилизован и отправлен на бк");
+        }catch (Exception e){
+            return null;
         }
 
-        return new DBModelContainer(listByteArray, table);
+        return new DBModelContainer(listByteArray, tableName);
     }
-
-
 
 }
