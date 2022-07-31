@@ -7,6 +7,7 @@ import ru.itm.servdbupdate.repository.dispatcher.DispatcherRepository;
 import ru.itm.servdbupdate.repository.drilling.HoleRepository;
 import ru.itm.servdbupdate.repository.drilling.HoleStatusRepository;
 import ru.itm.servdbupdate.repository.equipment.*;
+import ru.itm.servdbupdate.repository.lis.*;
 import ru.itm.servdbupdate.repository.location.LocationRepository;
 import ru.itm.servdbupdate.repository.operator.ActRepository;
 import ru.itm.servdbupdate.repository.operator.ActToRoleRepository;
@@ -27,6 +28,36 @@ public class RepositoryFactory {
     private static EquipmentHaulRepository equipmentHaulRepository;
     private static EquipmentLoadRepository equipmentLoadRepository;
     private static EquipmentTypeRepository equipmentTypeRepository;
+    private static ActionGroupRepository actionGroupRepository;
+    private static ActionVariableSourceRepository actionVariableSourceRepository;
+    private static LisActionRepository lisActionRepository;
+    private static LisActionPredicateRepository lisActionPredicateRepository;
+    private static LisActionPredicateVaribleRepository lisActionPredicateVaribleRepository;
+    @Autowired
+    public void setLisActionPredicateVariableRepository(LisActionPredicateVaribleRepository lisActionPredicateVaribleRepository) {
+        RepositoryFactory.lisActionPredicateVaribleRepository = lisActionPredicateVaribleRepository;
+    }
+
+    @Autowired
+    public void setLisActionPredicateRepository(LisActionPredicateRepository lisActionPredicateRepository) {
+        RepositoryFactory.lisActionPredicateRepository = lisActionPredicateRepository;
+    }
+
+    @Autowired
+    public void setLisActionRepository(LisActionRepository lisActionRepository) {
+        RepositoryFactory.lisActionRepository = lisActionRepository;
+    }
+
+    @Autowired
+    public void setActionVariableSourceRepository(ActionVariableSourceRepository actionVariableSourceRepository) {
+        RepositoryFactory.actionVariableSourceRepository = actionVariableSourceRepository;
+    }
+
+    @Autowired
+    public void setActionGroupRepository(ActionGroupRepository actionGroupRepository) {
+        RepositoryFactory.actionGroupRepository = actionGroupRepository;
+    }
+
     @Autowired
     public void setEquipmentTypeRepository(EquipmentTypeRepository equipmentTypeRepository) {
         RepositoryFactory.equipmentTypeRepository = equipmentTypeRepository;
@@ -135,6 +166,22 @@ public class RepositoryFactory {
             case "equip_type" -> {
                 return equipmentTypeRepository;
             }
+            case "action_group" -> {
+                return actionGroupRepository;
+            }
+            case "action_variable_source" -> {
+                return actionVariableSourceRepository;
+            }
+            case "lis_action" -> {
+                return lisActionRepository;
+            }
+            case "lis_action_predicate" -> {
+                return lisActionPredicateRepository;
+            }
+            case "lis_action_predicate_varible" -> {
+                return lisActionPredicateVaribleRepository;
+            }
+
 
             default -> { return null; }
         }
