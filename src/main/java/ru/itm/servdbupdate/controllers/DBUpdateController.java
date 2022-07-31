@@ -8,6 +8,7 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 import ru.itm.servdbupdate.entity.TableVersion;
 import ru.itm.servdbupdate.kryo.KryoSerializer;
+import ru.itm.servdbupdate.repository.CommonRepository;
 import ru.itm.servdbupdate.repository.RepositoryFactory;
 import ru.itm.servdbupdate.serivce.TablesService;
 import ru.itm.servdbupdate.udp.DBModelContainer;
@@ -89,11 +90,18 @@ public class DBUpdateController {
         tableName = tableName.toLowerCase();
 
         try{
-            RepositoryFactory.getRepo(tableName)
-                    .findAll()
-                    .forEach(entityObject -> listByteArray.add(KryoSerializer.serialize(entityObject)));
-            logger.info(tableName + " серилизован и отправлен на бк");
+            logger.info(tableName + " ищем репозиторий");
+            CommonRepository commonRepository = RepositoryFactory.getRepo(tableName);
+            if(commonRepository!=null){
+                commonRepository.findAll().forEach(entityObject -> listByteArray.add(KryoSerializer.serialize(entityObject)));
+                logger.info(tableName + " серилизован и отправлен на бк");
+            }
+            else{
+                logger.info(tableName + " репозиторий не найден");
+                return null;
+            }
         }catch (Exception e){
+            e.printStackTrace();
             return null;
         }
 
