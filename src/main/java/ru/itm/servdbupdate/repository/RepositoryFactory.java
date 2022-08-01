@@ -33,6 +33,13 @@ public class RepositoryFactory {
     private static LisActionRepository lisActionRepository;
     private static LisActionPredicateRepository lisActionPredicateRepository;
     private static LisActionPredicateVaribleRepository lisActionPredicateVaribleRepository;
+    private static LisActionSourceVariableRepository lisActionSourceVariableRepository;
+
+    @Autowired
+    public void setLisActionSourceVariableRepository(LisActionSourceVariableRepository lisActionSourceVariableRepository) {
+        RepositoryFactory.lisActionSourceVariableRepository = lisActionSourceVariableRepository;
+    }
+
     @Autowired
     public void setLisActionPredicateVariableRepository(LisActionPredicateVaribleRepository lisActionPredicateVaribleRepository) {
         RepositoryFactory.lisActionPredicateVaribleRepository = lisActionPredicateVaribleRepository;
@@ -123,7 +130,6 @@ public class RepositoryFactory {
         RepositoryFactory.locationRepository = locationRepository;
     }
 
-
     public static CommonRepository getRepo(String tableName){
 
         switch (tableName.toLowerCase()){
@@ -181,7 +187,9 @@ public class RepositoryFactory {
             case "lis_action_predicate_varible" -> {
                 return lisActionPredicateVaribleRepository;
             }
-
+            case "lis_action_source_varible" -> {
+                return lisActionSourceVariableRepository;
+            }
 
             default -> { return null; }
         }
