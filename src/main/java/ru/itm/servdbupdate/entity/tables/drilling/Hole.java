@@ -17,7 +17,7 @@ public class Hole extends AbstractEntity {
 	private String description;
 
 	public String toStringShow(){
-		return "[id=" + id + ", id_loc=" + id_loc +", number=" + number + ", drilling_z=" + drilling_z
+		return "drilling.holes [id=" + id + ", id_loc=" + id_loc +", number=" + number + ", drilling_z=" + drilling_z
 				+ ", azimuth=" + azimuth + ", drilling_angle=" + drill_angle + ", after_deep=" + after_deep
 				+ ", description=\'" + description + "\']" ;
 	}

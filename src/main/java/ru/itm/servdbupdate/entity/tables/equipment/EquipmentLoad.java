@@ -17,7 +17,7 @@ public class EquipmentLoad  extends AbstractEntity {
 	}
 
 	public String toStringShow() {
-		return "Equipment [id=" + id + ", radius_load=" + radius_load + ", radius_wait=" + radius_wait
+		return "equipment.equipment_load [id=" + id + ", radius_load=" + radius_load + ", radius_wait=" + radius_wait
 				+ ", radius_bucket=" + radius_bucket + ", equip_id=" + equip_id + "]";
 	}
 

@@ -15,7 +15,7 @@ public class ActionVariableSource extends AbstractEntity {
 	public ActionVariableSource(){}
 
 	public String toStringShow() {
-		return "ActionGroup [id=" + id + ", name=" + name + ", type=" + type + "]";
+		return "action_variable_source [id=" + id + ", name=" + name + ", type=" + type + "]";
 	}
 
 	public String getName() {

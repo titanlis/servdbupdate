@@ -14,7 +14,7 @@ public class LisType extends AbstractEntity {
 
 	@Override
 	public String toString() {
-		return "LisSourceVariable{" +
+		return "LisType{" +
 				"id=" + id +
 				", name=" + name +
 				", description=" + description +

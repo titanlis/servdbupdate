@@ -38,6 +38,6 @@ public final class Role extends AbstractEntity {
 	}
 
 	public String toStringShow(){
-		return "[id=" + id + ", name =\'" + name + "\', descr=\'" + descr +", active=\'"+ active +"\']";
+		return "operator.roles [id=" + id + ", name =\'" + name + "\', descr=\'" + descr +", active=\'"+ active +"\']";
 	}
 }
