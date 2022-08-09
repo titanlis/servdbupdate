@@ -10,5 +10,34 @@ public final class MaterialType extends AbstractEntity {
 	private String name;
 	private String description;
 
-	public MaterialType(){}	
+	public MaterialType(){}
+
+	@Override
+	public String toString() {
+		return "material.material_type{" +
+				"id=" + id +
+				", name=" + name +
+				", description=" + description +
+				'}';
+	}
+
+	public String toStringShow() {
+		return this.toString();
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
 }

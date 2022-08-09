@@ -9,4 +9,24 @@ import javax.persistence.Table;
 public final class SensorDataType extends AbstractEntity {
 	private String name;
 	public SensorDataType(){}
+
+	@Override
+	public String toString() {
+		return "LisType{" +
+				"id=" + id +
+				", name=" + name +
+				'}';
+	}
+
+	public String toStringShow() {
+		return this.toString();
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
 }
