@@ -44,7 +44,7 @@ public class DBUpdateController {
             @RequestBody MultiValueMap<String, Integer> bkMapVersions,
             @PathVariable String ip){
 
-        System.out.println("прилетел запрос с " + ip);
+        logger.info("A request came in from the " + ip);
 
         /**Создается list с TableVersion на базе полученных пар "имя таблицы"-версия */
         List<TableVersion> bkTablesList = new LinkedList<>();
@@ -90,14 +90,14 @@ public class DBUpdateController {
         tableName = tableName.toLowerCase();
 
         try{
-            logger.info(tableName + " ищем репозиторий");
+            logger.info(tableName + " searching for a repository");
             CommonRepository commonRepository = RepositoryFactory.getRepo(tableName);
             if(commonRepository!=null){
                 commonRepository.findAll().forEach(entityObject -> listByteArray.add(KryoSerializer.serialize(entityObject)));
-                logger.info(tableName + " серилизован и отправлен на бк");
+                logger.info(tableName + " is serialized and sent to the on-board computer.");
             }
             else{
-                logger.info(tableName + " репозиторий не найден");
+                logger.info(tableName + " - repository was not found.");
                 return null;
             }
         }catch (Exception e){

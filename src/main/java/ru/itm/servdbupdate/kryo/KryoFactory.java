@@ -20,6 +20,9 @@ import ru.itm.servdbupdate.entity.tables.sensor.SensorType;
 import ru.itm.servdbupdate.entity.tables.shift.Shift;
 import ru.itm.servdbupdate.entity.tables.status.*;
 import ru.itm.servdbupdate.entity.tables.location.Routes;
+import ru.itm.servdbupdate.entity.tables.tire.Tire;
+import ru.itm.servdbupdate.entity.tables.tire.TireAssign;
+import ru.itm.servdbupdate.entity.tables.tire.TireStorage;
 
 import java.sql.Timestamp;
 
@@ -39,30 +42,34 @@ public abstract class KryoFactory {
         Kryo kryo = new Kryo();
 
         kryo.register(ValuesData.class);
+
         kryo.register(Dispatcher.class);
+
         kryo.register(Hole.class);
         kryo.register(HoleStatus.class);
+
         kryo.register(Equipment.class);
         kryo.register(EquipmentDrill.class);
         kryo.register(EquipmentHaul.class);
         kryo.register(EquipmentLoad.class);
         kryo.register(EQUIPMENT_TYPE.class);
         kryo.register(EquipmentType.class);
+
         kryo.register(ActionGroup.class);
         kryo.register(ActionVariableSource.class);
         kryo.register(LisAction.class);
         kryo.register(LisActionPredicate.class);
         kryo.register(LisActionPredicateVariable.class);
         kryo.register(LisActionSourceVariable.class);
-        kryo.register(LisPredicate.class);
-        kryo.register(LisSourceVariable.class);
-        kryo.register(LisType.class);
         kryo.register(LisActionVariable.class);
+        kryo.register(LisCheckFunction.class);
         kryo.register(LisConnection.class);
-        kryo.register(LisPredicateVariable.class);
         kryo.register(LisGroup.class);
         kryo.register(LisPoint.class);
-        kryo.register(LisCheckFunction.class);
+        kryo.register(LisPredicate.class);
+        kryo.register(LisPredicateVariable.class);
+        kryo.register(LisSourceVariable.class);
+        kryo.register(LisType.class);
 
         kryo.register(CoordinateLocation.class);
         kryo.register(Location.class);
@@ -85,10 +92,10 @@ public abstract class KryoFactory {
         kryo.register(OperatorOnEquipType.class);
         kryo.register(Role.class);
 
-        kryo.register(SensorType.class);
-        kryo.register(SensorInclineCalibration.class);
-        kryo.register(SensorDataType.class);
         kryo.register(Sensor.class);
+        kryo.register(SensorDataType.class);
+        kryo.register(SensorInclineCalibration.class);
+        kryo.register(SensorType.class);
 
         kryo.register(Shift.class);
         kryo.register(Timestamp.class);
@@ -99,6 +106,10 @@ public abstract class KryoFactory {
         kryo.register(StatusGroup.class);
         kryo.register(StatusGroupRelation.class);
         kryo.register(StatusInheritance.class);
+
+        kryo.register(Tire.class);
+        kryo.register(TireAssign.class);
+        kryo.register(TireStorage.class);
 
         return kryo;
     }

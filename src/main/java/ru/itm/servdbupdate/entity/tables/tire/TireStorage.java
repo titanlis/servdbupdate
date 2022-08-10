@@ -10,7 +10,44 @@ import javax.persistence.Table;
 public final class TireStorage extends AbstractEntity {
 	private String name;
 	private String description;
-	
-	@Column(name = "max_storage")
-	private Integer maxStorage;
+	private Integer max_storage;
+
+	public TireStorage() {}
+
+	@Override
+	public String toString() {
+		return "tire.tire_storage{" +
+				"name=" + name +
+				", description=" + description +
+				", max_storage=" + max_storage +
+				'}';
+	}
+
+	public String toStringShow() {
+		return this.toString();
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public Integer getMax_storage() {
+		return max_storage;
+	}
+
+	public void setMax_storage(Integer max_storage) {
+		this.max_storage = max_storage;
+	}
 }

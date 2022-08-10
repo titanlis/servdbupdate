@@ -20,6 +20,9 @@ import ru.itm.servdbupdate.repository.sensor.SensorRepository;
 import ru.itm.servdbupdate.repository.sensor.SensorTypeRepository;
 import ru.itm.servdbupdate.repository.shift.ShiftRepository;
 import ru.itm.servdbupdate.repository.status.*;
+import ru.itm.servdbupdate.repository.tire.TireAssignRepository;
+import ru.itm.servdbupdate.repository.tire.TireRepository;
+import ru.itm.servdbupdate.repository.tire.TireStorageRepository;
 
 @Component
 public class RepositoryFactory {
@@ -77,6 +80,25 @@ public class RepositoryFactory {
     private static StatusInheritanceRepository statusInheritanceRepository;
     private static RoutesRepository routesRepository;
     private static RoutesRoadsRepository routesRoadsRepository;
+
+    private static TireRepository tireRepository;
+    private static TireAssignRepository tireAssignRepository;
+    private static TireStorageRepository tireStorageRepository;
+
+    @Autowired
+    public void setTireStorageRepository(TireStorageRepository tireStorageRepository) {
+        RepositoryFactory.tireStorageRepository = tireStorageRepository;
+    }
+
+    @Autowired
+    public void setTireAssignRepository(TireAssignRepository tireAssignRepository) {
+        RepositoryFactory.tireAssignRepository = tireAssignRepository;
+    }
+
+    @Autowired
+    public void setTireRepository(TireRepository tireRepository) {
+        RepositoryFactory.tireRepository = tireRepository;
+    }
 
     @Autowired
     public void setRoutesRoadsRepository(RoutesRoadsRepository routesRoadsRepository) {
@@ -355,21 +377,24 @@ public class RepositoryFactory {
             case "equipment_haul"  -> equipmentHaulRepository;
             case "equipment_load"  -> equipmentLoadRepository;
             case "equip_type"      -> equipmentTypeRepository;
+
             case "action_group"    -> actionGroupRepository;
             case "action_variable_source" -> actionVariableSourceRepository;
             case "lis_action"      -> lisActionRepository;
             case "lis_action_predicate" -> lisActionPredicateRepository;
             case "lis_action_predicate_variable" -> lisActionPredicateVariableRepository;
             case "lis_action_source_variable" -> lisActionSourceVariableRepository;
-            case "lis_predicate"          -> lisPredicateRepository;
-            case "lis_source_variable"    -> lisSourceVariableRepository;
-            case "lis_type"               -> lisTypeRepository;
             case "lis_action_variable"    -> lisActionVariableRepository;
+            case "lis_check_function" -> lisCheckFunctionRepository;
             case "lis_connection"         -> lisConnectionRepository;
-            case "lis_predicate_variable" -> lisPredicateVariableRepository;
             case "lis_group" -> lisGroupRepository;
             case "lis_point" -> lisPointRepository;
-            case "lis_check_function" -> lisCheckFunctionRepository;
+            case "lis_predicate"          -> lisPredicateRepository;
+            case "lis_predicate_variable" -> lisPredicateVariableRepository;
+            case "lis_source_variable"    -> lisSourceVariableRepository;
+            case "lis_type"               -> lisTypeRepository;
+
+
             case "coord_loc" -> coordinateLocationRepository;
             case "location" -> locationRepository;
             case "location_auto_status" -> locationAutoStatusRepository;
@@ -396,6 +421,9 @@ public class RepositoryFactory {
             case "status_inh" -> statusInheritanceRepository;
             case "routes" -> routesRepository;
             case "routes_roads" -> routesRoadsRepository;
+            case "tires" -> tireRepository;
+            case "tire_assign" -> tireAssignRepository;
+            case "tire_storage" -> tireStorageRepository;
 
             default ->  null;
         };
