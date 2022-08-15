@@ -8,9 +8,19 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
+/**
+ * @class KryoSerializer для простоты сериализации
+ * Функциональный процесс сериализации для упрощения.
+ * Два статических метода.
+ */
 public class KryoSerializer {
     private static final ThreadLocalKryoFactory factory = new ThreadLocalKryoFactory();
 
+    /**
+     * Сериализует объект в массив байтов
+     * @param object объект
+     * @return b массив байтов
+     */
     public static byte[] serialize(Object object) {
         Kryo kryo = factory.getKryo();
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
@@ -28,6 +38,11 @@ public class KryoSerializer {
         return b;
     }
 
+    /**
+     * Десериализация массива байтов в объект.
+     * @param b массив байтов
+     * @return Object объект - десериализованный класс
+     */
     public static Object deserialize(byte[] b) {
         if (b.length == 0) {
             return null;

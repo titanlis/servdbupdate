@@ -1,3 +1,7 @@
+/**
+ * @file KryoFactory.java
+ * Фабричный класс для оздания объекта Kryo
+ */
 package ru.itm.servdbupdate.kryo;
 
 
@@ -38,6 +42,10 @@ public abstract class KryoFactory {
         return threadFactory;
     }
 
+    /**
+     * В методе прописываются (регистрируются в kryo) все классы для сериализации.
+     * @return kryo объект Kryo
+     */
     protected Kryo createKryo() {
         Kryo kryo = new Kryo();
 

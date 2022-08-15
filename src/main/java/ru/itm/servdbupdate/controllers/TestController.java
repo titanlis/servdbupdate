@@ -16,6 +16,7 @@ import java.util.List;
 
 /**
  * Класс для "ручной" поверки некоторых методов сервиса
+ * @todo Из релиза убрать.
  */
 @RestController
 @RequestMapping("/test")

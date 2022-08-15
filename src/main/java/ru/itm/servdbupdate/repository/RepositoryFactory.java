@@ -1,3 +1,7 @@
+/**
+ * @file RepositoryFactory.java фабрика репозиториев
+ *
+ */
 package ru.itm.servdbupdate.repository;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +28,13 @@ import ru.itm.servdbupdate.repository.tire.TireAssignRepository;
 import ru.itm.servdbupdate.repository.tire.TireRepository;
 import ru.itm.servdbupdate.repository.tire.TireStorageRepository;
 
+/**
+ * @class RepositoryFactory
+ * @brief По имени таблицы возвращает репозиторий базы
+ * @details Репозитории "инжектятся" по мере необходимости конструкторами.
+ * Фабричный метод возвращает ссылку на CommonRepository с сопоставленным
+ * по имени таблицы репозиторием.
+ */
 @Component
 public class RepositoryFactory {
     private static ActRepository actRepository;
@@ -362,8 +373,14 @@ public class RepositoryFactory {
         RepositoryFactory.locationRepository = locationRepository;
     }
 
+    /**
+     * Сопоставление имени таблицы и репозитория в бд.
+     * @param tableName имя таблицы
+     * @return CommonRepository репозиторий
+     */
     public static CommonRepository getRepo(String tableName){
 
+        /// switch-case в формате Java-16
         return switch (tableName.toLowerCase()){
             case "acts"          -> actRepository;
             case "acts_to_roles" -> actToRoleRepository;
