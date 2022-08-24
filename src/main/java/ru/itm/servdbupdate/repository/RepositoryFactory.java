@@ -373,6 +373,10 @@ public class RepositoryFactory {
         RepositoryFactory.locationRepository = locationRepository;
     }
 
+    public static EquipmentRepository getEquipmentRepository() {
+        return equipmentRepository;
+    }
+
     /**
      * Сопоставление имени таблицы и репозитория в бд.
      * @param tableName имя таблицы
