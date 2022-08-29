@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import ru.itm.servdbupdate.entity.MessageInterface;
 import ru.itm.servdbupdate.kryo.KryoSerializer;
 import ru.itm.servdbupdate.repository.RepositoryFactory;
 import ru.itm.servdbupdate.repository.equipment.EquipmentRepository;
@@ -31,8 +32,9 @@ public class InitController {
      * @return ip ip адрес бк
      */
     @GetMapping(value = "/{sn}/getip")
-    public String getIp(@PathVariable String sn) {
+    public MessageInterface getIp(@PathVariable String sn) {
         AtomicReference<String> ip = new AtomicReference<>();
+        AtomicReference<String> mac = new AtomicReference<>();
         logger.info("Init request. Get ip for \'" + sn + '\'');
         /*Подключаемся к репозиторию equipment.equipment*/
         EquipmentRepository equipmentRepository = RepositoryFactory.getEquipmentRepository();
@@ -42,6 +44,7 @@ public class InitController {
                 String s = entityObject.getMt_sn();
                 if( s!=null && s.equals(sn)){
                     ip.set(entityObject.getMt_ip());
+                    mac.set(entityObject.getMt_mac());
                 }
             });
             if(ip.get()!=null){
@@ -54,7 +57,7 @@ public class InitController {
         else{
             logger.info("ip for " + sn + " not found");
         }
-        return ip.get();
+        return new MessageInterface(ip.get(), mac.get());
     }
 
 }
