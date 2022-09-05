@@ -35,6 +35,7 @@ public class KryoSerializer {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
         return b;
     }
 

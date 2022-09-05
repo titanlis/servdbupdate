@@ -7,12 +7,13 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 import ru.itm.servdbupdate.entity.TableVersion;
+import ru.itm.servdbupdate.kryo.CompressObject;
 import ru.itm.servdbupdate.kryo.KryoSerializer;
 import ru.itm.servdbupdate.repository.CommonRepository;
 import ru.itm.servdbupdate.repository.RepositoryFactory;
 import ru.itm.servdbupdate.serivce.TablesService;
-import ru.itm.servdbupdate.udp.DBModelContainer;
 
+import java.io.IOException;
 import java.util.*;
 
 /**
@@ -33,16 +34,39 @@ public class DBUpdateController {
     private static Logger logger = LoggerFactory.getLogger(DBUpdateController.class);
 
     /**
+     * Получаем массив со сжатой gzip мэпой MultiValueMap<String, Integer> с именами всех таблиц для проверки обновлений
+     * и их версиями.
+     * @param arrayAllTable
+     * @param ip
+     * @return Массив со сжатой gzip мэпой MultiValueMap<String, Integer> с именами новых таблиц и их версиями
+     */
+    @PostMapping(value = "/gettabversions")
+    public byte[] findNewTables(
+            @RequestBody byte[] arrayAllTable,
+            @PathVariable String ip){
+        try {
+            MultiValueMap<String, Integer> bkMapVersions = (MultiValueMap<String, Integer>)CompressObject.readCompressObject(arrayAllTable);
+            MultiValueMap<String, Integer> tableOutboxMessage = findTablesYoungerThanThis(bkMapVersions, ip);
+            return CompressObject.writeCompressObject(tableOutboxMessage);
+        } catch (IOException e) {
+            System.err.println(e.getMessage());
+        } catch (ClassNotFoundException e) {
+            System.err.println(e.getMessage());
+        }
+        return null;
+    }
+
+
+    /**
      * Метод принимает версии таблиц с бк для обновления.
      * Проверяет на новые версии и возвращает список таблиц, которые нужно обновить.
      * @param bkMapVersions MultiValueMap<String, Integer> имя и версия на bk
      * @param ip    адрес с которого прилетел запрос
      * @return map MultiValueMap<String, Integer> имя и версия таблиц для обновления
      */
-    @PostMapping(value = "/gettabversions")
     public MultiValueMap<String, Integer> findTablesYoungerThanThis(
-            @RequestBody MultiValueMap<String, Integer> bkMapVersions,
-            @PathVariable String ip){
+            MultiValueMap<String, Integer> bkMapVersions,
+            String ip){
 
         logger.info("A request came in from the " + ip);
 
@@ -71,7 +95,7 @@ public class DBUpdateController {
      * Получить список с версиями таблиц
      */
     @GetMapping("/gettabversions")
-    public List<TableVersion> listTables(){
+    public List<TableVersion> listTables(@PathVariable String ip){
         return tablesService.findAll();
     }
 
@@ -79,10 +103,10 @@ public class DBUpdateController {
      * Поиск таблицы в базе по имени.
      * @param ip входящий ip
      * @param tableName имя таблицы
-     * @return DBModelContainer Сообщение {список данных из таблицы в kryo (байты), имя таблицы}
+     * @return byte[] список данных из таблицы в kryo (байты) сжатый gzip в массив байт
      */
     @GetMapping("/update/{tableName}")
-    public DBModelContainer findTablesYoungerThanThis(
+    public byte[] findTablesYoungerThanThis(
             @PathVariable String ip,
             @PathVariable String tableName) {
 
@@ -93,7 +117,9 @@ public class DBUpdateController {
             logger.info(tableName + " searching for a repository");
             CommonRepository commonRepository = RepositoryFactory.getRepo(tableName);
             if(commonRepository!=null){
-                commonRepository.findAll().forEach(entityObject -> listByteArray.add(KryoSerializer.serialize(entityObject)));
+                commonRepository.findAll().forEach(entityObject -> {
+                    listByteArray.add(KryoSerializer.serialize(entityObject));
+                });
                 logger.info(tableName + " is serialized and sent to the on-board computer.");
             }
             else{
@@ -105,7 +131,13 @@ public class DBUpdateController {
             return null;
         }
 
-        return new DBModelContainer(listByteArray, tableName);
+        /**Сжатие сериализованной таблицы с помощью gzip*/
+        try {
+            return CompressObject.writeCompressObject(listByteArray);
+        } catch (IOException e) {
+            System.err.println("It fails to compress the list of byte arrays for table \"" + tableName + "\".");
+        }
+        return null;
     }
 
 }
