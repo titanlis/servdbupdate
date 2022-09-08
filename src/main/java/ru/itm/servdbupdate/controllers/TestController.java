@@ -38,7 +38,8 @@ public class TestController {
         logger.info("Check :"+ port + "/test/getalltables");
         List<TableVersion> tableVersions = tablesService.findAll();
         for(TableVersion t:tableVersions){
-            System.out.println(t.toStringShort());
+            //System.out.println(t.toStringShort());
+            logger.info(t.toStringShort());
         }
         return tableVersions;
     }
@@ -56,12 +57,16 @@ public class TestController {
         logger.trace("/test/findtables");
         List<TableVersion> tableVersions = createExampleTab();
         for(TableVersion t:tableVersions){
-            System.out.println(t.toStringShort());
+            //System.out.println(t.toStringShort());
+            logger.info(t.toStringShort());
         }
-        System.out.println("--------------------------------------------------------------------------");
+        //System.out.println("--------------------------------------------------------------------------");
+        logger.info("--------------------------------------");
         List<TableVersion> tableVersionsNew = tablesService.findTablesYoungerThanThis(tableVersions);
         for(TableVersion t:tableVersionsNew){
-            System.out.println(t.toStringShort());
+          //  System.out.println(t.toStringShort());
+            logger.info(t.toStringShort());
+
         }
         return tableVersionsNew;
     }
@@ -77,7 +82,8 @@ public class TestController {
     public String findTablesYoungerThanThis(@RequestBody MultiValueMap<String, Integer> bkMapVersions){//String incomingTableList){
         String mapVersions = bkMapVersions.toString();
 
-        System.out.println(mapVersions);
+        //System.out.println(mapVersions);
+        logger.info(mapVersions);
         //logger.info("Запрос прилетел : " + incomingTableList.getBody());
         //return tablesService.findTablesYoungerThanThis(incomingTableList);
         return "Сервер работает над запросом";

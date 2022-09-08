@@ -22,7 +22,7 @@ import java.util.*;
 @RestController
 @RequestMapping("/api/v1/{ip}")
 public class DBUpdateController {
-
+    private static Logger logger = LoggerFactory.getLogger(DBUpdateController.class);
     private TablesService tablesService;    //контакты с бд postgresql
 
     @Autowired
@@ -30,8 +30,6 @@ public class DBUpdateController {
         this.tablesService = tablesService;
     }
 
-
-    private static Logger logger = LoggerFactory.getLogger(DBUpdateController.class);
 
     /**
      * Получаем массив со сжатой gzip мэпой MultiValueMap<String, Integer> с именами всех таблиц для проверки обновлений
@@ -49,9 +47,11 @@ public class DBUpdateController {
             MultiValueMap<String, Integer> tableOutboxMessage = findTablesYoungerThanThis(bkMapVersions, ip);
             return CompressObject.writeCompressObject(tableOutboxMessage);
         } catch (IOException e) {
-            System.err.println(e.getMessage());
+            //System.err.println(e.getMessage());
+            logger.error(e.getMessage());
         } catch (ClassNotFoundException e) {
-            System.err.println(e.getMessage());
+            //System.err.println(e.getMessage());
+            logger.error(e.getMessage());
         }
         return null;
     }
@@ -135,7 +135,8 @@ public class DBUpdateController {
         try {
             return CompressObject.writeCompressObject(listByteArray);
         } catch (IOException e) {
-            System.err.println("It fails to compress the list of byte arrays for table \"" + tableName + "\".");
+            logger.error("It fails to compress the list of byte arrays for table \"" + tableName + "\".");
+            //System.err.println("It fails to compress the list of byte arrays for table \"" + tableName + "\".");
         }
         return null;
     }

@@ -53,7 +53,8 @@ public class TablesService {
     private void tmpPrintTables(List<TableVersion> tableVersions) {
         AtomicInteger i= new AtomicInteger(1);
         tableVersions.stream().forEach(t->{
-            System.out.println((i.getAndIncrement()) + "\t" + t.getTableName() + "\t" + t.getTableVersion());
+            //System.out.println((i.getAndIncrement()) + "\t" + t.getTableName() + "\t" + t.getTableVersion());
+            logger.info((i.getAndIncrement()) + "\t" + t.getTableName() + "\t" + t.getTableVersion());
         });
     }
 
