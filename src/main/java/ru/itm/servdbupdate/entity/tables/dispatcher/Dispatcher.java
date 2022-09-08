@@ -16,6 +16,10 @@ public final class Dispatcher extends AbstractEntity {
 
 	public Dispatcher() {}
 
+	@Override
+	public String toString(){
+		return toStringShow();
+	}
 	public String toStringShow() {
 		return "dispatcher.dispatcher [id=" + id + ", name =\'" + name +"\']";
 	}

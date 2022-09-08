@@ -10,4 +10,6 @@ import lombok.NoArgsConstructor;
 public class MessageInterface {
     private String ip;
     private String mac;
+
+
 }

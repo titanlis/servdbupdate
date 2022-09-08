@@ -3,12 +3,15 @@ package ru.itm.servdbupdate.controllers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.event.ApplicationReadyEvent;
+import org.springframework.context.event.EventListener;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 import ru.itm.servdbupdate.entity.TableVersion;
 import ru.itm.servdbupdate.kryo.CompressObject;
 import ru.itm.servdbupdate.kryo.KryoSerializer;
+import ru.itm.servdbupdate.loggers.ItmServerLogger;
 import ru.itm.servdbupdate.repository.CommonRepository;
 import ru.itm.servdbupdate.repository.RepositoryFactory;
 import ru.itm.servdbupdate.serivce.TablesService;
@@ -23,6 +26,8 @@ import java.util.*;
 @RequestMapping("/api/v1/{ip}")
 public class DBUpdateController {
     private static Logger logger = LoggerFactory.getLogger(DBUpdateController.class);
+    private static ItmServerLogger itmServerLogger;
+
     private TablesService tablesService;    //контакты с бд postgresql
 
     @Autowired
@@ -44,7 +49,9 @@ public class DBUpdateController {
             @PathVariable String ip){
         try {
             MultiValueMap<String, Integer> bkMapVersions = (MultiValueMap<String, Integer>)CompressObject.readCompressObject(arrayAllTable);
+            itmServerLogger.writeIn(String.format("http://server_host:port/api/v1/%s/gettabversions\";\"%s",ip, bkMapVersions.toString()),0);
             MultiValueMap<String, Integer> tableOutboxMessage = findTablesYoungerThanThis(bkMapVersions, ip);
+            itmServerLogger.writeOut(tableOutboxMessage.toString(),0);
             return CompressObject.writeCompressObject(tableOutboxMessage);
         } catch (IOException e) {
             //System.err.println(e.getMessage());
@@ -87,7 +94,6 @@ public class DBUpdateController {
         newTablesList.stream().forEach(tab->{
             map.add(tab.getTableName(), tab.getTableVersion());     //создаем пары для отправки на bk
         });
-
         return map;
     }
 
@@ -96,7 +102,10 @@ public class DBUpdateController {
      */
     @GetMapping("/gettabversions")
     public List<TableVersion> listTables(@PathVariable String ip){
-        return tablesService.findAll();
+        itmServerLogger.writeIn(String.format("http://server_host:port/api/v1/%s/gettabversions",ip), 0);
+        List<TableVersion> list = tablesService.findAll();
+        itmServerLogger.writeOut(list.toString(),0);
+        return list;
     }
 
     /**
@@ -110,7 +119,9 @@ public class DBUpdateController {
             @PathVariable String ip,
             @PathVariable String tableName) {
 
+        itmServerLogger.writeIn(String.format("http://server_host:port/api/v1/%s/update/%s",ip, tableName), 0);
         List<byte[]> listByteArray = new ArrayList<>();
+        List<String> listEntity = new ArrayList<>();
         tableName = tableName.toLowerCase();
 
         try{
@@ -119,6 +130,7 @@ public class DBUpdateController {
             if(commonRepository!=null){
                 commonRepository.findAll().forEach(entityObject -> {
                     listByteArray.add(KryoSerializer.serialize(entityObject));
+                    listEntity.add(entityObject.toString());
                 });
                 logger.info(tableName + " is serialized and sent to the on-board computer.");
             }
@@ -133,12 +145,22 @@ public class DBUpdateController {
 
         /**Сжатие сериализованной таблицы с помощью gzip*/
         try {
+
+            itmServerLogger.writeOut(listEntity.toString(), 0);
             return CompressObject.writeCompressObject(listByteArray);
         } catch (IOException e) {
             logger.error("It fails to compress the list of byte arrays for table \"" + tableName + "\".");
             //System.err.println("It fails to compress the list of byte arrays for table \"" + tableName + "\".");
         }
         return null;
+    }
+
+    /**
+     * Автозапуск после создания контекста
+     */
+    @EventListener(ApplicationReadyEvent.class)
+    private void startIni(){
+        itmServerLogger = new ItmServerLogger();
     }
 
 }
