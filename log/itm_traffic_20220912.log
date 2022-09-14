@@ -1,0 +1,500 @@
+21:29:19;IN;0;"http://server_host:port/api/v1/192.168.1.16/gettabversions";"{acts=[2], acts_to_roles=[2], coord_loc=[137], dispatcher=[7], equip_type=[11], equipment=[27], equipment_drill=[3], equipment_haul=[4], equipment_load=[3], holes=[124], hole_status=[5], location=[15], loc_inheritance=[121], location_auto_status=[4], location_type=[5], material=[5], material_conv=[5], material_type=[5], operator_on_equip=[5], operator_on_equip_type=[5], operators=[5], roads=[3], roles=[4], routes=[5], routes_roads=[6], sensor_data_types=[5], sensor_types=[6], sensor_inclin_calibration=[5], sensors=[14], shifts=[5], speed_limits=[3], status_cat=[5], status_cat_location_rel=[5], status_group=[8], status_group_rel=[25], status_inh=[9], statuses=[5], tires=[6], tire_assign=[6], tire_storage=[6], values_data=[45], action_group=[486], action_variable_source=[44], lis_action=[175], lis_action_predicate=[5000], lis_action_predicate_variable=[5], lis_action_variable=[56], lis_check_function=[13], lis_connection=[257], lis_group=[9], lis_point=[6], lis_predicate=[24], lis_predicate_variable=[112], lis_type=[22], lis_source_variable=[18], lis_action_source_variable=[2]}"
+21:29:19;OUT;0;"{lis_predicate=[247]}"
+21:29:20;IN;0;"http://server_host:port/api/v1/192.168.1.16/update/lis_predicate"
+21:29:20;OUT;0;"[LisPredicate{id=27, name=NOT_SAME_STATUS, description=статус не совпадает с текущим, type=JavaScript, func=let status1 = FIRST;
+let status2 = SECOND;
+
+result = false;
+
+if ((statOne && !statTwo) || (!statOne && statTwo)){
+	result = true;
+}
+
+if (statOne && statTwo && statOne.id != statTwo.id) {
+	result = true;
+}}, LisPredicate{id=32, name=SOURCE_OPERATOR, description=является ли вызывающим правило OPERATOR, type=JavaScript, func=let source = FIRST;
+
+if (source == "OPERATOR") {
+  result = true;
+} else {
+  result = false;
+}}, LisPredicate{id=15, name=STATUS_IN_GROUP_ALIGNMENT, description=статус относится к группе ALIGNMENT_DRILL, type=JavaScript, func=let status = FIRST;
+
+result = false;
+
+if (status && status.statusGroup.includes("ALIGNMENT_DRILL")){
+  result = true;
+}}, LisPredicate{id=17, name=STATUS_IN_GROUP_DRILLING, description=статус относится к группе DRILLING_WORK, type=JavaScript, func=let status = FIRST;
+
+result = false;
+
+if (status && status.statusGroup.includes("DRILLING_WORK")){
+  result = true;
+}}, LisPredicate{id=13, name=STATUS_IN_GROUP_INTERACTION_FUELING, description=статус находится в группе INTERACTION_FUELING, type=JavaScript, func=let status = FIRST;
+
+result = false;
+
+if (status && status.statusGroup.includes("INTERACTION_FUELING")){
+  result = true;
+}}, LisPredicate{id=30, name=SOURCE_RESPONDENT, description=является ли вызывающим правило RESPONDENT, type=JavaScript, func=let source = FIRST;
+
+if (source == "RESPONDENT") {
+  result = true;
+} else {
+  result = false;
+}}, LisPredicate{id=34, name=SOURCE_SHIFT, description=является ли вызывающим правило SHIFT, type=JavaScript, func=let source = FIRST;
+
+if (source == "SHIFT") {
+  result = true;
+} else {
+  result = false;
+}}, LisPredicate{id=29, name=SOURCE_SYSTEM, description=является ли вызывающим правило SYSTEM, type=JavaScript, func=let source = FIRST;
+
+if (source == "SYSTEM") {
+  result = true;
+} else {
+  result = false;
+}}, LisPredicate{id=11, name=STATUS_IN_GROUP_INTERACTION_LOADING, description=статус находится в группе INTERACTION_LOADING	, type=JavaScript, func=let status = FIRST;
+
+result = false;
+
+if (status && status.statusGroup.includes("INTERACTION_LOADING")) {
+    result = true;
+}}, LisPredicate{id=20, name=STATUS_IN_GROUP_LOADED, description=относится ли статус 1 к группе статусов LOADED, type=JavaScript, func=let status = FIRST;
+
+result = false;
+
+if (status && status.statusGroup.includes("LOADED")){
+  result = true;
+}}, LisPredicate{id=18, name=STATUS_IN_GROUP_LOADING_WORK, description=относится ли статус 1 к группе статусов LOADING_WORK, type=JavaScript, func=let status = FIRST;
+
+result = false;
+
+if (status && status.statusGroup.includes("LOADING_WORK")){
+  result = true;
+}}, LisPredicate{id=14, name=STATUS_IN_GROUP_NAVIGATION, description=статус относится к группе NAVIGATION_DRILL, type=JavaScript, func=let status = FIRST;
+
+result = false;
+
+if (status && status.statusGroup.includes("NAVIGATION_DRILL")){
+  result = true;
+}}, LisPredicate{id=12, name=STATUS_IN_GROUP_REFUELING_WORK, description=статус находится в группе REFUELING_WORK, type=JavaScript, func=let status = FIRST;
+
+result = false;
+
+if (status && status.statusGroup.includes("REFUELING_WORK")) {
+    result = true;
+}}, LisPredicate{id=16, name=STATUS_IN_GROUP_STEERING, description=статус относится к группе STEERING_DRILL, type=JavaScript, func=let status = FIRST;
+
+result = false;
+
+if (status && status.statusGroup.includes("STEERING_DRILL")){
+  result = true;
+}}, LisPredicate{id=19, name=STATUS_IN_GROUP_UNLOADED, description=относится ли статус 1 к группе статусов UNLOADED, type=JavaScript, func=let status = FIRST;
+
+result = false;
+
+if (status && status.statusGroup.includes("UNLOADED")){
+  result = true;
+}}, LisPredicate{id=21, name=STATUS_IN_GROUP_UNLOADING_WORK, description=статус относится к группе UNLOADING_WORK, type=JavaScript, func=let status = FIRST;
+
+result = false;
+
+if (status && status.statusGroup.includes("UNLOADING_WORK")){
+  result = true;
+}}, LisPredicate{id=24, name=NOT_EXCLUDING_STATUS, description=статус не является исключающим, type=JavaScript, func=let status = FIRST;
+
+result = true;
+
+if (status) {  
+  result = false;
+
+  if (status.statusGroup.includes("LOADING_WORK") || status.statusGroup.includes("REFUELING_WORK")
+     || status.statusGroup.includes("INTERACTION_LOADING") || status.statusGroup.includes("INTERACTION_FUELING")){
+    result = true;
+  }
+}}, LisPredicate{id=35, name=SOURCE_IS_NOT_SHIFT, description=является ли вызывающим правило не SHIFT, type=JavaScript, func=let source = FIRST;
+
+if (source == "SHIFT") {
+  result = false;
+} else {
+  result = true;
+}}, LisPredicate{id=31, name=SOURCE_CLIENT, description=является ли вызывающим правило CLIENT, type=JavaScript, func=let source = FIRST;
+
+if (source == "CLIENT") {
+  result = true;
+} else {
+  result = false;
+}}, LisPredicate{id=33, name=SOURCE_DISPATCHER, description=является ли вызывающим правило DISPATCHER, type=JavaScript, func=let source = FIRST;
+
+if (source == "DISPATCHER") {
+  result = true;
+} else {
+  result = false;
+}}, LisPredicate{id=36, name=NOT_STATUS_IN_GROUP_REFUELING_WORK, description=не находится ли статус в группе FUELING_WORK, type=JavaScript, func=let status = FIRST;
+
+result = true;
+
+if (status && status.statusGroup.includes("REFUELING_WORK")){
+  result = false;
+}}, LisPredicate{id=23, name=NOT_STATUS_IN_GROUP_ACCEPT_TO_INTERACTION, description=статус не относится к группе ACCEPT_TO_INTERACTION, type=JavaScript, func=let status = FIRST;
+
+result = true;
+
+if (status && status.statusGroup.includes("ACCEPT_TO_INTERACTION")){
+  result = false;
+}}, LisPredicate{id=37, name=NOT_STATUS_IN_GROUP_LOADING_WORK, description=не находится ли статус в группе LOADING_WORK, type=JavaScript, func=let status = FIRST;
+
+result = true;
+
+if (status && status.statusGroup.includes("LOADING_WORK")){
+  result = false;
+}}, LisPredicate{id=22, name=STATUS_IN_GROUP_ACCEPT_TO_INTERACTION, description=статус относится к группе ACCEPT_TO_INTERACTION, type=JavaScript, func=let status = FIRST;
+
+result = false;
+
+if (status && status.statusGroup.includes("ACCEPT_TO_INTERACTION")){
+  result = true;
+}}, LisPredicate{id=26, name=SUBSTATUS_ACCEPTED_BY_TECH, description=подстатус разрешен для данной техники, type=JavaScript, func=let status = FIRST;
+let equipment = SECOND;
+let allStatCatList = THIRD;
+
+if (status){
+  let statCatList = [];
+  
+  for each (let statCat in allStatCatList) {
+     if (statCat.statusId == status.id) {
+    	statCatList.push(statCat);
+	}
+  }
+
+  let equipTypeId = equipment.equipmentType.id;
+  let categoryByType;
+  let categoryByEquipId;
+  
+  for each (let statCat in statCatList) {
+    if (statCat.equipTypeId == equipTypeId) {
+  		categoryByType = statCat;
+  	}
+    if (statCat.equipId == equipment.id) {
+    	categoryByEquipId = statCat;
+  	}
+  }
+  
+  if (!categoryByEquipId) {
+  	if (categoryByType) {
+    	result = true;
+    } else {
+     	result = false;
+    }
+  } else {
+  	result = true;
+  }
+} else {
+  result = true;
+}}, LisPredicate{id=1, name=PostCurrentStatus, description=, type=JavaScript, func=NO CODE}, LisPredicate{id=51, name=ENTER_DYNAMIC_LOCATION, description=въезд в динамическую локацию, type=JavaScript, func=1}, LisPredicate{id=38, name=NOT_STATUS_IN_GROUP_INTERACTION_LOADING, description=не находится ли статус в группе INTERACTION_LOADING, type=JavaScript, func=let status = FIRST;
+
+result = true;
+
+if (status && status.statusGroup.includes("INTERACTION_LOADING")){
+  result = false;
+}}, LisPredicate{id=48, name=NEW_SECOND_STATUS, description=выставление нового второго статуса, type=JavaScript, func=1}, LisPredicate{id=40, name=SET_SECOND_STATUS, description=выставление второго статуса, type=JavaScript, func=let status = FIRST;
+
+if (status) {
+  result = true;
+} else {
+  result = false;
+}}, LisPredicate{id=41, name=SET_TRD_STATUS, description=выставление третьего статуса, type=JavaScript, func=let status = FIRST;
+
+if (status) {
+  result = true;
+} else {
+  result = false;
+}}, LisPredicate{id=25, name=STATUS_ACCEPTED_BY_TECH, description=статус разрешен для данной техники, type=JavaScript, func=let status = FIRST;
+let equipment = SECOND;
+let allStatCatList = THIRD;
+
+if (status){
+  let statCatList = [];
+  
+  for each (let statCat in allStatCatList) {
+     if (statCat.statusId == status.id) {
+    	statCatList.push(statCat);
+	}
+  }
+
+  let equipTypeId = equipment.equipmentType.id;
+  let categoryByType;
+  let categoryByEquipId;
+  
+  for each (let statCat in statCatList) {
+    if (statCat.equipTypeId == equipTypeId) {
+  		categoryByType = statCat;
+  	}
+    if (statCat.equipId == equipment.id) {
+    	categoryByEquipId = statCat;
+  	}
+  }
+  
+  if (!categoryByEquipId) {
+  	if (categoryByType) {
+    	result = true;
+    } else {
+     	result = false;
+    }
+  } else {
+  	result = true;
+  }
+}}, LisPredicate{id=28, name=STATUS_INHERITANCE_ACCEPTED, description=разрешен ли статус в последовательности, type=JavaScript, func=let nextStatus = FIRST;
+let curStatus = SECOND;
+let statCatList = THIRD;
+let statInhList = FOURTH;
+
+let curStatCategory;
+let nextStatCategory;
+
+for each (let statCat in statCatList) {
+  if (statCat.statusId == curStatus.id) {
+    curStatCategory = statCat;
+  }
+  if (statCat.statusId == nextStatus.id) {
+    nextStatCategory = statCat;
+  }  
+});
+
+let onlyExcluded = true;
+for each (let statInh in statInhList) {
+  if (statInh.curStatId == curStatCategory.id && statInh.nextStatusId == nextStatCategory.id) {
+    if (statInh.excluded) {
+        return false;
+    }else {
+        return true;
+    }
+  }
+
+  if(statInh.curStatId == curStatCategory.id) {
+    if (!statInh.excluded) {
+      onlyExcluded = false;
+    }
+  }
+});
+
+result = onlyExcluded;
+}, LisPredicate{id=49, name=START_MOVING, description=начало движения техники, type=JavaScript, func=1}, LisPredicate{id=42, name=SHIFT, description=проверка изменений во время новой смены, type=JavaScript, func=1}, LisPredicate{id=57, name=IS_EXCAVATOR, description=проверка техники на тип EXCAVATOR, type=JavaScript, func=let equipment = FIRST;
+let equipmentTypeList = SECOND;
+
+result = false;
+
+for each (let equipmentType in equipmentTypeList) {
+  if (equipmentType.id == equipment.equipmentTypeId && equipmentType.type == 'EXCAVATOR') {
+    result = true;
+    break;
+  }
+}}, LisPredicate{id=52, name=ENTER_STATIC_LOCATION, description=въезд в статическую локацию , type=JavaScript, func=1}, LisPredicate{id=53, name=EXIT_DYNAMIC_LOCATION, description=выезд из динамической локации, type=JavaScript, func=1}, LisPredicate{id=54, name=EXIT_STATIC_LOCATION, description=выезд из статической локации, type=JavaScript, func=1}, LisPredicate{id=60, name=START_INTERACTION_STATUS, description=выставление статуса начала интерекшиона, type=JavaScript, func=let type = FIRST;
+
+if (type) {
+  result = true;
+} else {
+  result = false;
+}}, LisPredicate{id=59, name=END_INTERACTION_STATUS, description=статус окончания взаимодействия, type=JavaScript, func=let type = FIRST;
+let currentInteraction = SECOND;
+let newStatus = THIRD;
+
+if (type && currentInteraction > 0 && newStatus) {
+  result = true;
+} else {
+  result = false;
+}}, LisPredicate{id=61, name=IS_FUELTRUCK, description=проверка текущей техники на заправщик, type=JavaScript, func=let equipment = FIRST;
+let equipmentTypeList = SECOND;
+
+result = false;
+
+for each (let equipmentType in equipmentTypeList) {
+  if (equipmentType.id == equipment.equipmentTypeId && equipmentType.type == 'FUELTRUCK') {
+    result = true;
+    break;
+  }
+}}, LisPredicate{id=62, name=SET_STATUS, description=выставление статуса, type=JavaScript, func=let status = FIRST;
+
+if (status) {
+  result = true;
+} else {
+  result = false;
+}}, LisPredicate{id=39, name=NOT_STATUS_IN_GROUP_INTERACTION_FUELING, description=не находится ли статус в группе INTERACTION_FUELING, type=JavaScript, func=let status = FIRST;
+
+result = true;
+
+if (status && status.statusGroup.includes("INTERACTION_FUELING")){
+  result = false;
+}}, LisPredicate{id=50, name=STOP_MOVING, description=остановка движения техники, type=JavaScript, func=1}, LisPredicate{id=43, name=CHECK_OPERATOR_STATUS, description=проверка выставления статуса, type=JavaScript, func=1}, LisPredicate{id=66, name=INTERACTION_CLIENT_LOADING_EXIT_ACCEPT, description=разрешение переключения стейта на EXIT у клиента при погрузке, type=JavaScript, func=1}, LisPredicate{id=64, name=NOT_STATUSES_IN_GROUP_REFUELING_WORK, description=не находятся ли статусы в группе FUELING_WORK, type=JavaScript, func=let fstStatus = FIRST;
+let secondStatus = FIRST;
+
+result = true;
+
+if (fstStatus && fstStatus.statusGroup.includes("REFUELING_WORK")){
+  result = false;
+}
+
+if (secondStatus && secondStatus.statusGroup.includes("REFUELING_WORK")){
+  result = false;
+}
+
+}, LisPredicate{id=84, name=CHECK_DISPATCHER_STATUS, description=проверка выставления статуса от диспетчера, type=JavaScript, func=1}, LisPredicate{id=85, name=SET_NEW_SUBSTATUS, description=выставить подстатусы, type=JavaScript, func=1}, LisPredicate{id=86, name=INTERACTION_CLIENT_LOADING_START, description=разрешено начало интеркшона погрузки, type=JavaScript, func=1}, LisPredicate{id=63, name=INTERACTION_CLIENT_LOADING_WORK_ACCEPT, description=разрешение для перехода клиента погрузки в стейт WORK, type=JavaScript, func=1}, LisPredicate{id=87, name=CURRENT_INTERACTION_RESPONDENT_ACCEPT, description=является ли данный респондент данной модели разрешенным к обработке(либо текущий  респондент нулл), type=JavaScript, func=let interactModel = FIRST;
+let currentInteractId = SECOND;
+
+if (currentInteractId == interactModel.respondentId || currentInteractId <= 0) {
+  result = true;
+} else {
+  result = false;
+}}, LisPredicate{id=71, name=INTERACTION_RESPONDENT_FUELING_EXIT_ACCEPT, description=разрешение переключения стейта на EXIT у респондента при заправке, type=JavaScript, func=1}, LisPredicate{id=88, name=INTERACTION_ACCEPTANCE_INCOME, description=пришло сообщение OnInteractionAcceptance, type=JavaScript, func=1}, LisPredicate{id=72, name=IS_TRUCK, description=проверка техники на тип TRUCK, type=JavaScript, func=let equipment = FIRST;
+let equipmentTypeList = SECOND;
+
+result = false;
+
+for each (let equipmentType in equipmentTypeList) {
+  if (equipmentType.id == equipment.equipmentTypeId && equipmentType.type == 'TRUCK') {
+    result = true;
+    break;
+  }
+}}, LisPredicate{id=69, name=INTERACTION_RESPONDENT_FUELING_WORK_ACCEPT, description=разрешение для перехода респондента заправки в стейт WORK, type=JavaScript, func=1}, LisPredicate{id=67, name=INTERACTION_RESPONDENT_LOADING_EXIT_ACCEPT, description=разрешение переключения стейта на EXIT у респондента при погрузке, type=JavaScript, func=1}, LisPredicate{id=65, name=INTERACTION_RESPONDENT_LOADING_WORK_ACCEPT, description=разрешение для перехода респондента погрузки в стейт WORK, type=JavaScript, func=1}, LisPredicate{id=80, name=SET_GUI_STATUS, description=выставление статуса через графику, type=JavaScript, func=1}, LisPredicate{id=75, name=SUBSCRIBE_FUELTRUCK_NOT_NULL, description=check accepted sub fueltruck to not null, type=JavaScript, func=let equipment = FIRST;
+
+if (equipment) {
+  result = true;
+} else {
+  result = false;
+}}, LisPredicate{id=89, name=INTERACTION_CLIENT_WORK_ACCEPTANCE_ACCEPT, description=проверяет разрешено ли взаимодействие с техникой по флагу в модели, type=JavaScript, func=let interactModel = FIRST;
+
+result = interactModel.accessInteraction;}, LisPredicate{id=76, name=SUBSCRIBE_FUELTRUCK, description=подписаный fueltruck, type=JavaScript, func=1}, LisPredicate{id=77, name=SUBSCRIBE_FUELTRUCK_IS_NULL, description=проверка заправщика что он null, type=JavaScript, func=let equipment = FIRST;
+
+if (equipment) {
+  result = false;
+} else {
+  result = true;
+}}, LisPredicate{id=78, name=END_LOAD, description=конец погрузки, type=JavaScript, func=1}, LisPredicate{id=79, name=NEW_THIRD_STATUS, description=новый 3 статус, type=JavaScript, func=1}, LisPredicate{id=73, name=OPEN_TRUCK, description=открытие кузова, type=JavaScript, func=1}, LisPredicate{id=74, name=CLOSE_TRUCK, description=закрытия кузова, type=JavaScript, func=1}, LisPredicate{id=70, name=INTERACTION_CLIENT_FUELING_EXIT_ACCEPT, description=разрешение переключения стейта на EXIT у клиента при заправке, type=JavaScript, func=1}, LisPredicate{id=68, name=INTERACTION_CLIENT_FUELING_WORK_ACCEPT, description=разрешение для перехода клиента заправки в стейт WORK, type=JavaScript, func=1}, LisPredicate{id=81, name=IS_NEED_SHOW_DRILL_WINDOW, description=предварительная проверка на необходимость не выставления статуса после его выбора в гуе, type=JavaScript, func=let status = FIRST;
+let source = SECOND;
+let currentHoleId = THIRD;
+
+if (status) {
+	if (source == 'OPERATOR' && status.statusGroup.includes("DRILLING_WORK")) {
+      if (currentHoleId > 0) {
+        result = false;
+      } else {
+        result = true;
+      }      
+    } else {
+      result = false;
+    }
+} else {
+  result = true;
+}}, LisPredicate{id=82, name=NOT_REPEATED_INTERACTION_STATUSES, description=не повторяющиеся интерекшион статусы, type=JavaScript, func=let newStatus = FIRST;
+let currentStatus = SECOND;
+
+if ((currentStatus.statusGroup.includes("LOADING_WORK") && 
+     newStatus.statusGroup.includes("INTERACTION_LOADING")) || 
+    (currentStatus.statusGroup.includes("REFUELING_WORK")) && 
+    newStatus.statusGroup.includes("INTERACTION_FUELING"))){
+    result = false;
+} else {
+  result = true;
+}}, LisPredicate{id=83, name=SET_CHECKED_GUI_STATUS, description=выставление статуса, проверенного на интерекшион подмену, type=JavaScript, func=1}, LisPredicate{id=90, name=IS_LOADER, description=проверка техники на тип LOADER, type=JavaScript, func=let equipment = FIRST;
+let equipmentTypeList = SECOND;
+
+result = false;
+
+for each (let equipmentType in equipmentTypeList) {
+  if (equipmentType.id == equipment.equipmentTypeId && equipmentType.type == 'LOADER') {
+    result = true;
+    break;
+  }
+}}, LisPredicate{id=91, name=INTERACTION_CLIENT_LOADING_WORK, description=разрешено выставить работу интеркшона, type=JavaScript, func=1}, LisPredicate{id=92, name=SOURCE_IS_NOT_CLIENT, description=проверка источника на не клиент, type=JavaScript, func=let source = FIRST;
+
+if (source == "CLIENT") {
+  result = false;
+} else {
+  result = true;
+}}, LisPredicate{id=93, name=SOURCE_IS_NOT_DISPATCHER, description=проверка источника на не диспетчер, type=JavaScript, func=let source = FIRST;
+
+if (source == "DISPATCHER") {
+  result = false;
+} else {
+  result = true;
+}}, LisPredicate{id=94, name=SOURCE_IS_NOT_OPERATOR, description=проверка источника на не оператор, type=JavaScript, func=let source = FIRST;
+
+if (source == "OPERATOR") {
+  result = false;
+} else {
+  result = true;
+}}, LisPredicate{id=96, name=INTERACTION_CLIENT_LOADING_DENINE, description=разрешено включение DENINE, type=JavaScript, func=1}, LisPredicate{id=97, name=INTERACTION_POST_OUT_INCOME, description=пришло сообщение PostOutInteraction, type=JavaScript, func=1}, LisPredicate{id=98, name=INTERACTION_CLIENT_LOADING_EXIT, description=выставить стейт EXIT для клиента погрузки, type=JavaScript, func=1}, LisPredicate{id=99, name=INTERACTION_CLIENT_FUELING_START, description=разрешено начало интеркшона заправки, type=JavaScript, func=1}, LisPredicate{id=100, name=INTERACTION_CLIENT_FUELING_WORK, description=разрешено выставить работу интеркшона, type=JavaScript, func=1}, LisPredicate{id=101, name=INTERACTION_CLIENT_FUELING_DENINE, description=разрешено включение DENINE, type=JavaScript, func=1}, LisPredicate{id=102, name=INTERACTION_CLIENT_FUELING_EXIT, description=выставить стейт EXIT для клиента заправки, type=JavaScript, func=1}, LisPredicate{id=103, name=INTERACTION_RESPONDENT_LOADING_START, description=разрешено начало интерекшона погрузки (START), type=JavaScript, func=1}, LisPredicate{id=104, name=INTERACTION_POST_ON_INTERACTION_RESP_INCOME, description=пришло сообщение PostOnInteractionResp, type=JavaScript, func=1}, LisPredicate{id=105, name=CURRENT_INTERACTION_CLIENT_ACCEPT, description=проверяет совпадает ли айди клиента с текущим INTERACTION_EQUIP либо он 0, type=JavaScript, func=let interactModel = FIRST;
+let currentInteractId = SECOND;
+
+if (currentInteractId == interactModel.clientId || currentInteractId <= 0) {
+  result = true;
+} else {
+  result = false;
+}}, LisPredicate{id=106, name=INTERACTION_RESPONDENT_LOADING_WORK_NOT_ACCEPT, description=not разрешение для перехода респондента погрузки в стейт WORK, type=JavaScript, func=1}, LisPredicate{id=107, name=INTERACTION_RESPONDENT_LOADING_WORK, description=выставить стейт WORK погрузки, type=JavaScript, func=1}, LisPredicate{id=108, name=SOURCE_IS_NOT_RESPONDENT, description=проверка источника на не респондент, type=JavaScript, func=let source = FIRST;
+
+if (source == "RESPONDENT") {
+  result = false;
+} else {
+  result = true;
+}}, LisPredicate{id=109, name=INTERACTION_RESPONDENT_LOADING_EXIT, description=выставить стейт EXIT для респондента погрузки, type=JavaScript, func=1}, LisPredicate{id=110, name=INTERACTION_RESPONDENT_FUELING_START, description=разрешено начало интерекшона заправки (START), type=JavaScript, func=1}, LisPredicate{id=111, name=IS_NOT_FUELTRUCK, description=техника не заправщик, type=JavaScript, func=let equipment = FIRST;
+let equipmentTypeList = SECOND;
+
+result = true;
+
+for each (let equipmentType in equipmentTypeList) {
+  if (equipmentType.id == equipment.equipmentTypeId && equipmentType.type == 'FUELTRUCK') {
+    result = false;
+    break;
+  }
+}}, LisPredicate{id=112, name=INTERACTION_RESPONDENT_FUELING_WORK_NOT_ACCEPT, description=not разрешение для перехода респондента заправки в стейт WORK, type=JavaScript, func=1}, LisPredicate{id=113, name=INTERACTION_RESPONDENT_FUELING_WORK, description=выставить стейт WORK заправки, type=JavaScript, func=1}, LisPredicate{id=114, name=INTERACTION_RESPONDENT_FUELING_EXIT, description=выставить стейт EXIT для респондента заправки, type=JavaScript, func=1}, LisPredicate{id=115, name=END_CYCLE, description=конец рейса, type=JavaScript, func=1}, LisPredicate{id=116, name=END_DRILLING, description=конец бурения, type=JavaScript, func=1}, LisPredicate{id=117, name=MOVE_DRILL, description=включение перегона буровой, type=JavaScript, func=1}, LisPredicate{id=118, name=LOCATION_TYPE_DRILLING_BLOCK, description=тип локации - бурильный блок, type=JavaScript, func=let location = FIRST;
+
+result = false;
+
+if (location && location.locationType.name == 'DRILLING_BLOCK'){
+  result = true;
+}}, LisPredicate{id=119, name=NAVIGATION_DRILL, description=включение навигации, type=JavaScript, func=1}, LisPredicate{id=120, name=LOCATION_TYPE_HOLE, description=проверка локации на тип HOLE, type=JavaScript, func=let location = FIRST;
+
+result = false;
+
+if (location && location.locationType.name == 'HOLE'){
+  result = true;
+}}, LisPredicate{id=121, name=STEERING_DRILL, description=включение наведения буровой, type=JavaScript, func=1}, LisPredicate{id=122, name=STEERING_SETTED, description=выставлено наведение, type=JavaScript, func=1}, LisPredicate{id=123, name=ALIGNMENT_DRILL, description=включение выравнивания буровой, type=JavaScript, func=1}, LisPredicate{id=124, name=CORRECT_POSITION_ON_HOLE, description=корректная позиция буровой для выравнивания, type=JavaScript, func=1}, LisPredicate{id=125, name=ALIGNMENT_SETTED, description=выставлен статус выравнивания, type=JavaScript, func=1}, LisPredicate{id=126, name=DRILLING_DRILL, description=включение бурения, type=JavaScript, func=1}, LisPredicate{id=127, name=CHANGE_DEEP_SENSOR, description=изменение глубины пробуренной скважины, type=JavaScript, func=1}, LisPredicate{id=128, name=DRILLING_SETTED, description=выставлен статус бурения, type=JavaScript, func=1}, LisPredicate{id=129, name=CURRENT_DRILL_EXIST, description=существует текущее бурение со скважиной, type=JavaScript, func=let currentDrilling = FIRST;
+
+if (currentDrilling) {
+  result = true;
+} else {
+  result = false;
+}}, LisPredicate{id=130, name=NEW_CAREER_LOC, description=смена карьера enter loc, type=JavaScript, func=1}, LisPredicate{id=131, name=LOCATION_TYPE_PIT, description=тип локации - PIT, type=JavaScript, func=let location = FIRST;
+
+result = false;
+
+if (location && location.locationType.name == 'PIT'){
+  result = true;
+}}, LisPredicate{id=132, name=NEW_WORK_BLOCK, description=смена рабочего блока enter loc, type=JavaScript, func=1}, LisPredicate{id=133, name=SET_CURRENT_OPERATOR, description=выставление текущего оператора, type=JavaScript, func=1}, LisPredicate{id=138, name=SET_ON_INTERACTION_CLIENT_TIMEOUT, description=таймаут на сообщение SetOnInteractionClient, type=JavaScript, func=1}, LisPredicate{id=134, name=OPERATOR_ACCEPTED_FOR_TECH, description=оператор подходит для техники, type=JavaScript, func=let operator = FIRST;
+let equipment = SECOND;
+let opOnEqType = THIRD;
+let opOnEq = FOURTH;
+
+result = false;
+
+for each (let ooet in opOnEqType){
+  if (ooet.equipType == equipment.equipType.name && ooet.operatorId == operator.id){
+    result = true;
+  }
+}
+	
+for each (let ooe in opOnEq){
+  if (ooe.equipId == equipment.id && ooe.operatorId == operator.id){
+    result = true;
+  }
+}}, LisPredicate{id=136, name=ENTER_ROAD, description=въезд на дорогу, type=JavaScript, func=1}, LisPredicate{id=137, name=EXIT_ROAD, description=выезд с дороги, type=JavaScript, func=1}, LisPredicate{id=135, name=IS_ROAD, description=является ли дорогой локация, type=JavaScript, func=let location = FIRST;
+let locationList = SECOND;
+
+result = false;
+
+for each (let loc in locationList){
+  if (loc.id == location.id && loc.locationType.name == 'ROAD'){
+    result = true;
+  }
+}}, LisPredicate{id=139, name=NEW_MATERIAL, description=новый материал, type=JavaScript, func=1}, LisPredicate{id=140, name=NEW_LOAD_ZONE, description=новая зона погрузки, type=JavaScript, func=1}, LisPredicate{id=141, name=NEW_UNLOAD_ZONE, description=новая зона разгрузки, type=JavaScript, func=1}, LisPredicate{id=142, name=SET_OUT_INTERACTION_CLIENT_ANSWER, description=ответ на сообщение SetOutInteractionClient, type=JavaScript, func=1}]"

@@ -1,9 +1,6 @@
 package ru.itm.servdbupdate.loggers;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 import ru.itm.servdbupdate.config.SystemConfig;
-
 import java.io.*;
 import java.time.LocalDateTime;
 
@@ -11,7 +8,6 @@ public class ItmServerLogger {
     private LocalDateTime today = null;
     private String fileName = "";
     private BufferedWriter logFile = null;
-    //BufferedWriter output = new BufferedWriter(new FileWriter(new File(fileNameWrite)));
 
     private String trafficFileNamePref="itm_traffic_";
 

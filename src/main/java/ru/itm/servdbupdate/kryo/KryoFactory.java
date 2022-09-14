@@ -27,8 +27,11 @@ import ru.itm.servdbupdate.entity.tables.location.Routes;
 import ru.itm.servdbupdate.entity.tables.tire.Tire;
 import ru.itm.servdbupdate.entity.tables.tire.TireAssign;
 import ru.itm.servdbupdate.entity.tables.tire.TireStorage;
+import ru.itm.servdbupdate.entity.tables.trans.TransFuel;
 
 import java.sql.Timestamp;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 public abstract class KryoFactory {
 
@@ -118,6 +121,10 @@ public abstract class KryoFactory {
         kryo.register(Tire.class);
         kryo.register(TireAssign.class);
         kryo.register(TireStorage.class);
+
+        kryo.register(TransFuel.class);
+        kryo.register(Calendar.class);
+        kryo.register(GregorianCalendar.class);
 
         return kryo;
     }
