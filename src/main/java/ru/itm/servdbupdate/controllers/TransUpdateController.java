@@ -2,6 +2,7 @@ package ru.itm.servdbupdate.controllers;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import ru.itm.servdbupdate.entity.AbstractEntity;
 import ru.itm.servdbupdate.entity.tables.equipment.Equipment;
@@ -9,6 +10,7 @@ import ru.itm.servdbupdate.entity.tables.trans.Trans;
 import ru.itm.servdbupdate.entity.tables.trans.TransFuel;
 import ru.itm.servdbupdate.kryo.CompressObject;
 import ru.itm.servdbupdate.kryo.KryoSerializer;
+import ru.itm.servdbupdate.loggers.ItmServerLogger;
 import ru.itm.servdbupdate.repository.CommonRepository;
 import ru.itm.servdbupdate.repository.RepositoryFactory;
 import ru.itm.servdbupdate.repository.trans.TransFuelRepository;
@@ -25,6 +27,18 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class TransUpdateController {
     private static Logger logger = LoggerFactory.getLogger(TransUpdateController.class);
 
+
+    public ItmServerLogger itmServerLogger;
+
+    @Autowired
+    public void setItmServerLogger(ItmServerLogger itmServerLogger) {
+        this.itmServerLogger = itmServerLogger;
+    }
+
+    public TransUpdateController(){
+
+    };
+
     /**
      * Получаем массив со сжатой gzip мэпой MultiValueMap<String, Integer> с именами всех таблиц для проверки обновлений
      * и их версиями.
@@ -33,7 +47,7 @@ public class TransUpdateController {
      */
     @PostMapping(value = "/update")
     public int updateTransTime(@RequestBody byte[] arrayTablesToUpdate){
-        System.out.println("size="+arrayTablesToUpdate.length);
+        //System.out.println("size="+arrayTablesToUpdate.length);
         Integer returnInfo = 0;
         try {
             Map<String, List<byte[]>> tablesMap = (Map<String, List<byte[]>>) CompressObject.readCompressObject(arrayTablesToUpdate);
@@ -55,10 +69,10 @@ public class TransUpdateController {
                         /**Десириализовали нулевую строку, для поиска имени оборудования*/
                         Trans transForName = (Trans) KryoSerializer.deserialize(listEntity.get(0));
                         /**Получили из нее id техники, нашли ее в постгресе, вывели имя в лог*/
-                        logger.info("Equipment : " +
-                                ((Equipment)RepositoryFactory.getRepo("equipment")
-                                        .findById(transForName.getEquipIdTrans()).get())
-                                        .getEquip());
+                        String equipmentName = ((Equipment)RepositoryFactory.getRepo("equipment")
+                                .findById(transForName.getEquipIdTrans()).get()).getEquip();
+                        logger.info("Equipment : " + equipmentName );
+                        itmServerLogger.writeIn("{\"equipment\":\"" + equipmentName + "\"}", 0);
                     }
 
                     List<AbstractEntity> transEntityList = new ArrayList<>();
@@ -69,13 +83,13 @@ public class TransUpdateController {
                         AbstractEntity transRow = (AbstractEntity) KryoSerializer.deserialize(b);
                         if(isNeedWrite(names, commonRepository, (Trans) transRow)){
                             transEntityList.add(transRow);  //разобраться с id
-                            System.out.print("--> (write) -->");
+                            logger.info("--> (write) -->" + transRow.toStringShow());
+                            itmServerLogger.writeIn(transRow.toStringShow(), 1);
                         }
                         else{
-                            System.out.print("-->(no write)->");
+                            logger.info("--> (no write) -->" + transRow.toStringShow());
+                            itmServerLogger.writeIn(transRow.toStringShow(), 0);
                         }
-                        System.out.println("-->" + transRow.toStringShow());
-
                     });
                     if(!transEntityList.isEmpty()){
                         saveTransList(names, commonRepository, transEntityList);
@@ -85,6 +99,7 @@ public class TransUpdateController {
                     logger.warn(String.format("Input table \'%s\' is empty", names));
                 }
             });
+            itmServerLogger.writeOut("1", 0);
             return 1;
         } catch (IOException e) {
             logger.error(e.getMessage());
@@ -92,6 +107,7 @@ public class TransUpdateController {
             logger.error(e.getMessage());
         }
 
+        itmServerLogger.writeOut("0", 0);
         return 0;
     }
 

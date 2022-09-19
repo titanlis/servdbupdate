@@ -26,7 +26,12 @@ import java.util.*;
 @RequestMapping("/api/v1/{ip}")
 public class DBUpdateController {
     private static Logger logger = LoggerFactory.getLogger(DBUpdateController.class);
-    private static ItmServerLogger itmServerLogger;
+    public ItmServerLogger itmServerLogger;
+
+    @Autowired
+    public void setItmServerLogger(ItmServerLogger itmServerLogger) {
+        this.itmServerLogger = itmServerLogger;
+    }
 
     private TablesService tablesService;    //контакты с бд postgresql
 
@@ -35,6 +40,9 @@ public class DBUpdateController {
         this.tablesService = tablesService;
     }
 
+
+    public DBUpdateController() {
+    }
 
     /**
      * Получаем массив со сжатой gzip мэпой MultiValueMap<String, Integer> с именами всех таблиц для проверки обновлений

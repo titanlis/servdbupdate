@@ -1,10 +1,11 @@
 package ru.itm.servdbupdate.loggers;
 
+import org.springframework.stereotype.Component;
 import ru.itm.servdbupdate.config.SystemConfig;
 import java.io.*;
 import java.time.LocalDateTime;
 
-
+@Component
 public class ItmServerLogger {
     private LocalDateTime today = null;
     private String fileName = "";
@@ -24,6 +25,9 @@ public class ItmServerLogger {
     }
 
     private void open(){
+        if(LocalDateTime.now().getDayOfMonth()!=today.getDayOfMonth()){
+            newFile();
+        }
         try {
             logFile = new BufferedWriter(new FileWriter(new File(fileName), true));
         } catch (IOException e) {

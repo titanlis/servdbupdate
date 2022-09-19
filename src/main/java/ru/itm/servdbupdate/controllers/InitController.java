@@ -33,7 +33,16 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InitController {
     private static Logger logger = LoggerFactory.getLogger(InitController.class);
     private TablesService tablesService;    //контакты с бд postgresql
-    private static ItmServerLogger itmServerLogger = null;
+//    private static ItmServerLogger itmServerLogger = null;
+
+    public ItmServerLogger itmServerLogger;
+    @Autowired
+    public void setItmServerLogger(ItmServerLogger itmServerLogger) {
+        this.itmServerLogger = itmServerLogger;
+    }
+
+    public InitController() {
+    }
 
     @Value("${OS}")
     private String os;
@@ -110,7 +119,7 @@ public class InitController {
         }
         logger.info("Itm log path = \'" + SystemConfig.getLoggerPath() + '\'');
 
-        itmServerLogger = new ItmServerLogger();
+        //itmServerLogger = new ItmServerLogger();
     }
 
 }
