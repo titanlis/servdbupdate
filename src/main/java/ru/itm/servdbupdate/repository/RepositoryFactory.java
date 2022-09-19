@@ -5,6 +5,7 @@
 package ru.itm.servdbupdate.repository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.stereotype.Component;
 import ru.itm.servdbupdate.entity.tables.location.LocationType;
 import ru.itm.servdbupdate.repository.config.ValuesDataRepository;
@@ -96,6 +97,7 @@ public class RepositoryFactory {
     private static TireRepository tireRepository;
     private static TireAssignRepository tireAssignRepository;
     private static TireStorageRepository tireStorageRepository;
+
 
     private static TransFuelRepository transFuelRepository;
     @Autowired
@@ -384,11 +386,16 @@ public class RepositoryFactory {
         return equipmentRepository;
     }
 
-    /**
-     * Сопоставление имени таблицы и репозитория в бд.
-     * @param tableName имя таблицы
-     * @return CommonRepository репозиторий
-     */
+
+//    public static TransFuelRepository getTransFuelRepo() {
+//        return transFuelRepository;
+//    }
+
+        /**
+         * Сопоставление имени таблицы и репозитория в бд.
+         * @param tableName имя таблицы
+         * @return CommonRepository репозиторий
+         */
     public static CommonRepository getRepo(String tableName){
 
         /// switch-case в формате Java-16

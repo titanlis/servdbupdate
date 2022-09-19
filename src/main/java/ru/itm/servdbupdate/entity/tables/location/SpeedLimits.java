@@ -4,6 +4,7 @@ import ru.itm.servdbupdate.entity.AbstractEntity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.util.Calendar;
 
 @Entity
 @Table(name = "speed_limits", schema = "location")
@@ -71,4 +72,5 @@ public final class SpeedLimits extends AbstractEntity {
 	public void setNorma(Double norma) {
 		this.norma = norma;
 	}
+
 }

@@ -4,8 +4,11 @@
  */
 package ru.itm.servdbupdate.entity;
 
+import ru.itm.servdbupdate.entity.tables.trans.Trans;
+
 import javax.persistence.MappedSuperclass;
 import javax.persistence.*;
+import java.util.Calendar;
 
 /**
  * @class AbstractEntity абстрактный класс для всех сущностей
@@ -14,10 +17,10 @@ import javax.persistence.*;
 @MappedSuperclass   ///< Hibernate тоже должен узнать, что это абстракция.
 public abstract class AbstractEntity{
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     protected Long id;    ///< id есть у каждой сущности
 
-    @Id
-    @GeneratedValue
     public Long getId() {
         return id;
     }
@@ -26,4 +29,5 @@ public abstract class AbstractEntity{
         this.id = id;
     }
     public String toStringShow(){return id.toString();};
+
 }
