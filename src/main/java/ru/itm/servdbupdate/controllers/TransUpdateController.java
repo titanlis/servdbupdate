@@ -7,12 +7,14 @@ import org.springframework.web.bind.annotation.*;
 import ru.itm.servdbupdate.entity.AbstractEntity;
 import ru.itm.servdbupdate.entity.tables.equipment.Equipment;
 import ru.itm.servdbupdate.entity.tables.trans.Trans;
+import ru.itm.servdbupdate.entity.tables.trans.TransCoord;
 import ru.itm.servdbupdate.entity.tables.trans.TransFuel;
 import ru.itm.servdbupdate.kryo.CompressObject;
 import ru.itm.servdbupdate.kryo.KryoSerializer;
 import ru.itm.servdbupdate.loggers.ItmServerLogger;
 import ru.itm.servdbupdate.repository.CommonRepository;
 import ru.itm.servdbupdate.repository.RepositoryFactory;
+import ru.itm.servdbupdate.repository.trans.TransCoordRepository;
 import ru.itm.servdbupdate.repository.trans.TransFuelRepository;
 
 import java.io.IOException;
@@ -26,18 +28,13 @@ import java.util.concurrent.atomic.AtomicInteger;
 @RequestMapping("/api/v1/trans")
 public class TransUpdateController {
     private static Logger logger = LoggerFactory.getLogger(TransUpdateController.class);
-
-
-    public ItmServerLogger itmServerLogger;
-
+    public ItmServerLogger itmServerLogger;     //внедряем логгер для трафика
     @Autowired
     public void setItmServerLogger(ItmServerLogger itmServerLogger) {
         this.itmServerLogger = itmServerLogger;
     }
 
-    public TransUpdateController(){
-
-    };
+    public TransUpdateController(){};
 
     /**
      * Получаем массив со сжатой gzip мэпой MultiValueMap<String, Integer> с именами всех таблиц для проверки обновлений
@@ -48,7 +45,7 @@ public class TransUpdateController {
     @PostMapping(value = "/update")
     public int updateTransTime(@RequestBody byte[] arrayTablesToUpdate){
         //System.out.println("size="+arrayTablesToUpdate.length);
-        Integer returnInfo = 0;
+//        Integer returnInfo = 0;
         try {
             Map<String, List<byte[]>> tablesMap = (Map<String, List<byte[]>>) CompressObject.readCompressObject(arrayTablesToUpdate);
             if(tablesMap.isEmpty()){
@@ -121,6 +118,7 @@ public class TransUpdateController {
         List<AbstractEntity> list = new ArrayList<>();
         switch (names){
             case "trans_fuel"->{ transEntityList.stream().forEach(t->list.add((AbstractEntity) (new TransFuel((TransFuel) t))));}
+            case "trans_coord"->{ transEntityList.stream().forEach(t->list.add((AbstractEntity) (new TransCoord((TransCoord) t))));}
         }
         if(!list.isEmpty()) commonRepository.saveAll(list);
     }
@@ -134,51 +132,10 @@ public class TransUpdateController {
      */
     private boolean isNeedWrite(String names, CommonRepository commonRepository, Trans transRow) {
         switch (names){
-            case "trans_fuel"->{
-                return ((TransFuelRepository)commonRepository).countAllByEquipIdAndTimeRead(transRow.getEquipIdTrans(), transRow.getTime())==0L;
-            }
+            case "trans_fuel"->{return ((TransFuelRepository)commonRepository).countAllByEquipIdAndTimeRead(transRow.getEquipIdTrans(), transRow.getTime())==0L;}
+            case "trans_coord"->{return ((TransCoordRepository)commonRepository).countAllByEquipIdAndEquipTime(transRow.getEquipIdTrans(), transRow.getTime())==0L;}
             default -> { return false; }
         }
     }
 
-
-//    /**
-//     * Тестовый ендпоинт
-//     * @param tableName
-//     * @return объект таблицы tableName с id==1
-//     */
-//    @GetMapping("/{tableName}")
-//    public AbstractEntity getTable(@PathVariable String tableName) {
-//        CommonRepository commonRepository = RepositoryFactory.getRepo(tableName);
-//        if(commonRepository!=null){
-//            Optional<AbstractEntity> opt = commonRepository.findById(1L);
-//            if(!opt.isEmpty()){
-//                logger.info("Find: " + opt.get().toStringShow());
-//                return opt.get();
-//            }
-//            else{
-//                return null;
-//            }
-//        }
-//        return null;
-//    }
-//
-//
-//    /**
-//     * Тестовый ендпоинт
-//     * @param tableName
-//     * @return все строки
-//     */
-//    @GetMapping("/all/{tableName}")
-//    public List<AbstractEntity> getTables(@PathVariable String tableName) {
-//        CommonRepository commonRepository = RepositoryFactory.getRepo(tableName);
-//        List<AbstractEntity> abstractEntityList =  new ArrayList<>();
-//
-//        if(commonRepository!=null){
-//            for (AbstractEntity abstractEntity : (Iterable<AbstractEntity>)commonRepository.findAll()) {
-//                abstractEntityList.add(abstractEntity);
-//            }
-//        }
-//        return abstractEntityList;
-//    }
 }

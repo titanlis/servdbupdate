@@ -1,0 +1,36 @@
+2022-09-20 16:04:48.211 INFO  [main] ru.itm.servdbupdate.ServdbupdateApplication Line:55  - Starting ServdbupdateApplication using Java 17.0.2 on ubuntu with PID 73731 (/mnt/hgfs/YD/Java/Spring/servdbupdate/build/classes/java/main started by itm in /mnt/hgfs/YD/Java/Spring/servdbupdate)
+2022-09-20 16:04:48.240 INFO  [main] ru.itm.servdbupdate.ServdbupdateApplication Line:640 - The following 1 profile is active: "mainProfile"
+2022-09-20 16:05:13.369 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:132 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-20 16:05:15.683 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:201 - Finished Spring Data repository scanning in 1982 ms. Found 60 JPA repository interfaces.
+2022-09-20 16:05:30.033 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 2600 (http)
+2022-09-20 16:05:30.066 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-2600"]
+2022-09-20 16:05:30.069 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-09-20 16:05:30.071 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-09-20 16:05:31.616 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-09-20 16:05:31.619 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 41804 ms
+2022-09-20 16:05:35.854 INFO  [main] org.hibernate.jpa.internal.util.LogHelper Line:31  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-20 16:05:44.209 INFO  [main] org.hibernate.Version Line:44  - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-09-20 16:05:52.705 INFO  [main] org.hibernate.annotations.common.Version Line:56  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-20 16:05:55.912 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:110 - HikariPool-1 - Starting...
+2022-09-20 16:06:10.228 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:123 - HikariPool-1 - Start completed.
+2022-09-20 16:06:11.084 INFO  [main] org.hibernate.dialect.Dialect Line:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-09-20 16:06:26.555 INFO  [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator Line:52  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-20 16:06:26.612 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-20 16:06:41.245 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-2600"]
+2022-09-20 16:06:41.393 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 2600 (http) with context path ''
+2022-09-20 16:06:45.061 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 10015 (http)
+2022-09-20 16:06:45.064 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-10015"]
+2022-09-20 16:06:45.066 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-09-20 16:06:45.068 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-09-20 16:06:45.088 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-09-20 16:06:45.091 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 3672 ms
+2022-09-20 16:06:45.109 INFO  [main] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Line:58  - Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-09-20 16:06:45.193 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-10015"]
+2022-09-20 16:06:45.204 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 10015 (http) with context path ''
+2022-09-20 16:06:45.230 INFO  [main] ru.itm.servdbupdate.ServdbupdateApplication Line:61  - Started ServdbupdateApplication in 131.594 seconds (JVM running for 149.468)
+2022-09-20 16:06:45.267 INFO  [main] ru.itm.servdbupdate.controllers.InitController Line:98  - OS = 'linux'
+2022-09-20 16:06:45.273 INFO  [main] ru.itm.servdbupdate.controllers.InitController Line:111 - Itm log path = './log/'
+2022-09-20 16:06:45.276 INFO  [main] ru.itm.servdbupdate.ServdbupdateApplication Line:22  - Application is start.
+2022-09-20 17:19:18.902 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-20 17:19:18.939 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:350 - HikariPool-1 - Shutdown initiated...
+2022-09-20 17:19:19.280 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:352 - HikariPool-1 - Shutdown completed.

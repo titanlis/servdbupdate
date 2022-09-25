@@ -33,7 +33,13 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InitController {
     private static Logger logger = LoggerFactory.getLogger(InitController.class);
     private TablesService tablesService;    //контакты с бд postgresql
-//    private static ItmServerLogger itmServerLogger = null;
+
+    private SystemConfig systemConfig;      //инжектим конфигурацию
+
+    @Autowired
+    public void setSystemConfig(SystemConfig systemConfig) {
+        this.systemConfig = systemConfig;
+    }
 
     public ItmServerLogger itmServerLogger;
     @Autowired
@@ -41,14 +47,8 @@ public class InitController {
         this.itmServerLogger = itmServerLogger;
     }
 
-    public InitController() {
-    }
+    public InitController() { }
 
-    @Value("${OS}")
-    private String os;
-
-    @Value("${itm.logger.path}")
-    private String itmLoggerPath;
 
     @Autowired
     public void setTablesService(TablesService tablesService) {
@@ -93,33 +93,4 @@ public class InitController {
 
         return messageInterface;
     }
-
-
-    /**
-     * Автозапуск после создания контекста
-     */
-    @EventListener(ApplicationReadyEvent.class)
-    private void startIni(){
-        if(os==null || os.equals("none")){
-            os = NetworkUtils.getOSName().toLowerCase(); //получаем имя операционки
-        }
-        SystemConfig.setOsType(os);
-        logger.info("OS = \'" + os + '\'');
-
-        if(itmLoggerPath==null || itmLoggerPath.equals("none")){
-            switch(SystemConfig.getOsType()){
-                case LINUX -> { SystemConfig.setLoggerPath("./log/"); }
-                case WINDOWS -> { SystemConfig.setLoggerPath("\\log\\"); }
-                default ->  { SystemConfig.setLoggerPath(""); }
-            }
-            itmLoggerPath = SystemConfig.getLoggerPath();
-        }
-        else {
-            SystemConfig.setLoggerPath(itmLoggerPath);
-        }
-        logger.info("Itm log path = \'" + SystemConfig.getLoggerPath() + '\'');
-
-        //itmServerLogger = new ItmServerLogger();
-    }
-
 }

@@ -8,6 +8,7 @@ import org.springframework.context.event.EventListener;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
+import ru.itm.servdbupdate.entity.AbstractEntity;
 import ru.itm.servdbupdate.entity.TableVersion;
 import ru.itm.servdbupdate.kryo.CompressObject;
 import ru.itm.servdbupdate.kryo.KryoSerializer;
@@ -138,7 +139,7 @@ public class DBUpdateController {
             if(commonRepository!=null){
                 commonRepository.findAll().forEach(entityObject -> {
                     listByteArray.add(KryoSerializer.serialize(entityObject));
-                    listEntity.add(entityObject.toString());
+                    listEntity.add(((AbstractEntity)entityObject).toString());
                 });
                 logger.info(tableName + " is serialized and sent to the on-board computer.");
             }
@@ -163,12 +164,13 @@ public class DBUpdateController {
         return null;
     }
 
+
     /**
      * Автозапуск после создания контекста
      */
-    @EventListener(ApplicationReadyEvent.class)
-    private void startIni(){
-        itmServerLogger = new ItmServerLogger();
-    }
+//    @EventListener(ApplicationReadyEvent.class)
+//    private void startIni(){
+//        itmServerLogger = new ItmServerLogger();
+//    }
 
 }

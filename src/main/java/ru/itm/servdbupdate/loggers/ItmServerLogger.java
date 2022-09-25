@@ -21,13 +21,11 @@ public class ItmServerLogger {
     }
 
     private String newFile(){
+        today = LocalDateTime.now();
         return fileName=SystemConfig.getLoggerPath() + trafficFileNamePref + getDateString(today) + ".log";
     }
 
     private void open(){
-        if(LocalDateTime.now().getDayOfMonth()!=today.getDayOfMonth()){
-            newFile();
-        }
         try {
             logFile = new BufferedWriter(new FileWriter(new File(fileName), true));
         } catch (IOException e) {
@@ -80,7 +78,7 @@ public class ItmServerLogger {
 
 
     private boolean isNow() {
-        return today.getDayOfMonth()==LocalDateTime.now().getDayOfYear();
+        return today.getDayOfMonth()==LocalDateTime.now().getDayOfMonth();
     }
 
 }

@@ -1,0 +1,515 @@
+2022-09-21 00:50:16.525 INFO  [main] ru.itm.servdbupdate.ServdbupdateApplication Line:55  - Starting ServdbupdateApplication using Java 17.0.2 on itmComp with PID 36719 (/home/itm/yd/Java/Spring/servdbupdate/build/classes/java/main started by itm in /home/itm/yd/Java/Spring/servdbupdate)
+2022-09-21 00:50:16.529 INFO  [main] ru.itm.servdbupdate.ServdbupdateApplication Line:640 - The following 1 profile is active: "mainProfile"
+2022-09-21 00:50:17.395 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:132 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-21 00:50:17.526 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:201 - Finished Spring Data repository scanning in 121 ms. Found 60 JPA repository interfaces.
+2022-09-21 00:50:18.133 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 2600 (http)
+2022-09-21 00:50:18.140 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-2600"]
+2022-09-21 00:50:18.141 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-09-21 00:50:18.141 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-09-21 00:50:18.229 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-09-21 00:50:18.229 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 1662 ms
+2022-09-21 00:50:18.538 INFO  [main] org.hibernate.jpa.internal.util.LogHelper Line:31  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-21 00:50:18.592 INFO  [main] org.hibernate.Version Line:44  - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-09-21 00:50:18.791 INFO  [main] org.hibernate.annotations.common.Version Line:56  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-21 00:50:18.908 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:110 - HikariPool-1 - Starting...
+2022-09-21 00:50:21.981 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:123 - HikariPool-1 - Start completed.
+2022-09-21 00:50:22.000 INFO  [main] org.hibernate.dialect.Dialect Line:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-09-21 00:50:38.148 INFO  [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator Line:52  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-21 00:50:38.155 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-21 00:50:40.620 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-2600"]
+2022-09-21 00:50:40.640 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 2600 (http) with context path ''
+2022-09-21 00:50:40.696 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 10015 (http)
+2022-09-21 00:50:40.697 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-10015"]
+2022-09-21 00:50:40.697 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-09-21 00:50:40.697 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-09-21 00:50:40.715 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-09-21 00:50:40.719 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 75 ms
+2022-09-21 00:50:40.739 INFO  [main] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Line:58  - Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-09-21 00:50:40.806 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-10015"]
+2022-09-21 00:50:40.838 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 10015 (http) with context path ''
+2022-09-21 00:50:40.871 INFO  [main] ru.itm.servdbupdate.ServdbupdateApplication Line:61  - Started ServdbupdateApplication in 24.778 seconds (JVM running for 25.296)
+2022-09-21 00:50:40.882 INFO  [main] ru.itm.servdbupdate.controllers.InitController Line:107 - OS = 'linux'
+2022-09-21 00:50:40.884 INFO  [main] ru.itm.servdbupdate.controllers.InitController Line:120 - Itm log path = './log/'
+2022-09-21 00:50:40.885 INFO  [main] ru.itm.servdbupdate.ServdbupdateApplication Line:22  - Application is start.
+2022-09-21 00:50:41.403 INFO  [RMI TCP Connection(5)-127.0.0.1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-21 00:50:41.404 INFO  [RMI TCP Connection(5)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet Line:525 - Initializing Servlet 'dispatcherServlet'
+2022-09-21 00:50:41.408 INFO  [RMI TCP Connection(5)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet Line:547 - Completed initialization in 2 ms
+2022-09-21 00:51:24.911 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.controllers.DBUpdateController Line:86  - A request came in from the 192.168.1.16
+2022-09-21 00:51:28.074 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 1	equipment_haul	4
+2022-09-21 00:51:28.075 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 2	lis_check_function	13
+2022-09-21 00:51:28.075 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 3	operator_on_equip	5
+2022-09-21 00:51:28.076 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 4	operator_on_equip_type	5
+2022-09-21 00:51:28.076 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 5	status_group	8
+2022-09-21 00:51:28.076 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 6	status_cat	5
+2022-09-21 00:51:28.077 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 7	lis_action	175
+2022-09-21 00:51:28.077 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 8	status_group_rel	25
+2022-09-21 00:51:28.077 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 9	tires	6
+2022-09-21 00:51:28.078 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 10	holes	124
+2022-09-21 00:51:28.078 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 11	tire_assign	6
+2022-09-21 00:51:28.078 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 12	location_auto_status	4
+2022-09-21 00:51:28.078 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 13	coord_loc	137
+2022-09-21 00:51:28.078 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 14	status_cat_location_rel	5
+2022-09-21 00:51:28.078 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 15	sensor_inclin_calibration	5
+2022-09-21 00:51:28.079 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 16	hole_status	5
+2022-09-21 00:51:28.079 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 17	shifts	5
+2022-09-21 00:51:28.079 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 18	sensors	14
+2022-09-21 00:51:28.079 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 19	dispatcher	7
+2022-09-21 00:51:28.079 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 20	routes	5
+2022-09-21 00:51:28.079 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 21	equipment_drill	3
+2022-09-21 00:51:28.079 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 22	equip_type	11
+2022-09-21 00:51:28.079 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 23	sensor_types	6
+2022-09-21 00:51:28.080 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 24	tire_storage	6
+2022-09-21 00:51:28.080 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 25	routes_roads	6
+2022-09-21 00:51:28.080 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 26	values_data	45
+2022-09-21 00:51:28.080 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 27	operators	5
+2022-09-21 00:51:28.080 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 28	statuses	5
+2022-09-21 00:51:28.080 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 29	location_type	5
+2022-09-21 00:51:28.080 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 30	equipment_load	3
+2022-09-21 00:51:28.080 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 31	acts	2
+2022-09-21 00:51:28.081 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 32	status_inh	9
+2022-09-21 00:51:28.081 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 33	acts_to_roles	2
+2022-09-21 00:51:28.081 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 34	lis_action_predicate_variable	5
+2022-09-21 00:51:28.081 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 35	lis_action_predicate	5000
+2022-09-21 00:51:28.081 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 36	lis_source_variable	18
+2022-09-21 00:51:28.081 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 37	lis_group	9
+2022-09-21 00:51:28.081 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 38	action_variable_source	44
+2022-09-21 00:51:28.081 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 39	lis_action_variable	56
+2022-09-21 00:51:28.082 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 40	lis_type	22
+2022-09-21 00:51:28.082 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 41	lis_point	6
+2022-09-21 00:51:28.082 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 42	roads	3
+2022-09-21 00:51:28.082 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 43	speed_limits	3
+2022-09-21 00:51:28.082 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 44	material	5
+2022-09-21 00:51:28.082 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 45	material_conv	5
+2022-09-21 00:51:28.082 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 46	lis_predicate_variable	112
+2022-09-21 00:51:28.082 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 47	loc_inheritance	121
+2022-09-21 00:51:28.082 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 48	material_type	5
+2022-09-21 00:51:28.083 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 49	location	15
+2022-09-21 00:51:28.083 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 50	roles	4
+2022-09-21 00:51:28.083 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 51	sensor_data_types	5
+2022-09-21 00:51:28.083 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 52	lis_predicate	247
+2022-09-21 00:51:28.083 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 53	equipment	29
+2022-09-21 00:51:28.083 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 54	lis_connection	257
+2022-09-21 00:51:28.083 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 55	lis_action_source_variable	2
+2022-09-21 00:51:28.083 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 56	action_group	486
+2022-09-21 00:51:28.110 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.controllers.DBUpdateController Line:136 - equipment searching for a repository
+2022-09-21 00:51:30.444 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.controllers.DBUpdateController Line:143 - equipment is serialized and sent to the on-board computer.
+2022-09-21 00:54:42.755 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.DBUpdateController Line:86  - A request came in from the 192.168.1.16
+2022-09-21 00:54:43.569 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 1	equipment_haul	4
+2022-09-21 00:54:43.570 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 2	lis_check_function	13
+2022-09-21 00:54:43.570 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 3	operator_on_equip	5
+2022-09-21 00:54:43.570 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 4	operator_on_equip_type	5
+2022-09-21 00:54:43.571 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 5	status_group	8
+2022-09-21 00:54:43.571 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 6	status_cat	5
+2022-09-21 00:54:43.572 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 7	lis_action	175
+2022-09-21 00:54:43.572 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 8	status_group_rel	25
+2022-09-21 00:54:43.572 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 9	tires	6
+2022-09-21 00:54:43.573 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 10	holes	124
+2022-09-21 00:54:43.573 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 11	tire_assign	6
+2022-09-21 00:54:43.574 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 12	location_auto_status	4
+2022-09-21 00:54:43.574 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 13	coord_loc	137
+2022-09-21 00:54:43.574 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 14	status_cat_location_rel	5
+2022-09-21 00:54:43.575 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 15	sensor_inclin_calibration	5
+2022-09-21 00:54:43.575 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 16	hole_status	5
+2022-09-21 00:54:43.576 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 17	shifts	5
+2022-09-21 00:54:43.576 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 18	sensors	14
+2022-09-21 00:54:43.576 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 19	dispatcher	7
+2022-09-21 00:54:43.577 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 20	routes	5
+2022-09-21 00:54:43.577 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 21	equipment_drill	3
+2022-09-21 00:54:43.577 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 22	equip_type	11
+2022-09-21 00:54:43.577 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 23	sensor_types	6
+2022-09-21 00:54:43.578 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 24	tire_storage	6
+2022-09-21 00:54:43.578 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 25	routes_roads	6
+2022-09-21 00:54:43.578 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 26	values_data	45
+2022-09-21 00:54:43.578 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 27	operators	5
+2022-09-21 00:54:43.578 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 28	statuses	5
+2022-09-21 00:54:43.578 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 29	location_type	5
+2022-09-21 00:54:43.579 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 30	equipment_load	3
+2022-09-21 00:54:43.579 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 31	acts	2
+2022-09-21 00:54:43.579 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 32	status_inh	9
+2022-09-21 00:54:43.579 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 33	acts_to_roles	2
+2022-09-21 00:54:43.580 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 34	lis_action_predicate_variable	5
+2022-09-21 00:54:43.580 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 35	lis_action_predicate	5000
+2022-09-21 00:54:43.580 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 36	lis_source_variable	18
+2022-09-21 00:54:43.580 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 37	lis_group	9
+2022-09-21 00:54:43.580 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 38	action_variable_source	44
+2022-09-21 00:54:43.580 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 39	lis_action_variable	56
+2022-09-21 00:54:43.580 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 40	lis_type	22
+2022-09-21 00:54:43.581 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 41	lis_point	6
+2022-09-21 00:54:43.581 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 42	roads	3
+2022-09-21 00:54:43.581 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 43	speed_limits	3
+2022-09-21 00:54:43.581 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 44	material	5
+2022-09-21 00:54:43.581 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 45	material_conv	5
+2022-09-21 00:54:43.581 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 46	lis_predicate_variable	112
+2022-09-21 00:54:43.581 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 47	loc_inheritance	121
+2022-09-21 00:54:43.581 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 48	material_type	5
+2022-09-21 00:54:43.581 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 49	location	15
+2022-09-21 00:54:43.582 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 50	roles	4
+2022-09-21 00:54:43.582 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 51	sensor_data_types	5
+2022-09-21 00:54:43.582 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 52	lis_predicate	247
+2022-09-21 00:54:43.582 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 53	equipment	29
+2022-09-21 00:54:43.582 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 54	lis_connection	257
+2022-09-21 00:54:43.582 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 55	lis_action_source_variable	2
+2022-09-21 00:54:43.582 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.serivce.TablesService Line:57  - 56	action_group	486
+2022-09-21 00:54:43.590 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.controllers.DBUpdateController Line:136 - equipment searching for a repository
+2022-09-21 00:54:44.157 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.controllers.DBUpdateController Line:143 - equipment is serialized and sent to the on-board computer.
+2022-09-21 01:00:04.783 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.controllers.DBUpdateController Line:86  - A request came in from the 192.168.1.16
+2022-09-21 01:00:05.740 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 1	equipment_haul	4
+2022-09-21 01:00:05.741 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 2	lis_check_function	13
+2022-09-21 01:00:05.741 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 3	operator_on_equip	5
+2022-09-21 01:00:05.741 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 4	operator_on_equip_type	5
+2022-09-21 01:00:05.741 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 5	status_group	8
+2022-09-21 01:00:05.742 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 6	status_cat	5
+2022-09-21 01:00:05.742 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 7	lis_action	175
+2022-09-21 01:00:05.742 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 8	status_group_rel	25
+2022-09-21 01:00:05.742 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 9	tires	6
+2022-09-21 01:00:05.743 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 10	holes	124
+2022-09-21 01:00:05.743 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 11	tire_assign	6
+2022-09-21 01:00:05.743 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 12	location_auto_status	4
+2022-09-21 01:00:05.743 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 13	coord_loc	137
+2022-09-21 01:00:05.743 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 14	status_cat_location_rel	5
+2022-09-21 01:00:05.744 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 15	sensor_inclin_calibration	5
+2022-09-21 01:00:05.744 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 16	hole_status	5
+2022-09-21 01:00:05.744 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 17	shifts	5
+2022-09-21 01:00:05.744 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 18	sensors	14
+2022-09-21 01:00:05.745 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 19	dispatcher	7
+2022-09-21 01:00:05.745 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 20	routes	5
+2022-09-21 01:00:05.745 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 21	equipment_drill	3
+2022-09-21 01:00:05.745 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 22	equip_type	11
+2022-09-21 01:00:05.745 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 23	sensor_types	6
+2022-09-21 01:00:05.746 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 24	tire_storage	6
+2022-09-21 01:00:05.746 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 25	routes_roads	6
+2022-09-21 01:00:05.746 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 26	values_data	45
+2022-09-21 01:00:05.746 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 27	operators	5
+2022-09-21 01:00:05.746 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 28	statuses	5
+2022-09-21 01:00:05.747 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 29	location_type	5
+2022-09-21 01:00:05.747 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 30	equipment_load	3
+2022-09-21 01:00:05.747 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 31	acts	2
+2022-09-21 01:00:05.747 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 32	status_inh	9
+2022-09-21 01:00:05.747 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 33	acts_to_roles	2
+2022-09-21 01:00:05.748 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 34	lis_action_predicate_variable	5
+2022-09-21 01:00:05.748 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 35	lis_action_predicate	5000
+2022-09-21 01:00:05.748 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 36	lis_source_variable	18
+2022-09-21 01:00:05.748 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 37	lis_group	9
+2022-09-21 01:00:05.748 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 38	action_variable_source	44
+2022-09-21 01:00:05.748 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 39	lis_action_variable	56
+2022-09-21 01:00:05.749 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 40	lis_type	22
+2022-09-21 01:00:05.749 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 41	lis_point	6
+2022-09-21 01:00:05.749 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 42	roads	3
+2022-09-21 01:00:05.749 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 43	speed_limits	3
+2022-09-21 01:00:05.749 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 44	material	5
+2022-09-21 01:00:05.749 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 45	material_conv	5
+2022-09-21 01:00:05.749 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 46	lis_predicate_variable	112
+2022-09-21 01:00:05.749 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 47	loc_inheritance	121
+2022-09-21 01:00:05.750 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 48	material_type	5
+2022-09-21 01:00:05.750 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 49	location	15
+2022-09-21 01:00:05.750 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 50	roles	4
+2022-09-21 01:00:05.750 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 51	sensor_data_types	5
+2022-09-21 01:00:05.750 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 52	lis_predicate	247
+2022-09-21 01:00:05.750 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 53	equipment	29
+2022-09-21 01:00:05.750 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 54	lis_connection	257
+2022-09-21 01:00:05.750 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 55	lis_action_source_variable	2
+2022-09-21 01:00:05.751 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.serivce.TablesService Line:57  - 56	action_group	486
+2022-09-21 01:18:49.153 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-21 01:18:49.155 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:350 - HikariPool-1 - Shutdown initiated...
+2022-09-21 01:18:59.157 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:352 - HikariPool-1 - Shutdown completed.
+2022-09-21 01:19:02.022 INFO  [main] ru.itm.servdbupdate.ServdbupdateApplication Line:55  - Starting ServdbupdateApplication using Java 17.0.2 on itmComp with PID 42039 (/home/itm/yd/Java/Spring/servdbupdate/build/classes/java/main started by itm in /home/itm/yd/Java/Spring/servdbupdate)
+2022-09-21 01:19:02.025 INFO  [main] ru.itm.servdbupdate.ServdbupdateApplication Line:640 - The following 1 profile is active: "mainProfile"
+2022-09-21 01:19:02.803 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:132 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-21 01:19:02.920 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:201 - Finished Spring Data repository scanning in 110 ms. Found 60 JPA repository interfaces.
+2022-09-21 01:19:03.445 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 2600 (http)
+2022-09-21 01:19:03.452 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-2600"]
+2022-09-21 01:19:03.453 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-09-21 01:19:03.453 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-09-21 01:19:03.519 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-09-21 01:19:03.519 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 1452 ms
+2022-09-21 01:19:03.829 INFO  [main] org.hibernate.jpa.internal.util.LogHelper Line:31  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-21 01:19:03.863 INFO  [main] org.hibernate.Version Line:44  - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-09-21 01:19:03.991 INFO  [main] org.hibernate.annotations.common.Version Line:56  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-21 01:19:04.083 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:110 - HikariPool-1 - Starting...
+2022-09-21 01:19:08.158 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:123 - HikariPool-1 - Start completed.
+2022-09-21 01:19:08.175 INFO  [main] org.hibernate.dialect.Dialect Line:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-09-21 01:19:19.635 INFO  [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator Line:52  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-21 01:19:19.642 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-21 01:19:19.650 INFO  [main] ru.itm.servdbupdate.config.SystemConfig Line:30  - OS = 'linux'
+2022-09-21 01:19:19.650 INFO  [main] ru.itm.servdbupdate.config.SystemConfig Line:40  - Itm log path = './log/'
+2022-09-21 01:19:19.652 INFO  [main] org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor Line:478 - Autowired annotation is not supported on static fields: private static java.lang.String ru.itm.servdbupdate.config.SystemConfig.loggerPath
+2022-09-21 01:19:21.443 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-2600"]
+2022-09-21 01:19:21.462 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 2600 (http) with context path ''
+2022-09-21 01:19:21.513 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 10015 (http)
+2022-09-21 01:19:21.514 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-10015"]
+2022-09-21 01:19:21.514 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-09-21 01:19:21.514 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-09-21 01:19:21.524 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-09-21 01:19:21.524 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 58 ms
+2022-09-21 01:19:21.533 INFO  [main] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Line:58  - Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-09-21 01:19:21.561 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-10015"]
+2022-09-21 01:19:21.564 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 10015 (http) with context path ''
+2022-09-21 01:19:21.580 INFO  [main] ru.itm.servdbupdate.ServdbupdateApplication Line:61  - Started ServdbupdateApplication in 19.901 seconds (JVM running for 20.329)
+2022-09-21 01:19:21.586 INFO  [main] ru.itm.servdbupdate.ServdbupdateApplication Line:22  - Application is start.
+2022-09-21 01:19:21.751 INFO  [RMI TCP Connection(1)-127.0.0.1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-21 01:19:21.752 INFO  [RMI TCP Connection(1)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet Line:525 - Initializing Servlet 'dispatcherServlet'
+2022-09-21 01:19:21.753 INFO  [RMI TCP Connection(1)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet Line:547 - Completed initialization in 1 ms
+2022-09-21 01:20:47.528 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.controllers.DBUpdateController Line:86  - A request came in from the 192.168.1.16
+2022-09-21 01:20:48.969 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 1	equipment_haul	4
+2022-09-21 01:20:48.969 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 2	lis_check_function	13
+2022-09-21 01:20:48.970 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 3	operator_on_equip	5
+2022-09-21 01:20:48.973 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 4	operator_on_equip_type	5
+2022-09-21 01:20:48.973 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 5	status_group	8
+2022-09-21 01:20:48.974 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 6	status_cat	5
+2022-09-21 01:20:48.975 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 7	lis_action	175
+2022-09-21 01:20:48.976 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 8	status_group_rel	25
+2022-09-21 01:20:48.976 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 9	tires	6
+2022-09-21 01:20:48.976 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 10	holes	124
+2022-09-21 01:20:48.976 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 11	tire_assign	6
+2022-09-21 01:20:48.976 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 12	location_auto_status	4
+2022-09-21 01:20:48.977 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 13	coord_loc	137
+2022-09-21 01:20:48.977 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 14	status_cat_location_rel	5
+2022-09-21 01:20:48.977 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 15	sensor_inclin_calibration	5
+2022-09-21 01:20:48.978 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 16	hole_status	5
+2022-09-21 01:20:48.978 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 17	shifts	5
+2022-09-21 01:20:48.979 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 18	sensors	14
+2022-09-21 01:20:48.979 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 19	dispatcher	7
+2022-09-21 01:20:48.979 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 20	routes	5
+2022-09-21 01:20:48.980 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 21	equipment_drill	3
+2022-09-21 01:20:48.980 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 22	equip_type	11
+2022-09-21 01:20:48.980 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 23	sensor_types	6
+2022-09-21 01:20:48.981 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 24	tire_storage	6
+2022-09-21 01:20:48.981 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 25	routes_roads	6
+2022-09-21 01:20:48.981 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 26	values_data	45
+2022-09-21 01:20:48.982 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 27	operators	5
+2022-09-21 01:20:48.983 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 28	statuses	5
+2022-09-21 01:20:48.984 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 29	location_type	5
+2022-09-21 01:20:48.984 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 30	equipment_load	3
+2022-09-21 01:20:48.984 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 31	acts	2
+2022-09-21 01:20:48.985 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 32	status_inh	9
+2022-09-21 01:20:48.985 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 33	acts_to_roles	2
+2022-09-21 01:20:48.986 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 34	lis_action_predicate_variable	5
+2022-09-21 01:20:48.986 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 35	lis_action_predicate	5000
+2022-09-21 01:20:48.986 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 36	lis_source_variable	18
+2022-09-21 01:20:48.987 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 37	lis_group	9
+2022-09-21 01:20:48.992 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 38	action_variable_source	44
+2022-09-21 01:20:48.993 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 39	lis_action_variable	56
+2022-09-21 01:20:48.993 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 40	lis_type	22
+2022-09-21 01:20:48.994 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 41	lis_point	6
+2022-09-21 01:20:48.994 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 42	roads	3
+2022-09-21 01:20:48.994 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 43	speed_limits	3
+2022-09-21 01:20:48.995 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 44	material	5
+2022-09-21 01:20:48.995 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 45	material_conv	5
+2022-09-21 01:20:48.995 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 46	lis_predicate_variable	112
+2022-09-21 01:20:48.996 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 47	loc_inheritance	121
+2022-09-21 01:20:48.998 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 48	material_type	5
+2022-09-21 01:20:48.998 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 49	location	15
+2022-09-21 01:20:48.999 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 50	roles	4
+2022-09-21 01:20:48.999 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 51	sensor_data_types	5
+2022-09-21 01:20:48.999 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 52	lis_predicate	247
+2022-09-21 01:20:49.000 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 53	equipment	29
+2022-09-21 01:20:49.000 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 54	lis_connection	257
+2022-09-21 01:20:49.000 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 55	lis_action_source_variable	2
+2022-09-21 01:20:49.001 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 56	action_group	486
+2022-09-21 01:20:49.063 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.controllers.DBUpdateController Line:136 - hole_status searching for a repository
+2022-09-21 01:20:50.229 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.controllers.DBUpdateController Line:143 - hole_status is serialized and sent to the on-board computer.
+2022-09-21 01:24:05.487 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-21 01:24:05.489 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:350 - HikariPool-1 - Shutdown initiated...
+2022-09-21 01:24:09.208 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:352 - HikariPool-1 - Shutdown completed.
+2022-09-21 01:24:12.394 INFO  [main] ru.itm.servdbupdate.ServdbupdateApplication Line:55  - Starting ServdbupdateApplication using Java 17.0.2 on itmComp with PID 43220 (/home/itm/yd/Java/Spring/servdbupdate/build/classes/java/main started by itm in /home/itm/yd/Java/Spring/servdbupdate)
+2022-09-21 01:24:12.396 INFO  [main] ru.itm.servdbupdate.ServdbupdateApplication Line:640 - The following 1 profile is active: "mainProfile"
+2022-09-21 01:24:13.110 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:132 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-21 01:24:13.237 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:201 - Finished Spring Data repository scanning in 120 ms. Found 60 JPA repository interfaces.
+2022-09-21 01:24:13.749 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 2600 (http)
+2022-09-21 01:24:13.756 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-2600"]
+2022-09-21 01:24:13.756 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-09-21 01:24:13.756 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-09-21 01:24:13.821 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-09-21 01:24:13.822 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 1388 ms
+2022-09-21 01:24:14.109 INFO  [main] org.hibernate.jpa.internal.util.LogHelper Line:31  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-21 01:24:14.146 INFO  [main] org.hibernate.Version Line:44  - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-09-21 01:24:14.249 INFO  [main] org.hibernate.annotations.common.Version Line:56  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-21 01:24:14.338 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:110 - HikariPool-1 - Starting...
+2022-09-21 01:24:16.695 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:123 - HikariPool-1 - Start completed.
+2022-09-21 01:24:16.708 INFO  [main] org.hibernate.dialect.Dialect Line:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-09-21 01:24:27.426 INFO  [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator Line:52  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-21 01:24:27.433 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-21 01:24:27.444 INFO  [main] ru.itm.servdbupdate.config.SystemConfig Line:30  - OS = 'linux'
+2022-09-21 01:24:27.445 INFO  [main] ru.itm.servdbupdate.config.SystemConfig Line:40  - Itm log path = './log/'
+2022-09-21 01:24:27.447 INFO  [main] org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor Line:478 - Autowired annotation is not supported on static fields: private static java.lang.String ru.itm.servdbupdate.config.SystemConfig.loggerPath
+2022-09-21 01:24:29.174 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-2600"]
+2022-09-21 01:24:29.185 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 2600 (http) with context path ''
+2022-09-21 01:24:29.239 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 10015 (http)
+2022-09-21 01:24:29.240 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-10015"]
+2022-09-21 01:24:29.241 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-09-21 01:24:29.241 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-09-21 01:24:29.250 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-09-21 01:24:29.250 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 60 ms
+2022-09-21 01:24:29.259 INFO  [main] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Line:58  - Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-09-21 01:24:29.285 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-10015"]
+2022-09-21 01:24:29.289 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 10015 (http) with context path ''
+2022-09-21 01:24:29.303 INFO  [main] ru.itm.servdbupdate.ServdbupdateApplication Line:61  - Started ServdbupdateApplication in 17.281 seconds (JVM running for 17.793)
+2022-09-21 01:24:29.309 INFO  [main] ru.itm.servdbupdate.ServdbupdateApplication Line:22  - Application is start.
+2022-09-21 01:24:29.548 INFO  [RMI TCP Connection(1)-127.0.0.1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-21 01:24:29.549 INFO  [RMI TCP Connection(1)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet Line:525 - Initializing Servlet 'dispatcherServlet'
+2022-09-21 01:24:29.550 INFO  [RMI TCP Connection(1)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet Line:547 - Completed initialization in 1 ms
+2022-09-21 01:24:38.505 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.controllers.DBUpdateController Line:86  - A request came in from the 192.168.1.16
+2022-09-21 01:24:39.517 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 1	equipment_haul	4
+2022-09-21 01:24:39.517 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 2	lis_check_function	13
+2022-09-21 01:24:39.517 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 3	operator_on_equip	5
+2022-09-21 01:24:39.518 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 4	operator_on_equip_type	5
+2022-09-21 01:24:39.518 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 5	status_group	8
+2022-09-21 01:24:39.518 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 6	status_cat	5
+2022-09-21 01:24:39.518 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 7	lis_action	175
+2022-09-21 01:24:39.518 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 8	status_group_rel	25
+2022-09-21 01:24:39.518 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 9	tires	6
+2022-09-21 01:24:39.519 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 10	holes	124
+2022-09-21 01:24:39.519 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 11	tire_assign	6
+2022-09-21 01:24:39.519 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 12	location_auto_status	4
+2022-09-21 01:24:39.519 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 13	coord_loc	137
+2022-09-21 01:24:39.519 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 14	status_cat_location_rel	5
+2022-09-21 01:24:39.519 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 15	sensor_inclin_calibration	5
+2022-09-21 01:24:39.519 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 16	hole_status	5
+2022-09-21 01:24:39.519 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 17	shifts	5
+2022-09-21 01:24:39.520 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 18	sensors	14
+2022-09-21 01:24:39.520 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 19	dispatcher	7
+2022-09-21 01:24:39.520 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 20	routes	5
+2022-09-21 01:24:39.520 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 21	equipment_drill	3
+2022-09-21 01:24:39.520 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 22	equip_type	11
+2022-09-21 01:24:39.521 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 23	sensor_types	6
+2022-09-21 01:24:39.521 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 24	tire_storage	6
+2022-09-21 01:24:39.521 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 25	routes_roads	6
+2022-09-21 01:24:39.521 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 26	values_data	45
+2022-09-21 01:24:39.521 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 27	operators	5
+2022-09-21 01:24:39.521 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 28	statuses	5
+2022-09-21 01:24:39.521 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 29	location_type	5
+2022-09-21 01:24:39.522 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 30	equipment_load	3
+2022-09-21 01:24:39.522 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 31	acts	2
+2022-09-21 01:24:39.522 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 32	status_inh	9
+2022-09-21 01:24:39.522 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 33	acts_to_roles	2
+2022-09-21 01:24:39.522 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 34	lis_action_predicate_variable	5
+2022-09-21 01:24:39.522 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 35	lis_action_predicate	5000
+2022-09-21 01:24:39.522 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 36	lis_source_variable	18
+2022-09-21 01:24:39.523 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 37	lis_group	9
+2022-09-21 01:24:39.523 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 38	action_variable_source	44
+2022-09-21 01:24:39.523 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 39	lis_action_variable	56
+2022-09-21 01:24:39.523 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 40	lis_type	22
+2022-09-21 01:24:39.523 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 41	lis_point	6
+2022-09-21 01:24:39.523 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 42	roads	3
+2022-09-21 01:24:39.523 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 43	speed_limits	3
+2022-09-21 01:24:39.523 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 44	material	5
+2022-09-21 01:24:39.523 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 45	material_conv	5
+2022-09-21 01:24:39.524 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 46	lis_predicate_variable	112
+2022-09-21 01:24:39.524 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 47	loc_inheritance	121
+2022-09-21 01:24:39.524 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 48	material_type	5
+2022-09-21 01:24:39.524 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 49	location	15
+2022-09-21 01:24:39.524 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 50	roles	4
+2022-09-21 01:24:39.524 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 51	sensor_data_types	5
+2022-09-21 01:24:39.524 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 52	lis_predicate	247
+2022-09-21 01:24:39.525 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 53	equipment	29
+2022-09-21 01:24:39.525 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 54	lis_connection	257
+2022-09-21 01:24:39.525 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 55	lis_action_source_variable	2
+2022-09-21 01:24:39.525 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 56	action_group	486
+2022-09-21 01:24:39.548 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.controllers.DBUpdateController Line:136 - equip_type searching for a repository
+2022-09-21 01:24:39.913 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.controllers.DBUpdateController Line:143 - equip_type is serialized and sent to the on-board computer.
+2022-09-21 01:33:44.373 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-21 01:33:44.374 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:350 - HikariPool-1 - Shutdown initiated...
+2022-09-21 01:33:46.760 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:352 - HikariPool-1 - Shutdown completed.
+2022-09-21 01:33:51.124 INFO  [main] ru.itm.servdbupdate.ServdbupdateApplication Line:55  - Starting ServdbupdateApplication using Java 17.0.2 on itmComp with PID 44910 (/home/itm/yd/Java/Spring/servdbupdate/build/classes/java/main started by itm in /home/itm/yd/Java/Spring/servdbupdate)
+2022-09-21 01:33:51.128 INFO  [main] ru.itm.servdbupdate.ServdbupdateApplication Line:640 - The following 1 profile is active: "mainProfile"
+2022-09-21 01:33:52.113 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:132 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-21 01:33:52.267 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:201 - Finished Spring Data repository scanning in 144 ms. Found 60 JPA repository interfaces.
+2022-09-21 01:33:52.790 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 2600 (http)
+2022-09-21 01:33:52.797 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-2600"]
+2022-09-21 01:33:52.798 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-09-21 01:33:52.798 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-09-21 01:33:52.864 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-09-21 01:33:52.864 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 1684 ms
+2022-09-21 01:33:53.182 INFO  [main] org.hibernate.jpa.internal.util.LogHelper Line:31  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-21 01:33:53.219 INFO  [main] org.hibernate.Version Line:44  - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-09-21 01:33:53.344 INFO  [main] org.hibernate.annotations.common.Version Line:56  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-21 01:33:53.455 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:110 - HikariPool-1 - Starting...
+2022-09-21 01:33:55.893 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:123 - HikariPool-1 - Start completed.
+2022-09-21 01:33:55.910 INFO  [main] org.hibernate.dialect.Dialect Line:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-09-21 01:34:03.777 INFO  [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator Line:52  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-21 01:34:03.789 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-21 01:34:03.798 INFO  [main] ru.itm.servdbupdate.config.SystemConfig Line:30  - OS = 'linux'
+2022-09-21 01:34:03.798 INFO  [main] ru.itm.servdbupdate.config.SystemConfig Line:40  - Itm log path = './log/'
+2022-09-21 01:34:03.801 INFO  [main] org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor Line:478 - Autowired annotation is not supported on static fields: private static java.lang.String ru.itm.servdbupdate.config.SystemConfig.loggerPath
+2022-09-21 01:34:05.842 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-2600"]
+2022-09-21 01:34:05.854 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 2600 (http) with context path ''
+2022-09-21 01:34:05.914 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 10015 (http)
+2022-09-21 01:34:05.915 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-10015"]
+2022-09-21 01:34:05.915 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-09-21 01:34:05.915 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-09-21 01:34:05.924 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-09-21 01:34:05.925 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 69 ms
+2022-09-21 01:34:05.935 INFO  [main] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Line:58  - Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-09-21 01:34:05.966 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-10015"]
+2022-09-21 01:34:05.968 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 10015 (http) with context path ''
+2022-09-21 01:34:05.983 INFO  [main] ru.itm.servdbupdate.ServdbupdateApplication Line:61  - Started ServdbupdateApplication in 15.68 seconds (JVM running for 16.217)
+2022-09-21 01:34:05.989 INFO  [main] ru.itm.servdbupdate.ServdbupdateApplication Line:22  - Application is start.
+2022-09-21 01:34:06.340 INFO  [RMI TCP Connection(4)-127.0.0.1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-21 01:34:06.340 INFO  [RMI TCP Connection(4)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet Line:525 - Initializing Servlet 'dispatcherServlet'
+2022-09-21 01:34:06.342 INFO  [RMI TCP Connection(4)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet Line:547 - Completed initialization in 2 ms
+2022-09-21 01:34:09.975 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.controllers.DBUpdateController Line:87  - A request came in from the 192.168.1.16
+2022-09-21 01:34:10.616 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 1	equipment_haul	4
+2022-09-21 01:34:10.617 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 2	lis_check_function	13
+2022-09-21 01:34:10.617 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 3	operator_on_equip	5
+2022-09-21 01:34:10.617 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 4	operator_on_equip_type	5
+2022-09-21 01:34:10.618 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 5	status_group	8
+2022-09-21 01:34:10.618 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 6	status_cat	5
+2022-09-21 01:34:10.618 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 7	lis_action	175
+2022-09-21 01:34:10.619 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 8	status_group_rel	25
+2022-09-21 01:34:10.619 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 9	tires	6
+2022-09-21 01:34:10.619 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 10	holes	124
+2022-09-21 01:34:10.619 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 11	tire_assign	6
+2022-09-21 01:34:10.620 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 12	location_auto_status	4
+2022-09-21 01:34:10.620 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 13	coord_loc	137
+2022-09-21 01:34:10.620 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 14	status_cat_location_rel	5
+2022-09-21 01:34:10.620 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 15	sensor_inclin_calibration	5
+2022-09-21 01:34:10.621 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 16	hole_status	5
+2022-09-21 01:34:10.621 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 17	shifts	5
+2022-09-21 01:34:10.621 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 18	sensors	14
+2022-09-21 01:34:10.621 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 19	dispatcher	7
+2022-09-21 01:34:10.622 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 20	routes	5
+2022-09-21 01:34:10.622 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 21	equipment_drill	3
+2022-09-21 01:34:10.622 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 22	equip_type	11
+2022-09-21 01:34:10.622 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 23	sensor_types	6
+2022-09-21 01:34:10.622 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 24	tire_storage	6
+2022-09-21 01:34:10.623 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 25	routes_roads	6
+2022-09-21 01:34:10.623 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 26	values_data	45
+2022-09-21 01:34:10.623 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 27	operators	5
+2022-09-21 01:34:10.623 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 28	statuses	5
+2022-09-21 01:34:10.623 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 29	location_type	5
+2022-09-21 01:34:10.624 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 30	equipment_load	3
+2022-09-21 01:34:10.624 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 31	acts	2
+2022-09-21 01:34:10.624 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 32	status_inh	9
+2022-09-21 01:34:10.624 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 33	acts_to_roles	2
+2022-09-21 01:34:10.624 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 34	lis_action_predicate_variable	5
+2022-09-21 01:34:10.624 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 35	lis_action_predicate	5000
+2022-09-21 01:34:10.624 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 36	lis_source_variable	18
+2022-09-21 01:34:10.624 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 37	lis_group	9
+2022-09-21 01:34:10.624 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 38	action_variable_source	44
+2022-09-21 01:34:10.625 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 39	lis_action_variable	56
+2022-09-21 01:34:10.625 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 40	lis_type	22
+2022-09-21 01:34:10.625 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 41	lis_point	6
+2022-09-21 01:34:10.625 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 42	roads	3
+2022-09-21 01:34:10.625 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 43	speed_limits	3
+2022-09-21 01:34:10.625 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 44	material	5
+2022-09-21 01:34:10.625 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 45	material_conv	5
+2022-09-21 01:34:10.626 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 46	lis_predicate_variable	112
+2022-09-21 01:34:10.626 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 47	loc_inheritance	121
+2022-09-21 01:34:10.626 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 48	material_type	5
+2022-09-21 01:34:10.626 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 49	location	15
+2022-09-21 01:34:10.626 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 50	roles	4
+2022-09-21 01:34:10.626 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 51	sensor_data_types	5
+2022-09-21 01:34:10.627 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 52	lis_predicate	247
+2022-09-21 01:34:10.627 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 53	equipment	29
+2022-09-21 01:34:10.627 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 54	lis_connection	257
+2022-09-21 01:34:10.627 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 55	lis_action_source_variable	2
+2022-09-21 01:34:10.627 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.serivce.TablesService Line:57  - 56	action_group	486
+2022-09-21 01:34:10.645 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.controllers.DBUpdateController Line:137 - equipment searching for a repository
+2022-09-21 01:34:11.010 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.controllers.DBUpdateController Line:144 - equipment is serialized and sent to the on-board computer.
+2022-09-21 01:41:25.300 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.controllers.TransUpdateController Line:69  - Equipment : fab4
+2022-09-21 01:41:25.433 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.controllers.TransUpdateController Line:81  - --> (write) -->trans.trans_fuel{"id":8, "equip_id":27, "shift_date":"Tue Sep 20 00:00:00 NOVT 2022", "shift_id":2, "time_read":"Wed Sep 21 01:36:51 NOVT 2022", "fuel_level":1538.0, "fuel_raw":1538.0, "trans_cycles_id":1}
+2022-09-21 01:46:26.742 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.controllers.TransUpdateController Line:69  - Equipment : fab4
+2022-09-21 01:46:26.959 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.controllers.TransUpdateController Line:81  - --> (write) -->trans.trans_fuel{"id":9, "equip_id":27, "shift_date":"Tue Sep 20 00:00:00 NOVT 2022", "shift_id":2, "time_read":"Wed Sep 21 01:41:51 NOVT 2022", "fuel_level":1530.0, "fuel_raw":1530.0, "trans_cycles_id":1}
+2022-09-21 01:49:31.799 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-21 01:49:31.801 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:350 - HikariPool-1 - Shutdown initiated...
+2022-09-21 01:49:33.029 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:352 - HikariPool-1 - Shutdown completed.

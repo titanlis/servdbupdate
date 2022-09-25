@@ -21,6 +21,3 @@ public interface TransFuelRepository extends CommonRepository<TransFuel> {
      List<TransFuel> findAllByEquipId(Long equip_id);
      Integer countAllByEquipIdAndTimeRead(Long equip_id, Calendar time_read);
 }
-//public interface TransFuelRepository extends JpaRepository<TransFuel, Long> {
-//    List<TransFuel> findAllByEquipId(Long equip_id);
-//}

@@ -1,11 +1,45 @@
 package ru.itm.servdbupdate.config;
 
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+import ru.itm.servdbupdate.controllers.InitController;
+import ru.itm.servdbupdate.utils.NetworkUtils;
+
 import static ru.itm.servdbupdate.config.OSType.LINUX;
 
+@Component
 public class SystemConfig {
+    private static Logger logger = LoggerFactory.getLogger(SystemConfig.class);
+
+    @Value("${OS}")
+    private String os;
+
     private static OSType osType = OSType.UNKNOWN;
-    private static String loggerPath = "none";
+
+    @Value("${itm.logger.path}")
+    private static String loggerPath;
+
+    public SystemConfig() {
+        if(os==null || os.equals("none")){
+            os = NetworkUtils.getOSName().toLowerCase(); //получаем имя операционки
+        }
+        setOsType(os);
+        logger.info("OS = \'" + os + '\'');
+
+        if(loggerPath==null || loggerPath.equals("none")){
+            switch(getOsType()){
+                case LINUX -> { setLoggerPath("./log/"); }
+                case WINDOWS -> { setLoggerPath("\\log\\"); }
+                default ->  { setLoggerPath(""); }
+            }
+            loggerPath = getLoggerPath();
+        }
+        logger.info("Itm log path = \'" + getLoggerPath() + '\'');
+
+    }
 
     public static String getLoggerPath() {
         return loggerPath;
