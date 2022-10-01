@@ -64,15 +64,6 @@ public class TransFuel extends AbstractEntity implements Trans{
 	public TransFuel() {
 	}
 
-//	public TransFuel(Calendar shift_date, Long shift_id, Calendar timeRead, Double fuelLevel, Double fuel_raw, Long trans_cycles_id) {
-//		this.shift_date = shift_date;
-//		this.shift_id = shift_id;
-//		this.timeRead = timeRead;
-//		this.fuelLevel = fuelLevel;
-//		this.fuel_raw = fuel_raw;
-//		this.trans_cycles_id = trans_cycles_id;
-//	}
-
 	public TransFuel(TransFuel transFuel) {
 		this.equipId = transFuel.equipId;
 		this.shift_date = transFuel.shift_date;

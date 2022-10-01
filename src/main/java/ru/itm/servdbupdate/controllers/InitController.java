@@ -33,7 +33,6 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InitController {
     private static Logger logger = LoggerFactory.getLogger(InitController.class);
     private TablesService tablesService;    //контакты с бд postgresql
-
     private SystemConfig systemConfig;      //инжектим конфигурацию
 
     @Autowired

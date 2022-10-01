@@ -1,69 +1,96 @@
 package ru.itm.servdbupdate.entity.tables.trans;
 
+import ru.itm.servdbupdate.entity.AbstractEntity;
+
 import javax.persistence.*;
-import java.math.BigDecimal;
-import java.time.Instant;
 import java.time.LocalDate;
-import java.util.LinkedHashSet;
-import java.util.Set;
+import java.util.Calendar;
 
 @Entity
-@Table(name = "trans_sensor")
-public class TransSensor {
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "trans_sensor_id_gen")
-    @SequenceGenerator(name = "trans_sensor_id_gen", sequenceName = "hibernate_sequence", allocationSize = 1)
-    @Column(name = "id", nullable = false)
-    private Integer id;
+@Table(name = "trans_sensor", schema = "trans")
+public class TransSensor extends AbstractEntity implements Trans{
 
-    @Column(name = "sensor_id", nullable = false)
-    private Integer sensorId;
+    @Column(name = "sensor_id")
+    private Long sensorId;
 
-    @Column(name = "equip_id", nullable = false)
-    private Integer equipId;
+    @Column(name = "equip_id")
+    private Long equipId;
 
-    @Column(name = "shift_date", nullable = false)
+    @Column(name = "shift_date")
     private LocalDate shiftDate;
 
     @Column(name = "shift_id")
-    private Integer shiftId;
+    private Long shiftId;
 
     @Column(name = "time_read")
-    private Instant timeRead;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Calendar timeRead;
 
-    @Column(name = "value", nullable = false, precision = 7, scale = 2)
-    private BigDecimal value;
+    @Column(name = "value_data")
+    private Float valueData;
 
     @Column(name = "trans_coord_id")
-    private Integer transCoordId;
+    private Long transCoordId;
 
-    @OneToMany(mappedBy = "idTransSensor")
-    private Set<TransKeysDrilling> transKeysDrillings = new LinkedHashSet<>();
-
-    @OneToMany(mappedBy = "idTransSensor")
-    private Set<TransKeysCycle> transKeysCycles = new LinkedHashSet<>();
-
-    public Integer getId() {
-        return id;
+    @Deprecated
+    public TransSensor() {
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public TransSensor(Long sensorId, Long equipId, LocalDate shiftDate, Long shiftId, Calendar timeRead, Float valueData, Long transCoordId) {
+        this.sensorId = sensorId;
+        this.equipId = equipId;
+        this.shiftDate = shiftDate;
+        this.shiftId = shiftId;
+        this.timeRead = timeRead;
+        this.valueData = valueData;
+        this.transCoordId = transCoordId;
     }
 
-    public Integer getSensorId() {
+    public TransSensor(TransSensor t) {
+        this.sensorId = t.sensorId;
+        this.equipId = t.equipId;
+        this.shiftDate = t.shiftDate;
+        this.shiftId = t.shiftId;
+        this.timeRead = t.timeRead;
+        this.valueData = t.valueData;
+        this.transCoordId = t.transCoordId;
+    }
+
+
+    @Override
+    public String toString() {
+        return "trans.trans_sensor" + '{' +
+                "\"id\":" + id +
+                ", \"sensor_id\":" + sensorId +
+                ", \"equip_id\":" + equipId +
+                ", \"shift_date\":\"" + localDateToString(shiftDate) + "\"" +
+                ", \"shift_id\":" + shiftId +
+                ", \"time_read\":\"" + calendarToString(timeRead) + "\"" +
+                ", \"value_data\":" + valueData +
+                ", \"trans_coord_id\":" + transCoordId +
+                '}';
+    }
+
+    private String calendarToString(Calendar calendar){
+        return (calendar!=null)?calendar.getTime().toString():"";
+    }
+    private String localDateToString(LocalDate localDate){
+        return (localDate!=null)?localDate.toString():"";
+    }
+
+    public Long getSensorId() {
         return sensorId;
     }
 
-    public void setSensorId(Integer sensorId) {
+    public void setSensorId(Long sensorId) {
         this.sensorId = sensorId;
     }
 
-    public Integer getEquipId() {
+    public Long getEquipId() {
         return equipId;
     }
 
-    public void setEquipId(Integer equipId) {
+    public void setEquipId(Long equipId) {
         this.equipId = equipId;
     }
 
@@ -75,52 +102,45 @@ public class TransSensor {
         this.shiftDate = shiftDate;
     }
 
-    public Integer getShiftId() {
+    public Long getShiftId() {
         return shiftId;
     }
 
-    public void setShiftId(Integer shiftId) {
+    public void setShiftId(Long shiftId) {
         this.shiftId = shiftId;
     }
 
-    public Instant getTimeRead() {
+    public Calendar getTimeRead() {
         return timeRead;
     }
 
-    public void setTimeRead(Instant timeRead) {
+    public void setTimeRead(Calendar timeRead) {
         this.timeRead = timeRead;
     }
 
-    public BigDecimal getValue() {
-        return value;
+    public Float getValueData() {
+        return valueData;
     }
 
-    public void setValue(BigDecimal value) {
-        this.value = value;
+    public void setValueData(Float valueData) {
+        this.valueData = valueData;
     }
 
-    public Integer getTransCoordId() {
+    public Long getTransCoordId() {
         return transCoordId;
     }
 
-    public void setTransCoordId(Integer transCoordId) {
+    public void setTransCoordId(Long transCoordId) {
         this.transCoordId = transCoordId;
     }
 
-    public Set<TransKeysDrilling> getTransKeysDrillings() {
-        return transKeysDrillings;
+    @Override
+    public Long getEquipIdTrans() {
+        return equipId;
     }
 
-    public void setTransKeysDrillings(Set<TransKeysDrilling> transKeysDrillings) {
-        this.transKeysDrillings = transKeysDrillings;
+    @Override
+    public Calendar getTime() {
+        return timeRead;
     }
-
-    public Set<TransKeysCycle> getTransKeysCycles() {
-        return transKeysCycles;
-    }
-
-    public void setTransKeysCycles(Set<TransKeysCycle> transKeysCycles) {
-        this.transKeysCycles = transKeysCycles;
-    }
-
 }

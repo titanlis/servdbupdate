@@ -30,6 +30,7 @@ import ru.itm.servdbupdate.repository.tire.TireRepository;
 import ru.itm.servdbupdate.repository.tire.TireStorageRepository;
 import ru.itm.servdbupdate.repository.trans.TransCoordRepository;
 import ru.itm.servdbupdate.repository.trans.TransFuelRepository;
+import ru.itm.servdbupdate.repository.trans.TransSensorRepository;
 
 /**
  * @class RepositoryFactory
@@ -100,6 +101,12 @@ public class RepositoryFactory {
     private static TireStorageRepository tireStorageRepository;
     private static TransFuelRepository transFuelRepository;
     private static TransCoordRepository transCoordRepository;
+    private static TransSensorRepository transSensorRepository;
+
+    @Autowired
+    public void setTransSensorRepository(TransSensorRepository transSensorRepository) {
+        RepositoryFactory.transSensorRepository = transSensorRepository;
+    }
 
     @Autowired
     public void setTransCoordRepository(TransCoordRepository transCoordRepository) {
@@ -469,6 +476,7 @@ public class RepositoryFactory {
 
             case "trans_fuel" -> transFuelRepository;
             case "trans_coord" -> transCoordRepository;
+            case "trans_sensor" -> transSensorRepository;
 
             default ->  null;
         };

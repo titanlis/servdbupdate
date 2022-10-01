@@ -9,6 +9,7 @@ import ru.itm.servdbupdate.entity.tables.equipment.Equipment;
 import ru.itm.servdbupdate.entity.tables.trans.Trans;
 import ru.itm.servdbupdate.entity.tables.trans.TransCoord;
 import ru.itm.servdbupdate.entity.tables.trans.TransFuel;
+import ru.itm.servdbupdate.entity.tables.trans.TransSensor;
 import ru.itm.servdbupdate.kryo.CompressObject;
 import ru.itm.servdbupdate.kryo.KryoSerializer;
 import ru.itm.servdbupdate.loggers.ItmServerLogger;
@@ -16,6 +17,7 @@ import ru.itm.servdbupdate.repository.CommonRepository;
 import ru.itm.servdbupdate.repository.RepositoryFactory;
 import ru.itm.servdbupdate.repository.trans.TransCoordRepository;
 import ru.itm.servdbupdate.repository.trans.TransFuelRepository;
+import ru.itm.servdbupdate.repository.trans.TransSensorRepository;
 
 import java.io.IOException;
 import java.util.*;
@@ -89,7 +91,11 @@ public class TransUpdateController {
                         }
                     });
                     if(!transEntityList.isEmpty()){
+                        logger.info("save " + names);
                         saveTransList(names, commonRepository, transEntityList);
+                    }
+                    else{
+                        logger.info("not save " + names);
                     }
                 }
                 else{
@@ -119,6 +125,7 @@ public class TransUpdateController {
         switch (names){
             case "trans_fuel"->{ transEntityList.stream().forEach(t->list.add((AbstractEntity) (new TransFuel((TransFuel) t))));}
             case "trans_coord"->{ transEntityList.stream().forEach(t->list.add((AbstractEntity) (new TransCoord((TransCoord) t))));}
+            case "trans_sensor"->{ transEntityList.stream().forEach(t->list.add((AbstractEntity) (new TransSensor((TransSensor) t))));}
         }
         if(!list.isEmpty()) commonRepository.saveAll(list);
     }
@@ -134,6 +141,7 @@ public class TransUpdateController {
         switch (names){
             case "trans_fuel"->{return ((TransFuelRepository)commonRepository).countAllByEquipIdAndTimeRead(transRow.getEquipIdTrans(), transRow.getTime())==0L;}
             case "trans_coord"->{return ((TransCoordRepository)commonRepository).countAllByEquipIdAndEquipTime(transRow.getEquipIdTrans(), transRow.getTime())==0L;}
+            case "trans_sensor"->{return ((TransSensorRepository)commonRepository).countAllByEquipIdAndTimeRead(transRow.getEquipIdTrans(), transRow.getTime())==0L;}
             default -> { return false; }
         }
     }

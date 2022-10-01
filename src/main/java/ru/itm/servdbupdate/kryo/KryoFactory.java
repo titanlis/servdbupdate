@@ -29,10 +29,15 @@ import ru.itm.servdbupdate.entity.tables.tire.TireAssign;
 import ru.itm.servdbupdate.entity.tables.tire.TireStorage;
 import ru.itm.servdbupdate.entity.tables.trans.TransCoord;
 import ru.itm.servdbupdate.entity.tables.trans.TransFuel;
+import ru.itm.servdbupdate.entity.tables.trans.TransSensor;
 
 import java.math.BigDecimal;
+import java.sql.Time;
 import java.sql.Timestamp;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.Calendar;
+import java.sql.Date;
 import java.util.GregorianCalendar;
 
 public abstract class KryoFactory {
@@ -111,6 +116,8 @@ public abstract class KryoFactory {
         kryo.register(SensorType.class);
 
         kryo.register(Shift.class);
+        kryo.register(Date.class);
+        kryo.register(Time.class);
         kryo.register(Timestamp.class);
 
         kryo.register(Statuses.class);
@@ -130,6 +137,10 @@ public abstract class KryoFactory {
         kryo.register(BigDecimal.class);
 
         kryo.register(TransCoord.class);
+        kryo.register(TransSensor.class);
+        kryo.register(LocalDate.class);
+        kryo.register(LocalTime.class);
+
 
         return kryo;
     }
