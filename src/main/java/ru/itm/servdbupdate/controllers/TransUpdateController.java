@@ -6,18 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import ru.itm.servdbupdate.entity.AbstractEntity;
 import ru.itm.servdbupdate.entity.tables.equipment.Equipment;
-import ru.itm.servdbupdate.entity.tables.trans.Trans;
-import ru.itm.servdbupdate.entity.tables.trans.TransCoord;
-import ru.itm.servdbupdate.entity.tables.trans.TransFuel;
-import ru.itm.servdbupdate.entity.tables.trans.TransSensor;
+import ru.itm.servdbupdate.entity.tables.trans.*;
 import ru.itm.servdbupdate.kryo.CompressObject;
 import ru.itm.servdbupdate.kryo.KryoSerializer;
 import ru.itm.servdbupdate.loggers.ItmServerLogger;
 import ru.itm.servdbupdate.repository.CommonRepository;
 import ru.itm.servdbupdate.repository.RepositoryFactory;
-import ru.itm.servdbupdate.repository.trans.TransCoordRepository;
-import ru.itm.servdbupdate.repository.trans.TransFuelRepository;
-import ru.itm.servdbupdate.repository.trans.TransSensorRepository;
+import ru.itm.servdbupdate.repository.trans.*;
 
 import java.io.IOException;
 import java.util.*;
@@ -67,11 +62,20 @@ public class TransUpdateController {
                         num.getAndIncrement();
                         /**Десириализовали нулевую строку, для поиска имени оборудования*/
                         Trans transForName = (Trans) KryoSerializer.deserialize(listEntity.get(0));
-                        /**Получили из нее id техники, нашли ее в постгресе, вывели имя в лог*/
-                        String equipmentName = ((Equipment)RepositoryFactory.getRepo("equipment")
-                                .findById(transForName.getEquipIdTrans()).get()).getEquip();
-                        logger.info("Equipment : " + equipmentName );
-                        itmServerLogger.writeIn("{\"equipment\":\"" + equipmentName + "\"}", 0);
+
+                        /**Если в записи таблицы есть в принципе id техники, то выводим его в лог*/
+                        Long equipIdTrans = transForName.getEquipIdTrans();
+                        if(equipIdTrans!=null){
+                            /**Получили из нее id техники, нашли ее в постгресе, вывели имя в лог*/
+                            String equipmentName = ((Equipment)RepositoryFactory.getRepo("equipment")
+                                    .findById(equipIdTrans).get()).getEquip();
+                            logger.info("Equipment : " + equipmentName );
+                            itmServerLogger.writeIn("{\"equipment\":\"" + equipmentName + "\"}", 0);
+                        }
+                        else{   //если id техники нет, то в лог напишем об этом
+                            logger.info("Equipment : unknown");
+                            itmServerLogger.writeIn("Equipment : unknown", 0);
+                        }
                     }
 
                     List<AbstractEntity> transEntityList = new ArrayList<>();
@@ -126,6 +130,9 @@ public class TransUpdateController {
             case "trans_fuel"->{ transEntityList.stream().forEach(t->list.add((AbstractEntity) (new TransFuel((TransFuel) t))));}
             case "trans_coord"->{ transEntityList.stream().forEach(t->list.add((AbstractEntity) (new TransCoord((TransCoord) t))));}
             case "trans_sensor"->{ transEntityList.stream().forEach(t->list.add((AbstractEntity) (new TransSensor((TransSensor) t))));}
+            case "trans_keys_cycle"->{ transEntityList.stream().forEach(t->list.add((AbstractEntity) (new TransKeysCycle((TransKeysCycle) t))));}
+            case "trans_keys_drilling"->{ transEntityList.stream().forEach(t->list.add((AbstractEntity) (new TransKeysDrilling((TransKeysDrilling) t))));}
+            case "trans_network"->{ transEntityList.stream().forEach(t->list.add((AbstractEntity) (new TransNetwork((TransNetwork) t))));}
         }
         if(!list.isEmpty()) commonRepository.saveAll(list);
     }
@@ -142,6 +149,9 @@ public class TransUpdateController {
             case "trans_fuel"->{return ((TransFuelRepository)commonRepository).countAllByEquipIdAndTimeRead(transRow.getEquipIdTrans(), transRow.getTime())==0L;}
             case "trans_coord"->{return ((TransCoordRepository)commonRepository).countAllByEquipIdAndEquipTime(transRow.getEquipIdTrans(), transRow.getTime())==0L;}
             case "trans_sensor"->{return ((TransSensorRepository)commonRepository).countAllByEquipIdAndTimeRead(transRow.getEquipIdTrans(), transRow.getTime())==0L;}
+            case "trans_keys_cycle"->{return ((TransKeysCycleRepository)commonRepository).countByIdTransCycleAndIdTransSensorAndSensorDataTypeId(transRow.getFirstID(), transRow.getSecondID(), transRow.getThirdID())==0L;}
+            case "trans_keys_drilling"->{return ((TransKeysDrillingRepository)commonRepository).countByIdHoleAndIdTransDrillingAndIdTransSensor(transRow.getFirstID(), transRow.getSecondID(), transRow.getThirdID())==0L;}
+            case "trans_network"->{return ((TransNetworkRepository)commonRepository).countAllByEquipIdAndEquipTime(transRow.getEquipIdTrans(), transRow.getTime())==0L;}
             default -> { return false; }
         }
     }

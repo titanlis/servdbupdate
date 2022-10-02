@@ -1,69 +1,86 @@
 package ru.itm.servdbupdate.entity.tables.trans;
 
+import ru.itm.servdbupdate.entity.AbstractEntity;
+
 import javax.persistence.*;
-import java.math.BigDecimal;
-import java.time.Instant;
+import java.util.Calendar;
 
 @Entity
-@Table(name = "trans_network")
-public class TransNetwork {
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "trans_network_id_gen")
-    @SequenceGenerator(name = "trans_network_id_gen", sequenceName = "hibernate_sequence", allocationSize = 1)
-    @Column(name = "id", nullable = false)
-    private Integer id;
+@Table(name = "trans_network", schema = "trans")
+public class TransNetwork extends AbstractEntity implements Trans{
 
     @Column(name = "equip_id", nullable = false)
-    private Integer equipId;
+    private Long equipId;                           //id техники
 
     @Column(name = "equip_time")
-    private Instant equipTime;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Calendar equipTime;                     //Время записи
 
     @Column(name = "trans_coord_id", nullable = false)
-    private Integer transCoordId;
+    private Long transCoordId;                      //Ссылка на таблицу trans_coord, по которым координатам проведен замер качества связи
 
-    @Lob
     @Column(name = "ap_mac")
-    private String apMac;
+    private String apMac;                           //MAC адрес точки доступа через которую работает оборудование
 
-    @Column(name = "level", precision = 5, scale = 1)
-    private BigDecimal level;
+    @Column(name = "level")
+    private Integer level;
 
-    @Column(name = "ping", precision = 5, scale = 1)
-    private BigDecimal ping;
+    @Column(name = "ping")
+    private Integer ping;
 
-    @Column(name = "speed", precision = 5, scale = 1)
-    private BigDecimal speed;
+    @Column(name = "speed")
+    private Integer speed;
 
-    public Integer getId() {
-        return id;
-    }
+    @Deprecated
+    public TransNetwork() {}
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Integer getEquipId() {
-        return equipId;
-    }
-
-    public void setEquipId(Integer equipId) {
+    public TransNetwork(Long equipId, Calendar equipTime, Long transCoordId, String apMac, Integer level, Integer ping, Integer speed) {
         this.equipId = equipId;
+        this.equipTime = equipTime;
+        this.transCoordId = transCoordId;
+        this.apMac = apMac;
+        this.level = level;
+        this.ping = ping;
+        this.speed = speed;
     }
 
-    public Instant getEquipTime() {
+    public TransNetwork(TransNetwork t) {
+        this.equipId = t.equipId;
+        this.equipTime = t.equipTime;
+        this.transCoordId = t.transCoordId;
+        this.apMac = t.apMac;
+        this.level = t.level;
+        this.ping = t.ping;
+        this.speed = t.speed;
+    }
+
+    @Override
+    public String toString() {
+        return "trans.trans_network" + '{' +
+                "\"id\":" + id +
+                ", \"equip_id\":" + equipId +
+                ", \"trans_coord_id\":\"" + transCoordId + "\"" +
+                ", \"ap_mac\":\"" + apMac + "\"" +
+                ", \"level\":\"" + level + "\"" +
+                ", \"ping\":\"" + ping + "\"" +
+                ", \"speed\":\"" + speed + "\"" +
+                '}';
+    }
+
+
+    public Calendar getEquipTime() {
         return equipTime;
     }
 
-    public void setEquipTime(Instant equipTime) {
+    public void setEquipTime(Calendar equipTime) {
         this.equipTime = equipTime;
     }
 
-    public Integer getTransCoordId() {
+    public Long getTransCoordId() {
         return transCoordId;
     }
 
-    public void setTransCoordId(Integer transCoordId) {
+    public void setTransCoordId(Long transCoordId) {
         this.transCoordId = transCoordId;
     }
 
@@ -75,28 +92,52 @@ public class TransNetwork {
         this.apMac = apMac;
     }
 
-    public BigDecimal getLevel() {
+    public Integer getLevel() {
         return level;
     }
 
-    public void setLevel(BigDecimal level) {
+    public void setLevel(Integer level) {
         this.level = level;
     }
 
-    public BigDecimal getPing() {
+    public Integer getPing() {
         return ping;
     }
 
-    public void setPing(BigDecimal ping) {
+    public void setPing(Integer ping) {
         this.ping = ping;
     }
 
-    public BigDecimal getSpeed() {
+    public Integer getSpeed() {
         return speed;
     }
 
-    public void setSpeed(BigDecimal speed) {
+    public void setSpeed(Integer speed) {
         this.speed = speed;
     }
 
+    @Override
+    public Long getEquipIdTrans() {
+        return equipId;
+    }
+
+    @Override
+    public Calendar getTime() {
+        return equipTime;
+    }
+
+    @Override
+    public Long getFirstID() {
+        return null;
+    }
+
+    @Override
+    public Long getSecondID() {
+        return null;
+    }
+
+    @Override
+    public Long getThirdID() {
+        return null;
+    }
 }

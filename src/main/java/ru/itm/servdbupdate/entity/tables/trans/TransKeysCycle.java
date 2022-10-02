@@ -1,60 +1,96 @@
 package ru.itm.servdbupdate.entity.tables.trans;
 
-import ru.itm.servdbupdate.entity.tables.sensor.SensorDataType;
+import ru.itm.servdbupdate.entity.AbstractEntity;
 
 import javax.persistence.*;
+import java.util.Calendar;
 
 @Entity
-@Table(name = "trans_keys_cycle")
-public class TransKeysCycle {
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "trans_keys_cycle_id_gen")
-    @SequenceGenerator(name = "trans_keys_cycle_id_gen", sequenceName = "hibernate_sequence", allocationSize = 1)
-    @Column(name = "id", nullable = false)
-    private Integer id;
+@Table(name = "trans_keys_cycle", schema = "trans")
+public class TransKeysCycle extends AbstractEntity implements Trans{
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "id_trans_cycle", nullable = false)
-    private TransCycle idTransCycle;
+    @Column(name = "id_trans_cycle", nullable = false)
+    private Long idTransCycle;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "id_trans_sensor", nullable = false)
-    private TransSensor idTransSensor;
+    @Column(name = "id_trans_sensor", nullable = false)
+    private Long idTransSensor;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "sensor_data_type_id", nullable = false)
-    private SensorDataType sensorDataType;
+    @Column(name = "sensor_data_type_id", nullable = false)
+    private Long sensorDataTypeId;
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public TransCycle getIdTransCycle() {
+    public Long getIdTransCycle() {
         return idTransCycle;
     }
 
-    public void setIdTransCycle(TransCycle idTransCycle) {
+    public void setIdTransCycle(Long idTransCycle) {
         this.idTransCycle = idTransCycle;
     }
 
-    public TransSensor getIdTransSensor() {
+    public Long getIdTransSensor() {
         return idTransSensor;
     }
 
-    public void setIdTransSensor(TransSensor idTransSensor) {
+    public void setIdTransSensor(Long idTransSensor) {
         this.idTransSensor = idTransSensor;
     }
 
-    public SensorDataType getSensorDataType() {
-        return sensorDataType;
+    public Long getSensorDataTypeId() {
+        return sensorDataTypeId;
     }
 
-    public void setSensorDataType(SensorDataType sensorDataType) {
-        this.sensorDataType = sensorDataType;
+    public void setSensorDataTypeId(Long sensorDataTypeId) {
+        this.sensorDataTypeId = sensorDataTypeId;
     }
 
+    public TransKeysCycle(Long idTransCycle, Long idTransSensor, Long sensorDataTypeId) {
+        this.idTransCycle = idTransCycle;
+        this.idTransSensor = idTransSensor;
+        this.sensorDataTypeId = sensorDataTypeId;
+    }
+
+    public TransKeysCycle(TransKeysCycle t) {
+        this.idTransCycle = t.idTransCycle;
+        this.idTransSensor = t.idTransSensor;
+        this.sensorDataTypeId = t.sensorDataTypeId;
+    }
+
+    @Override
+    public String toString() {
+        return "trans.trans_keys_cycle" + '{' +
+                "\"id\":" + id +
+                ", \"id_trans_cycle\":" + idTransCycle +
+                ", \"id_trans_sensor\":\"" + idTransSensor + "\"" +
+                ", \"sensor_data_type_id\":\"" + sensorDataTypeId + "\"" +
+                '}';
+    }
+
+
+    @Deprecated
+    public TransKeysCycle() {
+    }
+
+    @Override
+    public Long getEquipIdTrans() {
+        return null;
+    }
+
+    @Override
+    public Calendar getTime() {
+        return null;
+    }
+
+    @Override
+    public Long getFirstID() {
+        return idTransCycle;
+    }
+
+    @Override
+    public Long getSecondID() {
+        return idTransSensor;
+    }
+
+    @Override
+    public Long getThirdID() {
+        return sensorDataTypeId;
+    }
 }

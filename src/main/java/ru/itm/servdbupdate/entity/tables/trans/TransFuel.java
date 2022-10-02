@@ -143,4 +143,19 @@ public class TransFuel extends AbstractEntity implements Trans{
 		return timeRead;
 	}
 
+	@Override
+	public Long getFirstID() {
+		return null;
+	}
+
+	@Override
+	public Long getSecondID() {
+		return null;
+	}
+
+	@Override
+	public Long getThirdID() {
+		return null;
+	}
+
 }

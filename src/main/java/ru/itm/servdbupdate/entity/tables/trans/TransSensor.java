@@ -143,4 +143,19 @@ public class TransSensor extends AbstractEntity implements Trans{
     public Calendar getTime() {
         return timeRead;
     }
+
+    @Override
+    public Long getFirstID() {
+        return null;
+    }
+
+    @Override
+    public Long getSecondID() {
+        return null;
+    }
+
+    @Override
+    public Long getThirdID() {
+        return null;
+    }
 }

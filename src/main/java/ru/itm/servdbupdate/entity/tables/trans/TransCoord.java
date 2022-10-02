@@ -242,4 +242,19 @@ public class TransCoord extends AbstractEntity implements Trans{
     public Calendar getTime() {
         return equipTime;
     }
+
+    @Override
+    public Long getFirstID() {
+        return null;
+    }
+
+    @Override
+    public Long getSecondID() {
+        return null;
+    }
+
+    @Override
+    public Long getThirdID() {
+        return null;
+    }
 }

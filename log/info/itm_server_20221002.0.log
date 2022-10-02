@@ -1,0 +1,511 @@
+2022-10-02 15:39:05.586 INFO  [main] ru.itm.servdbupdate.ServdbupdateApplication Line:55  - Starting ServdbupdateApplication using Java 17.0.2 on itmComp with PID 35519 (/home/itm/yd/Java/Spring/servdbupdate/build/classes/java/main started by itm in /home/itm/yd/Java/Spring/servdbupdate)
+2022-10-02 15:39:05.590 INFO  [main] ru.itm.servdbupdate.ServdbupdateApplication Line:640 - The following 1 profile is active: "mainProfile"
+2022-10-02 15:39:06.395 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:132 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-02 15:39:06.519 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:201 - Finished Spring Data repository scanning in 115 ms. Found 63 JPA repository interfaces.
+2022-10-02 15:39:07.096 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 2600 (http)
+2022-10-02 15:39:07.104 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-2600"]
+2022-10-02 15:39:07.104 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-10-02 15:39:07.104 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-10-02 15:39:07.204 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-10-02 15:39:07.205 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 1570 ms
+2022-10-02 15:39:07.513 INFO  [main] org.hibernate.jpa.internal.util.LogHelper Line:31  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-02 15:39:07.567 INFO  [main] org.hibernate.Version Line:44  - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-10-02 15:39:07.755 INFO  [main] org.hibernate.annotations.common.Version Line:56  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-02 15:39:07.858 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:110 - HikariPool-1 - Starting...
+2022-10-02 15:39:09.823 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:123 - HikariPool-1 - Start completed.
+2022-10-02 15:39:09.843 INFO  [main] org.hibernate.dialect.Dialect Line:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-10-02 15:39:17.960 INFO  [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator Line:52  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-02 15:39:17.970 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-02 15:39:17.978 INFO  [main] ru.itm.servdbupdate.config.SystemConfig Line:30  - OS = 'linux'
+2022-10-02 15:39:17.978 INFO  [main] ru.itm.servdbupdate.config.SystemConfig Line:40  - Itm log path = './log/'
+2022-10-02 15:39:17.980 INFO  [main] org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor Line:478 - Autowired annotation is not supported on static fields: private static java.lang.String ru.itm.servdbupdate.config.SystemConfig.loggerPath
+2022-10-02 15:39:19.890 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-2600"]
+2022-10-02 15:39:19.907 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 2600 (http) with context path ''
+2022-10-02 15:39:19.957 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 10015 (http)
+2022-10-02 15:39:19.957 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-10015"]
+2022-10-02 15:39:19.958 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-10-02 15:39:19.958 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-10-02 15:39:19.968 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-10-02 15:39:19.969 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 59 ms
+2022-10-02 15:39:19.979 INFO  [main] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Line:58  - Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-10-02 15:39:20.008 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-10015"]
+2022-10-02 15:39:20.012 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 10015 (http) with context path ''
+2022-10-02 15:39:20.027 INFO  [main] ru.itm.servdbupdate.ServdbupdateApplication Line:61  - Started ServdbupdateApplication in 14.867 seconds (JVM running for 15.394)
+2022-10-02 15:39:20.033 INFO  [main] ru.itm.servdbupdate.ServdbupdateApplication Line:22  - Application is start.
+2022-10-02 15:39:20.355 INFO  [RMI TCP Connection(2)-127.0.0.1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-02 15:39:20.355 INFO  [RMI TCP Connection(2)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet Line:525 - Initializing Servlet 'dispatcherServlet'
+2022-10-02 15:39:20.357 INFO  [RMI TCP Connection(2)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet Line:547 - Completed initialization in 2 ms
+2022-10-02 15:40:46.566 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.controllers.DBUpdateController Line:87  - A request came in from the 192.168.1.15
+2022-10-02 15:40:46.882 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 1	equipment_haul	4
+2022-10-02 15:40:46.883 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 2	lis_check_function	13
+2022-10-02 15:40:46.883 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 3	operator_on_equip	5
+2022-10-02 15:40:46.883 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 4	operator_on_equip_type	5
+2022-10-02 15:40:46.883 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 5	status_group	8
+2022-10-02 15:40:46.883 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 6	status_cat	5
+2022-10-02 15:40:46.884 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 7	lis_action	175
+2022-10-02 15:40:46.884 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 8	status_group_rel	25
+2022-10-02 15:40:46.884 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 9	tires	6
+2022-10-02 15:40:46.884 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 10	holes	124
+2022-10-02 15:40:46.884 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 11	tire_assign	6
+2022-10-02 15:40:46.884 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 12	location_auto_status	4
+2022-10-02 15:40:46.885 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 13	coord_loc	137
+2022-10-02 15:40:46.885 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 14	status_cat_location_rel	5
+2022-10-02 15:40:46.885 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 15	sensor_inclin_calibration	5
+2022-10-02 15:40:46.885 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 16	hole_status	5
+2022-10-02 15:40:46.885 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 17	shifts	5
+2022-10-02 15:40:46.885 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 18	dispatcher	7
+2022-10-02 15:40:46.886 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 19	routes	5
+2022-10-02 15:40:46.886 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 20	equipment_drill	3
+2022-10-02 15:40:46.886 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 21	equip_type	11
+2022-10-02 15:40:46.886 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 22	sensor_types	6
+2022-10-02 15:40:46.886 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 23	tire_storage	6
+2022-10-02 15:40:46.886 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 24	routes_roads	6
+2022-10-02 15:40:46.887 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 25	values_data	45
+2022-10-02 15:40:46.887 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 26	operators	5
+2022-10-02 15:40:46.887 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 27	statuses	5
+2022-10-02 15:40:46.887 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 28	location_type	5
+2022-10-02 15:40:46.887 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 29	equipment_load	3
+2022-10-02 15:40:46.888 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 30	acts	2
+2022-10-02 15:40:46.888 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 31	status_inh	9
+2022-10-02 15:40:46.888 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 32	acts_to_roles	2
+2022-10-02 15:40:46.888 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 33	lis_action_predicate_variable	5
+2022-10-02 15:40:46.888 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 34	lis_action_predicate	5000
+2022-10-02 15:40:46.888 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 35	lis_source_variable	18
+2022-10-02 15:40:46.889 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 36	lis_group	9
+2022-10-02 15:40:46.889 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 37	action_variable_source	44
+2022-10-02 15:40:46.889 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 38	lis_action_variable	56
+2022-10-02 15:40:46.889 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 39	lis_type	22
+2022-10-02 15:40:46.889 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 40	lis_point	6
+2022-10-02 15:40:46.889 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 41	roads	3
+2022-10-02 15:40:46.890 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 42	speed_limits	3
+2022-10-02 15:40:46.890 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 43	material	5
+2022-10-02 15:40:46.890 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 44	material_conv	5
+2022-10-02 15:40:46.890 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 45	lis_predicate_variable	112
+2022-10-02 15:40:46.891 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 46	loc_inheritance	121
+2022-10-02 15:40:46.891 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 47	material_type	5
+2022-10-02 15:40:46.891 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 48	location	15
+2022-10-02 15:40:46.891 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 49	roles	4
+2022-10-02 15:40:46.891 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 50	sensor_data_types	5
+2022-10-02 15:40:46.892 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 51	lis_predicate	247
+2022-10-02 15:40:46.892 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 52	sensors	20
+2022-10-02 15:40:46.892 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 53	equipment	31
+2022-10-02 15:40:46.892 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 54	lis_connection	257
+2022-10-02 15:40:46.892 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 55	lis_action_source_variable	2
+2022-10-02 15:40:46.892 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 56	action_group	486
+2022-10-02 15:41:07.462 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-02 15:41:07.463 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:350 - HikariPool-1 - Shutdown initiated...
+2022-10-02 15:41:09.071 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:352 - HikariPool-1 - Shutdown completed.
+2022-10-02 15:53:40.154 INFO  [main] ru.itm.servdbupdate.ServdbupdateApplication Line:55  - Starting ServdbupdateApplication using Java 17.0.2 on itmComp with PID 38317 (/home/itm/yd/Java/Spring/servdbupdate/build/classes/java/main started by itm in /home/itm/yd/Java/Spring/servdbupdate)
+2022-10-02 15:53:40.157 INFO  [main] ru.itm.servdbupdate.ServdbupdateApplication Line:640 - The following 1 profile is active: "mainProfile"
+2022-10-02 15:53:40.979 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:132 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-02 15:53:41.103 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:201 - Finished Spring Data repository scanning in 115 ms. Found 63 JPA repository interfaces.
+2022-10-02 15:53:41.633 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 2600 (http)
+2022-10-02 15:53:41.640 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-2600"]
+2022-10-02 15:53:41.641 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-10-02 15:53:41.641 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-10-02 15:53:41.711 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-10-02 15:53:41.711 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 1504 ms
+2022-10-02 15:53:42.021 INFO  [main] org.hibernate.jpa.internal.util.LogHelper Line:31  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-02 15:53:42.052 INFO  [main] org.hibernate.Version Line:44  - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-10-02 15:53:42.163 INFO  [main] org.hibernate.annotations.common.Version Line:56  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-02 15:53:42.250 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:110 - HikariPool-1 - Starting...
+2022-10-02 15:53:43.999 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:123 - HikariPool-1 - Start completed.
+2022-10-02 15:53:44.012 INFO  [main] org.hibernate.dialect.Dialect Line:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-10-02 15:53:51.938 INFO  [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator Line:52  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-02 15:53:51.949 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-02 15:53:51.956 INFO  [main] ru.itm.servdbupdate.config.SystemConfig Line:30  - OS = 'linux'
+2022-10-02 15:53:51.956 INFO  [main] ru.itm.servdbupdate.config.SystemConfig Line:40  - Itm log path = './log/'
+2022-10-02 15:53:51.958 INFO  [main] org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor Line:478 - Autowired annotation is not supported on static fields: private static java.lang.String ru.itm.servdbupdate.config.SystemConfig.loggerPath
+2022-10-02 15:53:53.811 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-2600"]
+2022-10-02 15:53:53.822 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 2600 (http) with context path ''
+2022-10-02 15:53:53.878 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 10015 (http)
+2022-10-02 15:53:53.879 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-10015"]
+2022-10-02 15:53:53.879 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-10-02 15:53:53.879 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-10-02 15:53:53.890 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-10-02 15:53:53.890 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 65 ms
+2022-10-02 15:53:53.902 INFO  [main] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Line:58  - Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-10-02 15:53:53.928 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-10015"]
+2022-10-02 15:53:53.931 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 10015 (http) with context path ''
+2022-10-02 15:53:53.952 INFO  [main] ru.itm.servdbupdate.ServdbupdateApplication Line:61  - Started ServdbupdateApplication in 14.268 seconds (JVM running for 14.717)
+2022-10-02 15:53:53.960 INFO  [main] ru.itm.servdbupdate.ServdbupdateApplication Line:22  - Application is start.
+2022-10-02 15:53:54.184 INFO  [RMI TCP Connection(3)-127.0.0.1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-02 15:53:54.184 INFO  [RMI TCP Connection(3)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet Line:525 - Initializing Servlet 'dispatcherServlet'
+2022-10-02 15:53:54.186 INFO  [RMI TCP Connection(3)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet Line:547 - Completed initialization in 2 ms
+2022-10-02 15:55:46.678 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.controllers.TransUpdateController Line:79  - Equipment : unknown
+2022-10-02 15:55:47.042 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":810, "id_trans_cycle":19, "id_trans_sensor":"35489", "sensor_data_type_id":"4"}
+2022-10-02 15:55:47.208 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":811, "id_trans_cycle":11, "id_trans_sensor":"35493", "sensor_data_type_id":"6"}
+2022-10-02 15:55:47.325 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":812, "id_trans_cycle":1, "id_trans_sensor":"35490", "sensor_data_type_id":"3"}
+2022-10-02 15:55:47.453 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":813, "id_trans_cycle":25, "id_trans_sensor":"35491", "sensor_data_type_id":"4"}
+2022-10-02 15:55:47.454 INFO  [http-nio-2600-exec-1] ru.itm.servdbupdate.controllers.TransUpdateController Line:101 - save trans_keys_cycle
+2022-10-02 16:00:09.149 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.controllers.DBUpdateController Line:87  - A request came in from the 192.168.1.15
+2022-10-02 16:00:09.524 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 1	equipment_haul	4
+2022-10-02 16:00:09.524 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 2	lis_check_function	13
+2022-10-02 16:00:09.524 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 3	operator_on_equip	5
+2022-10-02 16:00:09.525 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 4	operator_on_equip_type	5
+2022-10-02 16:00:09.525 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 5	status_group	8
+2022-10-02 16:00:09.525 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 6	status_cat	5
+2022-10-02 16:00:09.525 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 7	lis_action	175
+2022-10-02 16:00:09.525 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 8	status_group_rel	25
+2022-10-02 16:00:09.526 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 9	tires	6
+2022-10-02 16:00:09.526 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 10	holes	124
+2022-10-02 16:00:09.526 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 11	tire_assign	6
+2022-10-02 16:00:09.526 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 12	location_auto_status	4
+2022-10-02 16:00:09.527 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 13	coord_loc	137
+2022-10-02 16:00:09.527 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 14	status_cat_location_rel	5
+2022-10-02 16:00:09.527 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 15	sensor_inclin_calibration	5
+2022-10-02 16:00:09.527 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 16	hole_status	5
+2022-10-02 16:00:09.527 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 17	shifts	5
+2022-10-02 16:00:09.528 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 18	dispatcher	7
+2022-10-02 16:00:09.528 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 19	routes	5
+2022-10-02 16:00:09.528 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 20	equipment_drill	3
+2022-10-02 16:00:09.528 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 21	equip_type	11
+2022-10-02 16:00:09.529 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 22	sensor_types	6
+2022-10-02 16:00:09.529 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 23	tire_storage	6
+2022-10-02 16:00:09.529 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 24	routes_roads	6
+2022-10-02 16:00:09.530 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 25	values_data	45
+2022-10-02 16:00:09.530 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 26	operators	5
+2022-10-02 16:00:09.530 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 27	statuses	5
+2022-10-02 16:00:09.530 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 28	location_type	5
+2022-10-02 16:00:09.530 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 29	equipment_load	3
+2022-10-02 16:00:09.530 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 30	acts	2
+2022-10-02 16:00:09.530 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 31	status_inh	9
+2022-10-02 16:00:09.530 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 32	acts_to_roles	2
+2022-10-02 16:00:09.531 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 33	lis_action_predicate_variable	5
+2022-10-02 16:00:09.531 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 34	lis_action_predicate	5000
+2022-10-02 16:00:09.531 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 35	lis_source_variable	18
+2022-10-02 16:00:09.531 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 36	lis_group	9
+2022-10-02 16:00:09.531 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 37	action_variable_source	44
+2022-10-02 16:00:09.531 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 38	lis_action_variable	56
+2022-10-02 16:00:09.531 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 39	lis_type	22
+2022-10-02 16:00:09.532 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 40	lis_point	6
+2022-10-02 16:00:09.532 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 41	roads	3
+2022-10-02 16:00:09.532 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 42	speed_limits	3
+2022-10-02 16:00:09.532 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 43	material	5
+2022-10-02 16:00:09.532 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 44	material_conv	5
+2022-10-02 16:00:09.532 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 45	lis_predicate_variable	112
+2022-10-02 16:00:09.532 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 46	loc_inheritance	121
+2022-10-02 16:00:09.533 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 47	material_type	5
+2022-10-02 16:00:09.533 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 48	location	15
+2022-10-02 16:00:09.533 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 49	roles	4
+2022-10-02 16:00:09.533 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 50	sensor_data_types	5
+2022-10-02 16:00:09.533 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 51	lis_predicate	247
+2022-10-02 16:00:09.533 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 52	sensors	20
+2022-10-02 16:00:09.533 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 53	equipment	31
+2022-10-02 16:00:09.533 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 54	lis_connection	257
+2022-10-02 16:00:09.534 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 55	lis_action_source_variable	2
+2022-10-02 16:00:09.534 INFO  [http-nio-2600-exec-3] ru.itm.servdbupdate.serivce.TablesService Line:57  - 56	action_group	486
+2022-10-02 16:00:49.136 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:79  - Equipment : unknown
+2022-10-02 16:00:49.497 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":814, "id_trans_cycle":11, "id_trans_sensor":"35201", "sensor_data_type_id":"9"}
+2022-10-02 16:00:49.615 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":815, "id_trans_cycle":20, "id_trans_sensor":"35201", "sensor_data_type_id":"6"}
+2022-10-02 16:00:49.616 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:101 - save trans_keys_cycle
+2022-10-02 16:05:50.193 INFO  [http-nio-2600-exec-6] ru.itm.servdbupdate.controllers.TransUpdateController Line:79  - Equipment : unknown
+2022-10-02 16:05:50.540 INFO  [http-nio-2600-exec-6] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":816, "id_trans_cycle":17, "id_trans_sensor":"20082", "sensor_data_type_id":"3"}
+2022-10-02 16:05:50.655 INFO  [http-nio-2600-exec-6] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":817, "id_trans_cycle":19, "id_trans_sensor":"35201", "sensor_data_type_id":"2"}
+2022-10-02 16:05:50.811 INFO  [http-nio-2600-exec-6] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":818, "id_trans_cycle":17, "id_trans_sensor":"35490", "sensor_data_type_id":"7"}
+2022-10-02 16:05:50.871 INFO  [http-nio-2600-exec-6] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":819, "id_trans_cycle":25, "id_trans_sensor":"35493", "sensor_data_type_id":"7"}
+2022-10-02 16:05:50.932 INFO  [http-nio-2600-exec-6] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":820, "id_trans_cycle":21, "id_trans_sensor":"35201", "sensor_data_type_id":"3"}
+2022-10-02 16:05:50.992 INFO  [http-nio-2600-exec-6] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":821, "id_trans_cycle":19, "id_trans_sensor":"35490", "sensor_data_type_id":"2"}
+2022-10-02 16:05:51.053 INFO  [http-nio-2600-exec-6] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":822, "id_trans_cycle":19, "id_trans_sensor":"35492", "sensor_data_type_id":"5"}
+2022-10-02 16:05:51.113 INFO  [http-nio-2600-exec-6] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":823, "id_trans_cycle":17, "id_trans_sensor":"35201", "sensor_data_type_id":"7"}
+2022-10-02 16:05:51.114 INFO  [http-nio-2600-exec-6] ru.itm.servdbupdate.controllers.TransUpdateController Line:101 - save trans_keys_cycle
+2022-10-02 16:10:52.157 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.controllers.TransUpdateController Line:79  - Equipment : unknown
+2022-10-02 16:10:52.374 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":824, "id_trans_cycle":1, "id_trans_sensor":"35200", "sensor_data_type_id":"2"}
+2022-10-02 16:10:52.530 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":825, "id_trans_cycle":22, "id_trans_sensor":"35200", "sensor_data_type_id":"5"}
+2022-10-02 16:10:52.687 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":826, "id_trans_cycle":11, "id_trans_sensor":"20082", "sensor_data_type_id":"9"}
+2022-10-02 16:10:52.748 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":827, "id_trans_cycle":1, "id_trans_sensor":"35166", "sensor_data_type_id":"1"}
+2022-10-02 16:10:52.808 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":828, "id_trans_cycle":28, "id_trans_sensor":"35490", "sensor_data_type_id":"5"}
+2022-10-02 16:10:52.809 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.controllers.TransUpdateController Line:101 - save trans_keys_cycle
+2022-10-02 16:15:53.548 INFO  [http-nio-2600-exec-10] ru.itm.servdbupdate.controllers.TransUpdateController Line:79  - Equipment : unknown
+2022-10-02 16:15:53.769 INFO  [http-nio-2600-exec-10] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":829, "id_trans_cycle":11, "id_trans_sensor":"35200", "sensor_data_type_id":"3"}
+2022-10-02 16:15:53.924 INFO  [http-nio-2600-exec-10] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":830, "id_trans_cycle":19, "id_trans_sensor":"20082", "sensor_data_type_id":"4"}
+2022-10-02 16:15:54.037 INFO  [http-nio-2600-exec-10] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":831, "id_trans_cycle":19, "id_trans_sensor":"35491", "sensor_data_type_id":"3"}
+2022-10-02 16:15:54.205 INFO  [http-nio-2600-exec-10] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":832, "id_trans_cycle":19, "id_trans_sensor":"35490", "sensor_data_type_id":"7"}
+2022-10-02 16:15:54.308 INFO  [http-nio-2600-exec-10] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":833, "id_trans_cycle":17, "id_trans_sensor":"35166", "sensor_data_type_id":"6"}
+2022-10-02 16:15:54.422 INFO  [http-nio-2600-exec-10] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":834, "id_trans_cycle":20, "id_trans_sensor":"20082", "sensor_data_type_id":"9"}
+2022-10-02 16:15:54.560 INFO  [http-nio-2600-exec-10] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":835, "id_trans_cycle":11, "id_trans_sensor":"35492", "sensor_data_type_id":"5"}
+2022-10-02 16:15:54.677 INFO  [http-nio-2600-exec-10] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":836, "id_trans_cycle":28, "id_trans_sensor":"35200", "sensor_data_type_id":"1"}
+2022-10-02 16:15:54.678 INFO  [http-nio-2600-exec-10] ru.itm.servdbupdate.controllers.TransUpdateController Line:101 - save trans_keys_cycle
+2022-10-02 16:20:56.019 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.controllers.TransUpdateController Line:79  - Equipment : unknown
+2022-10-02 16:20:56.233 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":837, "id_trans_cycle":28, "id_trans_sensor":"35200", "sensor_data_type_id":"4"}
+2022-10-02 16:20:56.390 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":838, "id_trans_cycle":19, "id_trans_sensor":"35489", "sensor_data_type_id":"5"}
+2022-10-02 16:20:56.545 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":839, "id_trans_cycle":1, "id_trans_sensor":"35489", "sensor_data_type_id":"2"}
+2022-10-02 16:20:56.606 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":840, "id_trans_cycle":17, "id_trans_sensor":"35166", "sensor_data_type_id":"4"}
+2022-10-02 16:20:56.666 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.controllers.TransUpdateController Line:96  - --> (no write) -->trans.trans_keys_cycle{"id":841, "id_trans_cycle":17, "id_trans_sensor":"35201", "sensor_data_type_id":"7"}
+2022-10-02 16:20:56.666 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.controllers.TransUpdateController Line:101 - save trans_keys_cycle
+2022-10-02 16:25:57.282 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:79  - Equipment : unknown
+2022-10-02 16:25:57.500 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":842, "id_trans_cycle":21, "id_trans_sensor":"35491", "sensor_data_type_id":"6"}
+2022-10-02 16:25:57.657 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":843, "id_trans_cycle":20, "id_trans_sensor":"35490", "sensor_data_type_id":"6"}
+2022-10-02 16:25:57.812 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":844, "id_trans_cycle":19, "id_trans_sensor":"35166", "sensor_data_type_id":"2"}
+2022-10-02 16:25:57.873 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":845, "id_trans_cycle":21, "id_trans_sensor":"35200", "sensor_data_type_id":"4"}
+2022-10-02 16:25:57.934 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":846, "id_trans_cycle":28, "id_trans_sensor":"35200", "sensor_data_type_id":"5"}
+2022-10-02 16:25:58.008 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":847, "id_trans_cycle":28, "id_trans_sensor":"20082", "sensor_data_type_id":"3"}
+2022-10-02 16:25:58.068 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":848, "id_trans_cycle":1, "id_trans_sensor":"35489", "sensor_data_type_id":"6"}
+2022-10-02 16:25:58.128 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":849, "id_trans_cycle":17, "id_trans_sensor":"20082", "sensor_data_type_id":"9"}
+2022-10-02 16:25:58.129 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:101 - save trans_keys_cycle
+2022-10-02 16:30:59.522 INFO  [http-nio-2600-exec-6] ru.itm.servdbupdate.controllers.TransUpdateController Line:79  - Equipment : unknown
+2022-10-02 16:30:59.743 INFO  [http-nio-2600-exec-6] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":850, "id_trans_cycle":28, "id_trans_sensor":"35493", "sensor_data_type_id":"7"}
+2022-10-02 16:30:59.898 INFO  [http-nio-2600-exec-6] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":851, "id_trans_cycle":1, "id_trans_sensor":"35492", "sensor_data_type_id":"2"}
+2022-10-02 16:31:00.012 INFO  [http-nio-2600-exec-6] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":852, "id_trans_cycle":11, "id_trans_sensor":"35493", "sensor_data_type_id":"7"}
+2022-10-02 16:31:00.183 INFO  [http-nio-2600-exec-6] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":853, "id_trans_cycle":20, "id_trans_sensor":"35200", "sensor_data_type_id":"8"}
+2022-10-02 16:31:00.343 INFO  [http-nio-2600-exec-6] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":854, "id_trans_cycle":20, "id_trans_sensor":"35490", "sensor_data_type_id":"7"}
+2022-10-02 16:31:00.344 INFO  [http-nio-2600-exec-6] ru.itm.servdbupdate.controllers.TransUpdateController Line:101 - save trans_keys_cycle
+2022-10-02 16:36:01.869 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.controllers.TransUpdateController Line:79  - Equipment : unknown
+2022-10-02 16:36:02.084 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":855, "id_trans_cycle":21, "id_trans_sensor":"35493", "sensor_data_type_id":"3"}
+2022-10-02 16:36:02.239 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":856, "id_trans_cycle":25, "id_trans_sensor":"35166", "sensor_data_type_id":"4"}
+2022-10-02 16:36:02.396 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":857, "id_trans_cycle":25, "id_trans_sensor":"35200", "sensor_data_type_id":"2"}
+2022-10-02 16:36:02.456 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.controllers.TransUpdateController Line:96  - --> (no write) -->trans.trans_keys_cycle{"id":858, "id_trans_cycle":28, "id_trans_sensor":"35200", "sensor_data_type_id":"1"}
+2022-10-02 16:36:02.516 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.controllers.TransUpdateController Line:96  - --> (no write) -->trans.trans_keys_cycle{"id":859, "id_trans_cycle":17, "id_trans_sensor":"35490", "sensor_data_type_id":"7"}
+2022-10-02 16:36:02.596 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":860, "id_trans_cycle":21, "id_trans_sensor":"35201", "sensor_data_type_id":"5"}
+2022-10-02 16:36:02.708 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":861, "id_trans_cycle":25, "id_trans_sensor":"35493", "sensor_data_type_id":"8"}
+2022-10-02 16:36:02.769 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":862, "id_trans_cycle":25, "id_trans_sensor":"35489", "sensor_data_type_id":"7"}
+2022-10-02 16:36:02.770 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.controllers.TransUpdateController Line:101 - save trans_keys_cycle
+2022-10-02 16:41:03.628 INFO  [http-nio-2600-exec-10] ru.itm.servdbupdate.controllers.TransUpdateController Line:79  - Equipment : unknown
+2022-10-02 16:41:03.981 INFO  [http-nio-2600-exec-10] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":863, "id_trans_cycle":11, "id_trans_sensor":"35492", "sensor_data_type_id":"6"}
+2022-10-02 16:41:04.090 INFO  [http-nio-2600-exec-10] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":864, "id_trans_cycle":1, "id_trans_sensor":"35166", "sensor_data_type_id":"7"}
+2022-10-02 16:41:04.278 INFO  [http-nio-2600-exec-10] ru.itm.servdbupdate.controllers.TransUpdateController Line:96  - --> (no write) -->trans.trans_keys_cycle{"id":865, "id_trans_cycle":1, "id_trans_sensor":"35492", "sensor_data_type_id":"2"}
+2022-10-02 16:41:04.496 INFO  [http-nio-2600-exec-10] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":866, "id_trans_cycle":28, "id_trans_sensor":"35493", "sensor_data_type_id":"2"}
+2022-10-02 16:41:04.836 INFO  [http-nio-2600-exec-10] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":867, "id_trans_cycle":17, "id_trans_sensor":"35491", "sensor_data_type_id":"9"}
+2022-10-02 16:41:05.258 INFO  [http-nio-2600-exec-10] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":868, "id_trans_cycle":20, "id_trans_sensor":"35492", "sensor_data_type_id":"6"}
+2022-10-02 16:41:05.259 INFO  [http-nio-2600-exec-10] ru.itm.servdbupdate.controllers.TransUpdateController Line:101 - save trans_keys_cycle
+2022-10-02 16:46:07.110 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.controllers.TransUpdateController Line:79  - Equipment : unknown
+2022-10-02 16:46:07.326 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":869, "id_trans_cycle":28, "id_trans_sensor":"35493", "sensor_data_type_id":"1"}
+2022-10-02 16:46:07.481 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":870, "id_trans_cycle":28, "id_trans_sensor":"20082", "sensor_data_type_id":"8"}
+2022-10-02 16:46:07.637 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":871, "id_trans_cycle":1, "id_trans_sensor":"35200", "sensor_data_type_id":"3"}
+2022-10-02 16:46:07.697 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":872, "id_trans_cycle":22, "id_trans_sensor":"35166", "sensor_data_type_id":"9"}
+2022-10-02 16:46:07.801 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":873, "id_trans_cycle":17, "id_trans_sensor":"35491", "sensor_data_type_id":"8"}
+2022-10-02 16:46:07.921 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.controllers.TransUpdateController Line:96  - --> (no write) -->trans.trans_keys_cycle{"id":874, "id_trans_cycle":1, "id_trans_sensor":"35490", "sensor_data_type_id":"3"}
+2022-10-02 16:46:07.981 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.controllers.TransUpdateController Line:96  - --> (no write) -->trans.trans_keys_cycle{"id":875, "id_trans_cycle":22, "id_trans_sensor":"35200", "sensor_data_type_id":"5"}
+2022-10-02 16:46:07.982 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.controllers.TransUpdateController Line:101 - save trans_keys_cycle
+2022-10-02 16:51:08.781 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:79  - Equipment : unknown
+2022-10-02 16:51:09.008 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":876, "id_trans_cycle":1, "id_trans_sensor":"20082", "sensor_data_type_id":"3"}
+2022-10-02 16:51:09.157 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":877, "id_trans_cycle":20, "id_trans_sensor":"35491", "sensor_data_type_id":"8"}
+2022-10-02 16:51:09.270 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":878, "id_trans_cycle":19, "id_trans_sensor":"35166", "sensor_data_type_id":"8"}
+2022-10-02 16:51:09.441 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":879, "id_trans_cycle":20, "id_trans_sensor":"35493", "sensor_data_type_id":"7"}
+2022-10-02 16:51:09.558 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":880, "id_trans_cycle":28, "id_trans_sensor":"35491", "sensor_data_type_id":"6"}
+2022-10-02 16:51:09.676 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":881, "id_trans_cycle":11, "id_trans_sensor":"20082", "sensor_data_type_id":"4"}
+2022-10-02 16:51:09.677 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:101 - save trans_keys_cycle
+2022-10-02 16:56:10.817 INFO  [http-nio-2600-exec-6] ru.itm.servdbupdate.controllers.TransUpdateController Line:79  - Equipment : unknown
+2022-10-02 16:56:11.084 INFO  [http-nio-2600-exec-6] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":882, "id_trans_cycle":22, "id_trans_sensor":"35166", "sensor_data_type_id":"2"}
+2022-10-02 16:56:11.199 INFO  [http-nio-2600-exec-6] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":883, "id_trans_cycle":21, "id_trans_sensor":"35489", "sensor_data_type_id":"3"}
+2022-10-02 16:56:11.355 INFO  [http-nio-2600-exec-6] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":884, "id_trans_cycle":1, "id_trans_sensor":"35489", "sensor_data_type_id":"5"}
+2022-10-02 16:56:11.416 INFO  [http-nio-2600-exec-6] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":885, "id_trans_cycle":1, "id_trans_sensor":"35491", "sensor_data_type_id":"5"}
+2022-10-02 16:56:11.475 INFO  [http-nio-2600-exec-6] ru.itm.servdbupdate.controllers.TransUpdateController Line:96  - --> (no write) -->trans.trans_keys_cycle{"id":886, "id_trans_cycle":22, "id_trans_sensor":"35166", "sensor_data_type_id":"9"}
+2022-10-02 16:56:11.535 INFO  [http-nio-2600-exec-6] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":887, "id_trans_cycle":19, "id_trans_sensor":"35489", "sensor_data_type_id":"1"}
+2022-10-02 16:56:11.696 INFO  [http-nio-2600-exec-6] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":888, "id_trans_cycle":25, "id_trans_sensor":"35489", "sensor_data_type_id":"4"}
+2022-10-02 16:56:11.788 INFO  [http-nio-2600-exec-6] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":889, "id_trans_cycle":17, "id_trans_sensor":"35200", "sensor_data_type_id":"2"}
+2022-10-02 16:56:11.789 INFO  [http-nio-2600-exec-6] ru.itm.servdbupdate.controllers.TransUpdateController Line:101 - save trans_keys_cycle
+2022-10-02 17:00:02.967 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.controllers.DBUpdateController Line:87  - A request came in from the 192.168.1.15
+2022-10-02 17:00:03.380 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 1	equipment_haul	4
+2022-10-02 17:00:03.380 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 2	lis_check_function	13
+2022-10-02 17:00:03.381 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 3	operator_on_equip	5
+2022-10-02 17:00:03.381 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 4	operator_on_equip_type	5
+2022-10-02 17:00:03.381 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 5	status_group	8
+2022-10-02 17:00:03.381 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 6	status_cat	5
+2022-10-02 17:00:03.382 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 7	lis_action	175
+2022-10-02 17:00:03.382 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 8	status_group_rel	25
+2022-10-02 17:00:03.382 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 9	tires	6
+2022-10-02 17:00:03.382 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 10	holes	124
+2022-10-02 17:00:03.383 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 11	tire_assign	6
+2022-10-02 17:00:03.383 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 12	location_auto_status	4
+2022-10-02 17:00:03.383 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 13	coord_loc	137
+2022-10-02 17:00:03.383 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 14	status_cat_location_rel	5
+2022-10-02 17:00:03.383 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 15	sensor_inclin_calibration	5
+2022-10-02 17:00:03.384 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 16	hole_status	5
+2022-10-02 17:00:03.384 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 17	shifts	5
+2022-10-02 17:00:03.384 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 18	dispatcher	7
+2022-10-02 17:00:03.384 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 19	routes	5
+2022-10-02 17:00:03.384 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 20	equipment_drill	3
+2022-10-02 17:00:03.384 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 21	equip_type	11
+2022-10-02 17:00:03.385 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 22	sensor_types	6
+2022-10-02 17:00:03.385 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 23	tire_storage	6
+2022-10-02 17:00:03.385 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 24	routes_roads	6
+2022-10-02 17:00:03.385 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 25	values_data	45
+2022-10-02 17:00:03.385 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 26	operators	5
+2022-10-02 17:00:03.385 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 27	statuses	5
+2022-10-02 17:00:03.385 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 28	location_type	5
+2022-10-02 17:00:03.386 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 29	equipment_load	3
+2022-10-02 17:00:03.386 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 30	acts	2
+2022-10-02 17:00:03.386 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 31	status_inh	9
+2022-10-02 17:00:03.386 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 32	acts_to_roles	2
+2022-10-02 17:00:03.386 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 33	lis_action_predicate_variable	5
+2022-10-02 17:00:03.386 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 34	lis_action_predicate	5000
+2022-10-02 17:00:03.386 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 35	lis_source_variable	18
+2022-10-02 17:00:03.387 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 36	lis_group	9
+2022-10-02 17:00:03.387 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 37	action_variable_source	44
+2022-10-02 17:00:03.387 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 38	lis_action_variable	56
+2022-10-02 17:00:03.387 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 39	lis_type	22
+2022-10-02 17:00:03.387 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 40	lis_point	6
+2022-10-02 17:00:03.387 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 41	roads	3
+2022-10-02 17:00:03.387 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 42	speed_limits	3
+2022-10-02 17:00:03.388 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 43	material	5
+2022-10-02 17:00:03.388 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 44	material_conv	5
+2022-10-02 17:00:03.388 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 45	lis_predicate_variable	112
+2022-10-02 17:00:03.388 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 46	loc_inheritance	121
+2022-10-02 17:00:03.388 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 47	material_type	5
+2022-10-02 17:00:03.388 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 48	location	15
+2022-10-02 17:00:03.388 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 49	roles	4
+2022-10-02 17:00:03.389 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 50	sensor_data_types	5
+2022-10-02 17:00:03.389 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 51	lis_predicate	247
+2022-10-02 17:00:03.389 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 52	sensors	20
+2022-10-02 17:00:03.389 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 53	equipment	31
+2022-10-02 17:00:03.389 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 54	lis_connection	257
+2022-10-02 17:00:03.389 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 55	lis_action_source_variable	2
+2022-10-02 17:00:03.390 INFO  [http-nio-2600-exec-8] ru.itm.servdbupdate.serivce.TablesService Line:57  - 56	action_group	486
+2022-10-02 17:01:12.963 INFO  [http-nio-2600-exec-10] ru.itm.servdbupdate.controllers.TransUpdateController Line:79  - Equipment : unknown
+2022-10-02 17:01:13.184 INFO  [http-nio-2600-exec-10] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":890, "id_trans_cycle":11, "id_trans_sensor":"35491", "sensor_data_type_id":"7"}
+2022-10-02 17:01:13.338 INFO  [http-nio-2600-exec-10] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":891, "id_trans_cycle":11, "id_trans_sensor":"35490", "sensor_data_type_id":"7"}
+2022-10-02 17:01:13.453 INFO  [http-nio-2600-exec-10] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":892, "id_trans_cycle":25, "id_trans_sensor":"35492", "sensor_data_type_id":"8"}
+2022-10-02 17:01:13.619 INFO  [http-nio-2600-exec-10] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":893, "id_trans_cycle":21, "id_trans_sensor":"35492", "sensor_data_type_id":"8"}
+2022-10-02 17:01:13.759 INFO  [http-nio-2600-exec-10] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_keys_cycle{"id":894, "id_trans_cycle":19, "id_trans_sensor":"35493", "sensor_data_type_id":"3"}
+2022-10-02 17:01:13.760 INFO  [http-nio-2600-exec-10] ru.itm.servdbupdate.controllers.TransUpdateController Line:101 - save trans_keys_cycle
+2022-10-02 18:00:05.327 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.controllers.DBUpdateController Line:87  - A request came in from the 192.168.1.15
+2022-10-02 18:00:05.728 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 1	equipment_haul	4
+2022-10-02 18:00:05.729 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 2	lis_check_function	13
+2022-10-02 18:00:05.729 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 3	operator_on_equip	5
+2022-10-02 18:00:05.729 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 4	operator_on_equip_type	5
+2022-10-02 18:00:05.729 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 5	status_group	8
+2022-10-02 18:00:05.730 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 6	status_cat	5
+2022-10-02 18:00:05.730 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 7	lis_action	175
+2022-10-02 18:00:05.730 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 8	status_group_rel	25
+2022-10-02 18:00:05.730 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 9	tires	6
+2022-10-02 18:00:05.731 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 10	holes	124
+2022-10-02 18:00:05.731 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 11	tire_assign	6
+2022-10-02 18:00:05.731 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 12	location_auto_status	4
+2022-10-02 18:00:05.731 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 13	coord_loc	137
+2022-10-02 18:00:05.731 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 14	status_cat_location_rel	5
+2022-10-02 18:00:05.732 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 15	sensor_inclin_calibration	5
+2022-10-02 18:00:05.732 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 16	hole_status	5
+2022-10-02 18:00:05.732 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 17	shifts	5
+2022-10-02 18:00:05.732 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 18	dispatcher	7
+2022-10-02 18:00:05.733 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 19	routes	5
+2022-10-02 18:00:05.733 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 20	equipment_drill	3
+2022-10-02 18:00:05.733 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 21	equip_type	11
+2022-10-02 18:00:05.733 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 22	sensor_types	6
+2022-10-02 18:00:05.733 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 23	tire_storage	6
+2022-10-02 18:00:05.734 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 24	routes_roads	6
+2022-10-02 18:00:05.734 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 25	values_data	45
+2022-10-02 18:00:05.734 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 26	operators	5
+2022-10-02 18:00:05.734 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 27	statuses	5
+2022-10-02 18:00:05.734 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 28	location_type	5
+2022-10-02 18:00:05.735 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 29	equipment_load	3
+2022-10-02 18:00:05.735 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 30	acts	2
+2022-10-02 18:00:05.735 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 31	status_inh	9
+2022-10-02 18:00:05.735 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 32	acts_to_roles	2
+2022-10-02 18:00:05.735 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 33	lis_action_predicate_variable	5
+2022-10-02 18:00:05.735 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 34	lis_action_predicate	5000
+2022-10-02 18:00:05.735 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 35	lis_source_variable	18
+2022-10-02 18:00:05.735 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 36	lis_group	9
+2022-10-02 18:00:05.736 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 37	action_variable_source	44
+2022-10-02 18:00:05.736 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 38	lis_action_variable	56
+2022-10-02 18:00:05.736 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 39	lis_type	22
+2022-10-02 18:00:05.736 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 40	lis_point	6
+2022-10-02 18:00:05.736 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 41	roads	3
+2022-10-02 18:00:05.736 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 42	speed_limits	3
+2022-10-02 18:00:05.736 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 43	material	5
+2022-10-02 18:00:05.736 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 44	material_conv	5
+2022-10-02 18:00:05.736 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 45	lis_predicate_variable	112
+2022-10-02 18:00:05.736 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 46	loc_inheritance	121
+2022-10-02 18:00:05.736 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 47	material_type	5
+2022-10-02 18:00:05.736 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 48	location	15
+2022-10-02 18:00:05.737 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 49	roles	4
+2022-10-02 18:00:05.737 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 50	sensor_data_types	5
+2022-10-02 18:00:05.737 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 51	lis_predicate	247
+2022-10-02 18:00:05.737 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 52	sensors	20
+2022-10-02 18:00:05.737 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 53	equipment	31
+2022-10-02 18:00:05.737 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 54	lis_connection	257
+2022-10-02 18:00:05.737 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 55	lis_action_source_variable	2
+2022-10-02 18:00:05.737 INFO  [http-nio-2600-exec-2] ru.itm.servdbupdate.serivce.TablesService Line:57  - 56	action_group	486
+2022-10-02 23:24:46.123 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:75  - Equipment : KRIL63
+2022-10-02 23:24:46.288 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_fuel{"id":902, "equip_id":24, "shift_date":"Sun Oct 02 00:00:00 NOVT 2022", "shift_id":2, "time_read":"Sun Oct 02 22:01:29 NOVT 2022", "fuel_level":197.0, "fuel_raw":197.0, "trans_cycles_id":1}
+2022-10-02 23:24:46.348 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_fuel{"id":903, "equip_id":24, "shift_date":"Sun Oct 02 00:00:00 NOVT 2022", "shift_id":2, "time_read":"Sun Oct 02 22:02:30 NOVT 2022", "fuel_level":195.0, "fuel_raw":195.0, "trans_cycles_id":1}
+2022-10-02 23:24:46.408 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_fuel{"id":904, "equip_id":24, "shift_date":"Sun Oct 02 00:00:00 NOVT 2022", "shift_id":2, "time_read":"Sun Oct 02 22:03:31 NOVT 2022", "fuel_level":194.0, "fuel_raw":194.0, "trans_cycles_id":1}
+2022-10-02 23:24:46.468 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_fuel{"id":905, "equip_id":24, "shift_date":"Sun Oct 02 00:00:00 NOVT 2022", "shift_id":2, "time_read":"Sun Oct 02 22:04:32 NOVT 2022", "fuel_level":192.0, "fuel_raw":192.0, "trans_cycles_id":1}
+2022-10-02 23:24:46.529 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_fuel{"id":906, "equip_id":24, "shift_date":"Sun Oct 02 00:00:00 NOVT 2022", "shift_id":2, "time_read":"Sun Oct 02 22:05:33 NOVT 2022", "fuel_level":190.0, "fuel_raw":190.0, "trans_cycles_id":1}
+2022-10-02 23:24:46.589 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_fuel{"id":907, "equip_id":24, "shift_date":"Sun Oct 02 00:00:00 NOVT 2022", "shift_id":2, "time_read":"Sun Oct 02 22:06:34 NOVT 2022", "fuel_level":189.0, "fuel_raw":189.0, "trans_cycles_id":1}
+2022-10-02 23:24:46.649 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_fuel{"id":908, "equip_id":24, "shift_date":"Sun Oct 02 00:00:00 NOVT 2022", "shift_id":2, "time_read":"Sun Oct 02 22:07:35 NOVT 2022", "fuel_level":187.0, "fuel_raw":187.0, "trans_cycles_id":1}
+2022-10-02 23:24:46.709 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_fuel{"id":909, "equip_id":24, "shift_date":"Sun Oct 02 00:00:00 NOVT 2022", "shift_id":2, "time_read":"Sun Oct 02 22:08:36 NOVT 2022", "fuel_level":185.0, "fuel_raw":185.0, "trans_cycles_id":1}
+2022-10-02 23:24:46.769 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_fuel{"id":910, "equip_id":24, "shift_date":"Sun Oct 02 00:00:00 NOVT 2022", "shift_id":2, "time_read":"Sun Oct 02 22:09:37 NOVT 2022", "fuel_level":183.0, "fuel_raw":183.0, "trans_cycles_id":1}
+2022-10-02 23:24:46.769 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:101 - save trans_fuel
+2022-10-02 23:24:48.230 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_sensor{"id":913, "sensor_id":37, "equip_id":24, "shift_date":"2022-10-02", "shift_id":1, "time_read":"Sun Oct 02 23:23:29 NOVT 2022", "value_data":2.0, "trans_coord_id":1}
+2022-10-02 23:24:48.290 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_sensor{"id":917, "sensor_id":37, "equip_id":24, "shift_date":"2022-10-02", "shift_id":1, "time_read":"Sun Oct 02 23:24:32 NOVT 2022", "value_data":5.0, "trans_coord_id":1}
+2022-10-02 23:24:48.291 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:101 - save trans_sensor
+2022-10-02 23:24:48.666 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_coord{"id":911, "equip_id":24, "gnss_time":"Sun Oct 02 23:23:13 NOVT 2022", "equip_time":"Sun Oct 02 23:23:13 NOVT 2022", "z":1.00, "latitude":54.9959, "longitude":82.883415, "azimuth":0.5, "height":134.39, "speed":0.09, "gnss_pdop":1.00, "gnss_hdop":1.00, "gnss_sat":23, "gnss_rtk":1, "cycle_id":1, "loc_id":1}
+2022-10-02 23:24:48.726 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_coord{"id":912, "equip_id":24, "gnss_time":"Sun Oct 02 23:23:24 NOVT 2022", "equip_time":"Sun Oct 02 23:23:24 NOVT 2022", "z":1.00, "latitude":54.99598, "longitude":82.883446, "azimuth":0.5, "height":129.17, "speed":0.07, "gnss_pdop":0.98, "gnss_hdop":1.03, "gnss_sat":25, "gnss_rtk":1, "cycle_id":1, "loc_id":1}
+2022-10-02 23:24:48.786 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_coord{"id":914, "equip_id":24, "gnss_time":"Sun Oct 02 23:24:08 NOVT 2022", "equip_time":"Sun Oct 02 23:24:08 NOVT 2022", "z":1.00, "latitude":54.9959, "longitude":82.88363, "azimuth":0.5, "height":132.42, "speed":0.06, "gnss_pdop":0.98, "gnss_hdop":1.18, "gnss_sat":16, "gnss_rtk":1, "cycle_id":1, "loc_id":1}
+2022-10-02 23:24:48.847 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_coord{"id":915, "equip_id":24, "gnss_time":"Sun Oct 02 23:24:19 NOVT 2022", "equip_time":"Sun Oct 02 23:24:19 NOVT 2022", "z":1.00, "latitude":54.995888, "longitude":82.88365, "azimuth":0.5, "height":131.81, "speed":0.11, "gnss_pdop":0.98, "gnss_hdop":1.06, "gnss_sat":30, "gnss_rtk":1, "cycle_id":1, "loc_id":1}
+2022-10-02 23:24:48.907 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_coord{"id":916, "equip_id":24, "gnss_time":"Sun Oct 02 23:24:30 NOVT 2022", "equip_time":"Sun Oct 02 23:24:30 NOVT 2022", "z":1.00, "latitude":54.995827, "longitude":82.883705, "azimuth":0.5, "height":132.60, "speed":0.13, "gnss_pdop":1.11, "gnss_hdop":0.99, "gnss_sat":18, "gnss_rtk":1, "cycle_id":1, "loc_id":1}
+2022-10-02 23:24:48.907 INFO  [http-nio-2600-exec-4] ru.itm.servdbupdate.controllers.TransUpdateController Line:101 - save trans_coord
+2022-10-02 23:24:49.678 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.controllers.DBUpdateController Line:87  - A request came in from the 192.168.1.15
+2022-10-02 23:24:49.982 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 1	equipment_haul	4
+2022-10-02 23:24:49.982 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 2	lis_check_function	13
+2022-10-02 23:24:49.982 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 3	operator_on_equip	5
+2022-10-02 23:24:49.983 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 4	operator_on_equip_type	5
+2022-10-02 23:24:49.983 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 5	status_group	8
+2022-10-02 23:24:49.983 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 6	status_cat	5
+2022-10-02 23:24:49.984 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 7	lis_action	175
+2022-10-02 23:24:49.984 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 8	status_group_rel	25
+2022-10-02 23:24:49.984 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 9	tires	6
+2022-10-02 23:24:49.984 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 10	holes	124
+2022-10-02 23:24:49.985 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 11	tire_assign	6
+2022-10-02 23:24:49.985 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 12	location_auto_status	4
+2022-10-02 23:24:49.985 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 13	coord_loc	137
+2022-10-02 23:24:49.985 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 14	status_cat_location_rel	5
+2022-10-02 23:24:49.985 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 15	sensor_inclin_calibration	5
+2022-10-02 23:24:49.986 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 16	hole_status	5
+2022-10-02 23:24:49.986 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 17	shifts	5
+2022-10-02 23:24:49.986 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 18	dispatcher	7
+2022-10-02 23:24:49.986 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 19	routes	5
+2022-10-02 23:24:49.986 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 20	equipment_drill	3
+2022-10-02 23:24:49.987 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 21	equip_type	11
+2022-10-02 23:24:49.987 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 22	sensor_types	6
+2022-10-02 23:24:49.987 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 23	tire_storage	6
+2022-10-02 23:24:49.987 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 24	routes_roads	6
+2022-10-02 23:24:49.988 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 25	values_data	45
+2022-10-02 23:24:49.988 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 26	operators	5
+2022-10-02 23:24:49.988 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 27	statuses	5
+2022-10-02 23:24:49.988 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 28	location_type	5
+2022-10-02 23:24:49.989 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 29	equipment_load	3
+2022-10-02 23:24:49.989 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 30	acts	2
+2022-10-02 23:24:49.989 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 31	status_inh	9
+2022-10-02 23:24:49.989 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 32	acts_to_roles	2
+2022-10-02 23:24:49.989 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 33	lis_action_predicate_variable	5
+2022-10-02 23:24:49.990 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 34	lis_action_predicate	5000
+2022-10-02 23:24:49.990 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 35	lis_source_variable	18
+2022-10-02 23:24:49.990 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 36	lis_group	9
+2022-10-02 23:24:49.990 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 37	action_variable_source	44
+2022-10-02 23:24:49.990 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 38	lis_action_variable	56
+2022-10-02 23:24:49.991 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 39	lis_type	22
+2022-10-02 23:24:49.991 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 40	lis_point	6
+2022-10-02 23:24:49.991 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 41	roads	3
+2022-10-02 23:24:49.991 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 42	speed_limits	3
+2022-10-02 23:24:49.991 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 43	material	5
+2022-10-02 23:24:49.991 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 44	material_conv	5
+2022-10-02 23:24:49.991 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 45	lis_predicate_variable	112
+2022-10-02 23:24:49.991 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 46	loc_inheritance	121
+2022-10-02 23:24:49.992 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 47	material_type	5
+2022-10-02 23:24:49.992 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 48	location	15
+2022-10-02 23:24:49.992 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 49	roles	4
+2022-10-02 23:24:49.992 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 50	sensor_data_types	5
+2022-10-02 23:24:49.992 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 51	lis_predicate	247
+2022-10-02 23:24:49.992 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 52	sensors	20
+2022-10-02 23:24:49.992 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 53	equipment	31
+2022-10-02 23:24:49.993 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 54	lis_connection	257
+2022-10-02 23:24:49.993 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 55	lis_action_source_variable	2
+2022-10-02 23:24:49.993 INFO  [http-nio-2600-exec-5] ru.itm.servdbupdate.serivce.TablesService Line:57  - 56	action_group	486
+2022-10-02 23:29:50.072 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.controllers.TransUpdateController Line:75  - Equipment : KRIL63
+2022-10-02 23:29:50.132 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_sensor{"id":921, "sensor_id":37, "equip_id":24, "shift_date":"2022-10-02", "shift_id":1, "time_read":"Sun Oct 02 23:25:35 NOVT 2022", "value_data":8.0, "trans_coord_id":1}
+2022-10-02 23:29:50.193 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_sensor{"id":925, "sensor_id":37, "equip_id":24, "shift_date":"2022-10-02", "shift_id":1, "time_read":"Sun Oct 02 23:26:38 NOVT 2022", "value_data":11.0, "trans_coord_id":1}
+2022-10-02 23:29:50.193 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.controllers.TransUpdateController Line:101 - save trans_sensor
+2022-10-02 23:29:50.563 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_coord{"id":918, "equip_id":24, "gnss_time":"Sun Oct 02 23:25:03 NOVT 2022", "equip_time":"Sun Oct 02 23:25:03 NOVT 2022", "z":1.00, "latitude":54.995716, "longitude":82.88365, "azimuth":1.0, "height":131.70, "speed":0.12, "gnss_pdop":1.01, "gnss_hdop":1.03, "gnss_sat":20, "gnss_rtk":1, "cycle_id":1, "loc_id":1}
+2022-10-02 23:29:50.623 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_coord{"id":919, "equip_id":24, "gnss_time":"Sun Oct 02 23:25:14 NOVT 2022", "equip_time":"Sun Oct 02 23:25:14 NOVT 2022", "z":1.00, "latitude":54.995697, "longitude":82.88358, "azimuth":1.0, "height":129.16, "speed":0.13, "gnss_pdop":0.95, "gnss_hdop":1.22, "gnss_sat":13, "gnss_rtk":1, "cycle_id":1, "loc_id":1}
+2022-10-02 23:29:50.683 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_coord{"id":920, "equip_id":24, "gnss_time":"Sun Oct 02 23:25:25 NOVT 2022", "equip_time":"Sun Oct 02 23:25:25 NOVT 2022", "z":1.00, "latitude":54.995647, "longitude":82.88352, "azimuth":1.0, "height":132.08, "speed":0.11, "gnss_pdop":1.11, "gnss_hdop":1.11, "gnss_sat":18, "gnss_rtk":1, "cycle_id":1, "loc_id":1}
+2022-10-02 23:29:50.743 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_coord{"id":922, "equip_id":24, "gnss_time":"Sun Oct 02 23:26:09 NOVT 2022", "equip_time":"Sun Oct 02 23:26:09 NOVT 2022", "z":1.00, "latitude":54.99551, "longitude":82.88347, "azimuth":0.5, "height":129.58, "speed":0.06, "gnss_pdop":1.01, "gnss_hdop":1.13, "gnss_sat":26, "gnss_rtk":1, "cycle_id":1, "loc_id":1}
+2022-10-02 23:29:50.803 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_coord{"id":923, "equip_id":24, "gnss_time":"Sun Oct 02 23:26:20 NOVT 2022", "equip_time":"Sun Oct 02 23:26:20 NOVT 2022", "z":1.00, "latitude":54.99549, "longitude":82.883415, "azimuth":0.5, "height":134.42, "speed":0.03, "gnss_pdop":1.03, "gnss_hdop":1.01, "gnss_sat":20, "gnss_rtk":1, "cycle_id":1, "loc_id":1}
+2022-10-02 23:29:50.863 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_coord{"id":924, "equip_id":24, "gnss_time":"Sun Oct 02 23:26:31 NOVT 2022", "equip_time":"Sun Oct 02 23:26:31 NOVT 2022", "z":1.00, "latitude":54.99544, "longitude":82.88334, "azimuth":0.5, "height":134.43, "speed":0.11, "gnss_pdop":1.00, "gnss_hdop":1.24, "gnss_sat":26, "gnss_rtk":1, "cycle_id":1, "loc_id":1}
+2022-10-02 23:29:50.923 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_coord{"id":926, "equip_id":24, "gnss_time":"Sun Oct 02 23:27:15 NOVT 2022", "equip_time":"Sun Oct 02 23:27:15 NOVT 2022", "z":1.00, "latitude":54.995342, "longitude":82.88329, "azimuth":0.5, "height":129.09, "speed":0.12, "gnss_pdop":1.12, "gnss_hdop":1.12, "gnss_sat":23, "gnss_rtk":1, "cycle_id":1, "loc_id":1}
+2022-10-02 23:29:50.983 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.controllers.TransUpdateController Line:92  - --> (write) -->trans.trans_coord{"id":927, "equip_id":24, "gnss_time":"Sun Oct 02 23:27:26 NOVT 2022", "equip_time":"Sun Oct 02 23:27:26 NOVT 2022", "z":1.00, "latitude":54.995262, "longitude":82.88322, "azimuth":0.5, "height":129.27, "speed":0.03, "gnss_pdop":1.11, "gnss_hdop":1.02, "gnss_sat":16, "gnss_rtk":1, "cycle_id":1, "loc_id":1}
+2022-10-02 23:29:50.984 INFO  [http-nio-2600-exec-7] ru.itm.servdbupdate.controllers.TransUpdateController Line:101 - save trans_coord
+2022-10-02 23:37:42.166 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-02 23:37:42.168 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:350 - HikariPool-1 - Shutdown initiated...
+2022-10-02 23:37:43.982 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:352 - HikariPool-1 - Shutdown completed.
